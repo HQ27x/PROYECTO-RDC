@@ -1,0 +1,1761 @@
+================================================================================
+L4D2 TOURNAMENT - REPORTE COMPLETO DE VERIFICACIÓN DE INTEGRIDAD
+================================================================================
+
+FECHA Y HORA: 2025-10-31T11:38:50.931422
+PC: Administrator
+USUARIO: nhuay
+ESTADO GENERAL: SUSPICIOUS
+RESUMEN: Problemas detectados: Mods detectados: 2, Mods en Versus: 1, Procesos sospechosos: 3
+
+--------------------------------------------------------------------------------
+IDENTIFICACIÓN COMPLETA DEL SISTEMA
+--------------------------------------------------------------------------------
+MAC Address: 00:e0:4c:b7:20:d1
+System UUID: 03000200-0400-0500-0006-000700080009
+Disk Serial: KS5YIES5ENRTSWXDFGVV
+System Fingerprint: 5460fe8468131038bc14ce1102456c79
+
+⚠️ NOTA: Las direcciones IP están al final del archivo por privacidad
+
+--------------------------------------------------------------------------------
+CUENTAS STEAM DETECTADAS: 1
+--------------------------------------------------------------------------------
+1. Usuario: Unknown
+   SteamID64: 76561199176974317
+   SteamID3: [U:1:1216708589]
+   SteamID: STEAM_0:1:608354294
+
+--------------------------------------------------------------------------------
+MODS DETECTADOS: 2
+--------------------------------------------------------------------------------
+1. Nombre: 1118606848.vpk
+   Tamaño: 75,613 bytes
+   Ubicación: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\addons
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\addons\1118606848.vpk
+
+2. Nombre: parish overgrowth.vpk
+   Tamaño: 179,202,097 bytes
+   Ubicación: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\addons
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\addons\parish overgrowth.vpk
+   ⚠️ SOSPECHOSO: Archivo muy grande (posible mod completo)
+
+--------------------------------------------------------------------------------
+PROCESOS SOSPECHOSOS: 3
+--------------------------------------------------------------------------------
+1. Proceso: Unity Hub.exe
+   PID: 15260
+   Ruta Completa: C:\Unity\Unity Hub\Unity Hub.exe
+   Razón: Contiene keyword sospechoso: bypass
+
+2. Proceso: Unity Hub.exe
+   PID: 18240
+   Ruta Completa: C:\Unity\Unity Hub\Unity Hub.exe
+   Razón: Contiene keyword sospechoso: bypass
+
+3. Proceso: Unity Hub.exe
+   PID: 18348
+   Ruta Completa: C:\Unity\Unity Hub\Unity Hub.exe
+   Razón: Contiene keyword sospechoso: bypass
+
+--------------------------------------------------------------------------------
+ARCHIVOS/CARPETAS DE CHEATS: 14
+--------------------------------------------------------------------------------
+1. CARPETA: dload
+   Ruta Completa: C:\Users\nhuay\Downloads\dload
+   Total de archivos: 3
+   Archivos sospechosos: 0
+
+2. CARPETA: Downloads
+   Ruta Completa: C:\Users\nhuay\Downloads\Downloads
+   Total de archivos: 10
+   Archivos sospechosos: 0
+
+3. CARPETA: drive-download-20251021T143310Z-1-001
+   Ruta Completa: C:\Users\nhuay\Downloads\drive-download-20251021T143310Z-1-001
+   Total de archivos: 5
+   Archivos sospechosos: 0
+
+4. CARPETA: models
+   Ruta Completa: C:\Users\nhuay\Downloads\models
+   Total de archivos: 3
+   Archivos sospechosos: 0
+
+5. CARPETA: .tlauncher
+   Ruta Completa: C:\Users\nhuay\AppData\Roaming\.tlauncher
+   Total de archivos: 4
+   Archivos sospechosos: 2
+   Ejemplos de archivos:
+      - lua5.3.dll (404880 bytes)
+        Ruta: C:\Users\nhuay\AppData\Roaming\.tlauncher\lua5.3.dll
+      - tl-uninstall.exe (1826136 bytes)
+        Ruta: C:\Users\nhuay\AppData\Roaming\.tlauncher\tl-uninstall.exe
+
+6. CARPETA: CoA_p6gamelauncher_147919520
+   Ruta Completa: C:\Users\nhuay\AppData\Roaming\CoA_p6gamelauncher_147919520
+   Total de archivos: 6
+   Archivos sospechosos: 0
+
+7. CARPETA: czdownloader
+   Ruta Completa: C:\Users\nhuay\AppData\Roaming\czdownloader
+   Total de archivos: 1
+   Archivos sospechosos: 0
+
+8. CARPETA: DAEMON Tools Pro
+   Ruta Completa: C:\Users\nhuay\AppData\Roaming\DAEMON Tools Pro
+   Total de archivos: 1
+   Archivos sospechosos: 0
+
+9. CARPETA: EasyAntiCheat
+   Ruta Completa: C:\Users\nhuay\AppData\Roaming\EasyAntiCheat
+   Total de archivos: 3
+   Archivos sospechosos: 1
+   Ejemplos de archivos:
+      - anticheatlauncher.log (451469 bytes)
+        Ruta: C:\Users\nhuay\AppData\Roaming\EasyAntiCheat\anticheatlauncher.log
+
+10. CARPETA: UI Launcher
+   Ruta Completa: C:\Users\nhuay\AppData\Roaming\UI Launcher
+   Total de archivos: 2
+   Archivos sospechosos: 0
+
+11. CARPETA: ConnectedDevicesPlatform
+   Ruta Completa: C:\Users\nhuay\AppData\Local\ConnectedDevicesPlatform
+   Total de archivos: 6
+   Archivos sospechosos: 0
+
+12. CARPETA: d5_launcher
+   Ruta Completa: C:\Users\nhuay\AppData\Local\d5_launcher
+   Total de archivos: 1
+   Archivos sospechosos: 0
+
+13. CARPETA: EpicGamesLauncher
+   Ruta Completa: C:\Users\nhuay\AppData\Local\EpicGamesLauncher
+   Total de archivos: 1
+   Archivos sospechosos: 0
+
+14. CARPETA: hydralauncher-updater
+   Ruta Completa: C:\Users\nhuay\AppData\Local\hydralauncher-updater
+   Total de archivos: 1
+   Archivos sospechosos: 1
+   Ejemplos de archivos:
+      - installer.exe (154532620 bytes)
+        Ruta: C:\Users\nhuay\AppData\Local\hydralauncher-updater\installer.exe
+
+--------------------------------------------------------------------------------
+PROGRAMAS EJECUTADOS RECIENTEMENTE: 79
+--------------------------------------------------------------------------------
+1. Programa: 4KVIDEODOWNLOADERPLUS.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-30 14:20:01
+   Hace: 21.33 horas
+   Ruta: C:\Windows\Prefetch\4KVIDEODOWNLOADERPLUS.EXE-40647A6D.pf
+   Archivo Prefetch: 4KVIDEODOWNLOADERPLUS.EXE-40647A6D.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: Posible falso positivo, pero requiere atención: Contiene números sospechosos
+
+2. Programa: ACROCEF.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-29 15:06:45
+   Hace: 44.56 horas
+   Ruta: C:\Windows\Prefetch\ACROCEF.EXE-BD6343A7.pf
+   Archivo Prefetch: ACROCEF.EXE-BD6343A7.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: ACROCEF.EXE
+
+3. Programa: ACROCEF.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-29 15:06:45
+   Hace: 44.56 horas
+   Ruta: C:\Windows\Prefetch\ACROCEF.EXE-BD6343A8.pf
+   Archivo Prefetch: ACROCEF.EXE-BD6343A8.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: ACROCEF.EXE
+
+4. Programa: ACROCEF.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-29 15:06:45
+   Hace: 44.56 horas
+   Ruta: C:\Windows\Prefetch\ACROCEF.EXE-BD6343A9.pf
+   Archivo Prefetch: ACROCEF.EXE-BD6343A9.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: ACROCEF.EXE
+
+5. Programa: ACROCEF.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-29 15:06:45
+   Hace: 44.56 horas
+   Ruta: C:\Windows\Prefetch\ACROCEF.EXE-BD6343AF.pf
+   Archivo Prefetch: ACROCEF.EXE-BD6343AF.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: ACROCEF.EXE
+
+6. Programa: APPLICATIONFRAMEHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-09-13 08:53:36
+   Hace: 1154.77 horas
+   Ruta: C:\Windows\Prefetch\APPLICATIONFRAMEHOST.EXE-4CE44C83.pf
+   Archivo Prefetch: APPLICATIONFRAMEHOST.EXE-4CE44C83.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: APPLICATIONFRAMEHOST.EXE
+
+7. Programa: APPLICATIONFRAMEHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-31 09:29:46
+   Hace: 2.17 horas
+   Ruta: C:\Windows\Prefetch\APPLICATIONFRAMEHOST.EXE-8CE9A1EE.pf
+   Archivo Prefetch: APPLICATIONFRAMEHOST.EXE-8CE9A1EE.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: APPLICATIONFRAMEHOST.EXE
+
+8. Programa: AUDIODG.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-31 09:49:02
+   Hace: 1.85 horas
+   Ruta: C:\Windows\Prefetch\AUDIODG.EXE-AB22E9A6.pf
+   Archivo Prefetch: AUDIODG.EXE-AB22E9A6.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: AUDIODG.EXE
+
+9. Programa: COLABOXCHECKER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-29 22:17:04
+   Hace: 37.38 horas
+   Ruta: C:\Windows\Prefetch\COLABOXCHECKER.EXE-C544ADA8.pf
+   Archivo Prefetch: COLABOXCHECKER.EXE-C544ADA8.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: COLABOXCHECKER.EXE
+
+10. Programa: CONSENT.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-09-14 11:38:01
+   Hace: 1128.03 horas
+   Ruta: C:\Windows\Prefetch\CONSENT.EXE-2D674CE4.pf
+   Archivo Prefetch: CONSENT.EXE-2D674CE4.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: CONSENT.EXE
+
+11. Programa: DISCSOFTBUSSERVICEPRO.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-30 10:50:46
+   Hace: 24.82 horas
+   Ruta: C:\Windows\Prefetch\DISCSOFTBUSSERVICEPRO.EXE-05FBEBF8.pf
+   Archivo Prefetch: DISCSOFTBUSSERVICEPRO.EXE-05FBEBF8.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: DISCSOFTBUSSERVICEPRO.EXE
+
+12. Programa: DLLHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-30 11:26:34
+   Hace: 24.22 horas
+   Ruta: C:\Windows\Prefetch\DLLHOST.EXE-4EFFBABA.pf
+   Archivo Prefetch: DLLHOST.EXE-4EFFBABA.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: DLLHOST.EXE
+
+13. Programa: DLLHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-31 11:37:15
+   Hace: 0.05 horas
+   Ruta: C:\Windows\Prefetch\DLLHOST.EXE-7D5CE0CA.pf
+   Archivo Prefetch: DLLHOST.EXE-7D5CE0CA.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: DLLHOST.EXE
+
+14. Programa: DLLHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-30 11:52:15
+   Hace: 23.8 horas
+   Ruta: C:\Windows\Prefetch\DLLHOST.EXE-CE1932AE.pf
+   Archivo Prefetch: DLLHOST.EXE-CE1932AE.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: DLLHOST.EXE
+
+15. Programa: ELEVATION_SERVICE.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-31 10:14:23
+   Hace: 1.43 horas
+   Ruta: C:\Windows\Prefetch\ELEVATION_SERVICE.EXE-76357F22.pf
+   Archivo Prefetch: ELEVATION_SERVICE.EXE-76357F22.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: ELEVATION_SERVICE.EXE
+
+16. Programa: EXCEL.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-27 16:27:59
+   Hace: 91.2 horas
+   Ruta: C:\Windows\Prefetch\EXCEL.EXE-FE860005.pf
+   Archivo Prefetch: EXCEL.EXE-FE860005.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: EXCEL.EXE
+
+17. Programa: FILECOAUTH.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-31 09:32:42
+   Hace: 2.12 horas
+   Ruta: C:\Windows\Prefetch\FILECOAUTH.EXE-942C52CE.pf
+   Archivo Prefetch: FILECOAUTH.EXE-942C52CE.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: FILECOAUTH.EXE
+
+18. Programa: GAMEBARPRESENCEWRITER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-31 02:14:15
+   Hace: 9.43 horas
+   Ruta: C:\Windows\Prefetch\GAMEBARPRESENCEWRITER.EXE-5ADEE7C2.pf
+   Archivo Prefetch: GAMEBARPRESENCEWRITER.EXE-5ADEE7C2.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: GAMEBARPRESENCEWRITER.EXE
+
+19. Programa: GAMEINPUTSVC.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-31 02:24:20
+   Hace: 9.26 horas
+   Ruta: C:\Windows\Prefetch\GAMEINPUTSVC.EXE-94731803.pf
+   Archivo Prefetch: GAMEINPUTSVC.EXE-94731803.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: GAMEINPUTSVC.EXE
+
+20. Programa: GET
+   Fuente: Prefetch
+   Última ejecución: 2025-10-30 00:01:50
+   Hace: 35.64 horas
+   Ruta: C:\Windows\Prefetch\GET-GRAPHICS-OFFSETS32.EXE-53FB181F.pf
+   Archivo Prefetch: GET-GRAPHICS-OFFSETS32.EXE-53FB181F.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: GET
+
+21. Programa: GET
+   Fuente: Prefetch
+   Última ejecución: 2025-10-30 00:01:50
+   Hace: 35.64 horas
+   Ruta: C:\Windows\Prefetch\GET-GRAPHICS-OFFSETS64.EXE-AAFDE0E0.pf
+   Archivo Prefetch: GET-GRAPHICS-OFFSETS64.EXE-AAFDE0E0.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: GET
+
+22. Programa: GOOGLEPLAYGAMESSERVICES.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-30 19:51:33
+   Hace: 15.81 horas
+   Ruta: C:\Windows\Prefetch\GOOGLEPLAYGAMESSERVICES.EXE-F45D145F.pf
+   Archivo Prefetch: GOOGLEPLAYGAMESSERVICES.EXE-F45D145F.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: GOOGLEPLAYGAMESSERVICES.EXE
+
+23. Programa: GOOGLEPLAYGAMESSERVICESINSTAL
+   Fuente: Prefetch
+   Última ejecución: 2025-10-30 19:51:02
+   Hace: 15.82 horas
+   Ruta: C:\Windows\Prefetch\GOOGLEPLAYGAMESSERVICESINSTAL-300F036C.pf
+   Archivo Prefetch: GOOGLEPLAYGAMESSERVICESINSTAL-300F036C.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: GOOGLEPLAYGAMESSERVICESINSTAL
+
+24. Programa: GOOGLEPLAYGAMESSERVICESINSTAL
+   Fuente: Prefetch
+   Última ejecución: 2025-10-30 19:50:48
+   Hace: 15.82 horas
+   Ruta: C:\Windows\Prefetch\GOOGLEPLAYGAMESSERVICESINSTAL-363F1583.pf
+   Archivo Prefetch: GOOGLEPLAYGAMESSERVICESINSTAL-363F1583.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: GOOGLEPLAYGAMESSERVICESINSTAL
+
+25. Programa: GPUCHECK.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-30 00:01:49
+   Hace: 35.64 horas
+   Ruta: C:\Windows\Prefetch\GPUCHECK.EXE-85AC7ABF.pf
+   Archivo Prefetch: GPUCHECK.EXE-85AC7ABF.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: GPUCHECK.EXE
+
+26. Programa: GRAPHICS
+   Fuente: Prefetch
+   Última ejecución: 2025-10-30 00:01:49
+   Hace: 35.64 horas
+   Ruta: C:\Windows\Prefetch\GRAPHICS-CHECK.EXE-8BD27249.pf
+   Archivo Prefetch: GRAPHICS-CHECK.EXE-8BD27249.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: GRAPHICS
+
+27. Programa: GTA5_BE.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-24 15:15:31
+   Hace: 164.41 horas
+   Ruta: C:\Windows\Prefetch\GTA5_BE.EXE-1E02BCEA.pf
+   Archivo Prefetch: GTA5_BE.EXE-1E02BCEA.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: GTA5_BE.EXE
+
+28. Programa: GTA5_ENHANCED_BE.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-20 15:20:08
+   Hace: 260.33 horas
+   Ruta: C:\Windows\Prefetch\GTA5_ENHANCED_BE.EXE-86061C41.pf
+   Archivo Prefetch: GTA5_ENHANCED_BE.EXE-86061C41.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: GTA5_ENHANCED_BE.EXE
+
+29. Programa: JHI_SERVICE.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-31 09:31:22
+   Hace: 2.14 horas
+   Ruta: C:\Windows\Prefetch\JHI_SERVICE.EXE-72BDAE19.pf
+   Archivo Prefetch: JHI_SERVICE.EXE-72BDAE19.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: JHI_SERVICE.EXE
+
+30. Programa: L4D2_TOKEN_GENERATOR.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-26 16:11:00
+   Hace: 115.48 horas
+   Ruta: C:\Windows\Prefetch\L4D2_TOKEN_GENERATOR.EXE-5BF86CEE.pf
+   Archivo Prefetch: L4D2_TOKEN_GENERATOR.EXE-5BF86CEE.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: L4D2_TOKEN_GENERATOR.EXE
+
+31. Programa: LDPLAYER9_ES_1009_LD.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-29 23:02:01
+   Hace: 36.63 horas
+   Ruta: C:\Windows\Prefetch\LDPLAYER9_ES_1009_LD.EXE-A098F75A.pf
+   Archivo Prefetch: LDPLAYER9_ES_1009_LD.EXE-A098F75A.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: LDPLAYER9_ES_1009_LD.EXE
+
+32. Programa: MOUSOCOREWORKER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-31 10:13:28
+   Hace: 1.44 horas
+   Ruta: C:\Windows\Prefetch\MOUSOCOREWORKER.EXE-44A01CE7.pf
+   Archivo Prefetch: MOUSOCOREWORKER.EXE-44A01CE7.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: MOUSOCOREWORKER.EXE
+
+33. Programa: MPCMDRUN.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-31 09:32:20
+   Hace: 2.13 horas
+   Ruta: C:\Windows\Prefetch\MPCMDRUN.EXE-523CD03F.pf
+   Archivo Prefetch: MPCMDRUN.EXE-523CD03F.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: MPCMDRUN.EXE
+
+34. Programa: NETCORERUN.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-31 10:49:15
+   Hace: 0.85 horas
+   Ruta: C:\Windows\Prefetch\NETCORERUN.EXE-F0095479.pf
+   Archivo Prefetch: NETCORERUN.EXE-F0095479.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: NETCORERUN.EXE
+
+35. Programa: OFFICECLICKTORUN.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-20 02:55:59
+   Hace: 272.73 horas
+   Ruta: C:\Windows\Prefetch\OFFICECLICKTORUN.EXE-F5CCE208.pf
+   Archivo Prefetch: OFFICECLICKTORUN.EXE-F5CCE208.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: OFFICECLICKTORUN.EXE
+
+36. Programa: PACKETTRACER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-25 07:56:16
+   Hace: 147.73 horas
+   Ruta: C:\Windows\Prefetch\PACKETTRACER.EXE-CFB12143.pf
+   Archivo Prefetch: PACKETTRACER.EXE-CFB12143.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: PACKETTRACER.EXE
+
+37. Programa: PHOTOS.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-30 23:13:05
+   Hace: 12.45 horas
+   Ruta: C:\Windows\Prefetch\PHOTOS.EXE-B4F89A48.pf
+   Archivo Prefetch: PHOTOS.EXE-B4F89A48.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: PHOTOS.EXE
+
+38. Programa: PHOTOS.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-09-02 08:21:19
+   Hace: 1419.31 horas
+   Ruta: C:\Windows\Prefetch\PHOTOS.EXE-DD663DCD.pf
+   Archivo Prefetch: PHOTOS.EXE-DD663DCD.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: PHOTOS.EXE
+
+39. Programa: PLEX UPDATE SERVICE.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-31 09:31:29
+   Hace: 2.14 horas
+   Ruta: C:\Windows\Prefetch\PLEX UPDATE SERVICE.EXE-A5CD87FD.pf
+   Archivo Prefetch: PLEX UPDATE SERVICE.EXE-A5CD87FD.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: PLEX UPDATE SERVICE.EXE
+
+40. Programa: QTWEBENGINEPROCESS.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-31 09:46:22
+   Hace: 1.89 horas
+   Ruta: C:\Windows\Prefetch\QTWEBENGINEPROCESS.EXE-2AC5276A.pf
+   Archivo Prefetch: QTWEBENGINEPROCESS.EXE-2AC5276A.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: QTWEBENGINEPROCESS.EXE
+
+41. Programa: QTWEBENGINEPROCESS.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-30 14:31:59
+   Hace: 21.13 horas
+   Ruta: C:\Windows\Prefetch\QTWEBENGINEPROCESS.EXE-90815111.pf
+   Archivo Prefetch: QTWEBENGINEPROCESS.EXE-90815111.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: QTWEBENGINEPROCESS.EXE
+
+42. Programa: QTWEBENGINEPROCESS.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-29 22:46:34
+   Hace: 36.89 horas
+   Ruta: C:\Windows\Prefetch\QTWEBENGINEPROCESS.EXE-F233F807.pf
+   Archivo Prefetch: QTWEBENGINEPROCESS.EXE-F233F807.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: QTWEBENGINEPROCESS.EXE
+
+43. Programa: QTWEBENGINEPROCESS.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-29 22:46:34
+   Hace: 36.89 horas
+   Ruta: C:\Windows\Prefetch\QTWEBENGINEPROCESS.EXE-F233F80E.pf
+   Archivo Prefetch: QTWEBENGINEPROCESS.EXE-F233F80E.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: QTWEBENGINEPROCESS.EXE
+
+44. Programa: RUNDLL32.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-31 10:55:41
+   Hace: 0.74 horas
+   Ruta: C:\Windows\Prefetch\RUNDLL32.EXE-36D847E4.pf
+   Archivo Prefetch: RUNDLL32.EXE-36D847E4.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: RUNDLL32.EXE
+
+45. Programa: RUNDLL32.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-31 02:24:20
+   Hace: 9.26 horas
+   Ruta: C:\Windows\Prefetch\RUNDLL32.EXE-3ADC3BA7.pf
+   Archivo Prefetch: RUNDLL32.EXE-3ADC3BA7.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: RUNDLL32.EXE
+
+46. Programa: RUNDLL32.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-31 09:33:38
+   Hace: 2.11 horas
+   Ruta: C:\Windows\Prefetch\RUNDLL32.EXE-75313621.pf
+   Archivo Prefetch: RUNDLL32.EXE-75313621.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: RUNDLL32.EXE
+
+47. Programa: RUNONCE.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-31 09:29:43
+   Hace: 2.17 horas
+   Ruta: C:\Windows\Prefetch\RUNONCE.EXE-FB4EF753.pf
+   Archivo Prefetch: RUNONCE.EXE-FB4EF753.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: RUNONCE.EXE
+
+48. Programa: RUNTIMEBROKER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-29 12:41:30
+   Hace: 46.98 horas
+   Ruta: C:\Windows\Prefetch\RUNTIMEBROKER.EXE-28060877.pf
+   Archivo Prefetch: RUNTIMEBROKER.EXE-28060877.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: RUNTIMEBROKER.EXE
+
+49. Programa: RUNTIMEBROKER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-31 11:38:39
+   Hace: 0.02 horas
+   Ruta: C:\Windows\Prefetch\RUNTIMEBROKER.EXE-2C5A250C.pf
+   Archivo Prefetch: RUNTIMEBROKER.EXE-2C5A250C.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: RUNTIMEBROKER.EXE
+
+50. Programa: RUNTIMEBROKER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-31 09:32:14
+   Hace: 2.13 horas
+   Ruta: C:\Windows\Prefetch\RUNTIMEBROKER.EXE-4163B14B.pf
+   Archivo Prefetch: RUNTIMEBROKER.EXE-4163B14B.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: RUNTIMEBROKER.EXE
+
+51. Programa: RUNTIMEBROKER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-30 10:53:08
+   Hace: 24.78 horas
+   Ruta: C:\Windows\Prefetch\RUNTIMEBROKER.EXE-4551A062.pf
+   Archivo Prefetch: RUNTIMEBROKER.EXE-4551A062.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: RUNTIMEBROKER.EXE
+
+52. Programa: RUNTIMEBROKER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-31 09:32:51
+   Hace: 2.12 horas
+   Ruta: C:\Windows\Prefetch\RUNTIMEBROKER.EXE-46677606.pf
+   Archivo Prefetch: RUNTIMEBROKER.EXE-46677606.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: RUNTIMEBROKER.EXE
+
+53. Programa: RUNTIMEBROKER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-30 11:43:50
+   Hace: 23.94 horas
+   Ruta: C:\Windows\Prefetch\RUNTIMEBROKER.EXE-4D3D38F0.pf
+   Archivo Prefetch: RUNTIMEBROKER.EXE-4D3D38F0.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: RUNTIMEBROKER.EXE
+
+54. Programa: RUNTIMEBROKER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-31 09:29:07
+   Hace: 2.18 horas
+   Ruta: C:\Windows\Prefetch\RUNTIMEBROKER.EXE-556364D4.pf
+   Archivo Prefetch: RUNTIMEBROKER.EXE-556364D4.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: RUNTIMEBROKER.EXE
+
+55. Programa: RUNTIMEBROKER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-31 09:29:47
+   Hace: 2.17 horas
+   Ruta: C:\Windows\Prefetch\RUNTIMEBROKER.EXE-8228A9CD.pf
+   Archivo Prefetch: RUNTIMEBROKER.EXE-8228A9CD.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: RUNTIMEBROKER.EXE
+
+56. Programa: RUNTIMEBROKER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-31 02:14:16
+   Hace: 9.43 horas
+   Ruta: C:\Windows\Prefetch\RUNTIMEBROKER.EXE-92982E33.pf
+   Archivo Prefetch: RUNTIMEBROKER.EXE-92982E33.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: RUNTIMEBROKER.EXE
+
+57. Programa: RUNTIMEBROKER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-30 20:26:17
+   Hace: 15.23 horas
+   Ruta: C:\Windows\Prefetch\RUNTIMEBROKER.EXE-967B2208.pf
+   Archivo Prefetch: RUNTIMEBROKER.EXE-967B2208.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: RUNTIMEBROKER.EXE
+
+58. Programa: RUNTIMEBROKER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-31 09:29:07
+   Hace: 2.18 horas
+   Ruta: C:\Windows\Prefetch\RUNTIMEBROKER.EXE-E193A8DD.pf
+   Archivo Prefetch: RUNTIMEBROKER.EXE-E193A8DD.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: RUNTIMEBROKER.EXE
+
+59. Programa: RUNTIMEBROKER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-31 11:18:28
+   Hace: 0.36 horas
+   Ruta: C:\Windows\Prefetch\RUNTIMEBROKER.EXE-EC707770.pf
+   Archivo Prefetch: RUNTIMEBROKER.EXE-EC707770.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: RUNTIMEBROKER.EXE
+
+60. Programa: SERVICE.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-30 12:58:23
+   Hace: 22.69 horas
+   Ruta: C:\Windows\Prefetch\SERVICE.EXE-166CEBD0.pf
+   Archivo Prefetch: SERVICE.EXE-166CEBD0.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: SERVICE.EXE
+
+61. Programa: SERVICE.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-09-07 17:34:28
+   Hace: 1290.09 horas
+   Ruta: C:\Windows\Prefetch\SERVICE.EXE-9E894B95.pf
+   Archivo Prefetch: SERVICE.EXE-9E894B95.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: SERVICE.EXE
+
+62. Programa: SHAREIT.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-30 11:23:29
+   Hace: 24.28 horas
+   Ruta: C:\Windows\Prefetch\SHAREIT.EXE-5D25CCCE.pf
+   Archivo Prefetch: SHAREIT.EXE-5D25CCCE.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: SHAREIT.EXE
+
+63. Programa: SHELLEXPERIENCEHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-09-12 12:32:33
+   Hace: 1175.13 horas
+   Ruta: C:\Windows\Prefetch\SHELLEXPERIENCEHOST.EXE-05695930.pf
+   Archivo Prefetch: SHELLEXPERIENCEHOST.EXE-05695930.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: SHELLEXPERIENCEHOST.EXE
+
+64. Programa: SHELLEXPERIENCEHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-31 09:32:50
+   Hace: 2.12 horas
+   Ruta: C:\Windows\Prefetch\SHELLEXPERIENCEHOST.EXE-40B91F33.pf
+   Archivo Prefetch: SHELLEXPERIENCEHOST.EXE-40B91F33.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: SHELLEXPERIENCEHOST.EXE
+
+65. Programa: STARTMENUEXPERIENCEHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-31 09:29:07
+   Hace: 2.18 horas
+   Ruta: C:\Windows\Prefetch\STARTMENUEXPERIENCEHOST.EXE-C9399E50.pf
+   Archivo Prefetch: STARTMENUEXPERIENCEHOST.EXE-C9399E50.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: STARTMENUEXPERIENCEHOST.EXE
+
+66. Programa: UNITY.LICENSING.CLIENT.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-31 10:37:34
+   Hace: 1.04 horas
+   Ruta: C:\Windows\Prefetch\UNITY.LICENSING.CLIENT.EXE-AADE65B7.pf
+   Archivo Prefetch: UNITY.LICENSING.CLIENT.EXE-AADE65B7.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: UNITY.LICENSING.CLIENT.EXE
+
+67. Programa: UNITYAUTOQUITTER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-31 10:55:02
+   Hace: 0.75 horas
+   Ruta: C:\Windows\Prefetch\UNITYAUTOQUITTER.EXE-4658AAA3.pf
+   Archivo Prefetch: UNITYAUTOQUITTER.EXE-4658AAA3.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: UNITYAUTOQUITTER.EXE
+
+68. Programa: VSCE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-30 16:46:28
+   Hace: 18.89 horas
+   Ruta: C:\Windows\Prefetch\VSCE-SIGN.EXE-FA5D53BF.pf
+   Archivo Prefetch: VSCE-SIGN.EXE-FA5D53BF.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: VSCE
+
+69. Programa: VSWHERE.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-31 10:54:15
+   Hace: 0.76 horas
+   Ruta: C:\Windows\Prefetch\VSWHERE.EXE-DB1BD37D.pf
+   Archivo Prefetch: VSWHERE.EXE-DB1BD37D.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: VSWHERE.EXE
+
+70. Programa: WHATSAPP.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-09-13 21:34:30
+   Hace: 1142.09 horas
+   Ruta: C:\Windows\Prefetch\WHATSAPP.EXE-016F5628.pf
+   Archivo Prefetch: WHATSAPP.EXE-016F5628.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: WHATSAPP.EXE
+
+71. Programa: WHATSAPP.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-09-26 01:25:09
+   Hace: 850.25 horas
+   Ruta: C:\Windows\Prefetch\WHATSAPP.EXE-5A8902B3.pf
+   Archivo Prefetch: WHATSAPP.EXE-5A8902B3.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: WHATSAPP.EXE
+
+72. Programa: WHATSAPP.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-31 10:36:20
+   Hace: 1.06 horas
+   Ruta: C:\Windows\Prefetch\WHATSAPP.EXE-A8A823E9.pf
+   Archivo Prefetch: WHATSAPP.EXE-A8A823E9.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: WHATSAPP.EXE
+
+73. Programa: WHATSAPP.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-05-23 18:41:56
+   Hace: 3856.97 horas
+   Ruta: C:\Windows\Prefetch\WHATSAPP.EXE-D0396417.pf
+   Archivo Prefetch: WHATSAPP.EXE-D0396417.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: WHATSAPP.EXE
+
+74. Programa: WHATSAPP.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-06-28 09:27:11
+   Hace: 3002.21 horas
+   Ruta: C:\Windows\Prefetch\WHATSAPP.EXE-EF577EFB.pf
+   Archivo Prefetch: WHATSAPP.EXE-EF577EFB.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: WHATSAPP.EXE
+
+75. Programa: WHATSAPP.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-08-11 15:17:21
+   Hace: 1940.38 horas
+   Ruta: C:\Windows\Prefetch\WHATSAPP.EXE-FC1D97DC.pf
+   Archivo Prefetch: WHATSAPP.EXE-FC1D97DC.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: WHATSAPP.EXE
+
+76. Programa: WHERE.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-31 11:01:06
+   Hace: 0.65 horas
+   Ruta: C:\Windows\Prefetch\WHERE.EXE-8DCB25CC.pf
+   Archivo Prefetch: WHERE.EXE-8DCB25CC.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: WHERE.EXE
+
+77. Programa: WINWORD.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-30 19:21:01
+   Hace: 16.32 horas
+   Ruta: C:\Windows\Prefetch\WINWORD.EXE-AB6EC2FA.pf
+   Archivo Prefetch: WINWORD.EXE-AB6EC2FA.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: WINWORD.EXE
+
+78. Programa: XAMPP
+   Fuente: Prefetch
+   Última ejecución: 2025-09-19 14:36:37
+   Hace: 1005.06 horas
+   Ruta: C:\Windows\Prefetch\XAMPP-CONTROL.EXE-1CEAD3C2.pf
+   Archivo Prefetch: XAMPP-CONTROL.EXE-1CEAD3C2.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: XAMPP
+
+79. Programa: ZOOM.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-10-27 17:10:00
+   Hace: 90.5 horas
+   Ruta: C:\Windows\Prefetch\ZOOM.EXE-BCE8A0C6.pf
+   Archivo Prefetch: ZOOM.EXE-BCE8A0C6.pf
+   Severidad: HIGH
+   Confianza: ALTA
+   Análisis: Programa sospechoso: ZOOM.EXE
+
+--------------------------------------------------------------------------------
+ARCHIVOS CFG CON COMANDOS SOSPECHOSOS: 32
+--------------------------------------------------------------------------------
+1. Archivo: 360controller.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\360controller.cfg
+   Comandos prohibidos: 11
+      Línea 1: unbindall				// Prevent mouse/keyboard control when gamepad is in use (to prevent autoaim exploit)
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 23: joy_autoaimdampenrange 0.85
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 24: joy_autoaimdampen 0.5
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 31: joy_autoaimdampen 0.3
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 32: joy_autoaimdampenrange 0.85
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 41: bind "R_TRIGGER" "+attack"			// RT - Main weapon - Primary trigger
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 42: bind "L_TRIGGER" "+attack2"			// LT - Melee
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 65: cmd2 bind "R_TRIGGER" "+attack"			// RT - Main weapon - Primary trigger
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 66: cmd2 bind "L_TRIGGER" "+attack2"			// LT - Melee
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 68: cmd2 bind "L_SHOULDER" "toggle_duck"			// LB - Duck - is also used to give objects to people.
+         Comando: give
+         Severidad: MEDIUM
+         Razón: Dar items sin restricciones
+      Línea 83: sk_autoaim_mode 2
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+
+2. Archivo: autoexec.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\autoexec.cfg
+   Comandos prohibidos: 1
+      Línea 4: cl_interp 0.0000
+         Comando: cl_interp 0
+         Severidad: MEDIUM
+         Razón: Interpolación extremadamente baja
+
+3. Archivo: config.360.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\config.360.cfg
+   Comandos prohibidos: 4
+      Línea 51: joy_autoaimdampen 0.3
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 52: joy_autoaimdampenrange 0.85
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 57: exec joy_preset_1.cfg
+         Comando: exec
+         Severidad: LOW
+         Razón: Ejecutar archivos externos (puede ser legítimo)
+      Línea 59: cl_mouselook 0					// turn off mouse look to enable autoaim
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+
+4. Archivo: config.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\config.cfg
+   Comandos prohibidos: 10
+      Línea 39: bind "MOUSE1" "+attack"
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 40: bind "MOUSE2" "+attack2"
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 91: cl_autoaim "1"
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 92: cl_autoaim2 "1"
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 153: joy_autoaimdampen "0"
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 154: joy_autoaimdampenrange "0"
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 263: sk_autoaim_mode "1"
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 287: sv_noclipaccelerate "5"
+         Comando: noclip
+         Severidad: CRITICAL
+         Razón: Atravesar paredes y volar
+      Línea 288: sv_noclipspeed "5"
+         Comando: noclip
+         Severidad: CRITICAL
+         Razón: Atravesar paredes y volar
+      Línea 292: sv_specnoclip "1"
+         Comando: noclip
+         Severidad: CRITICAL
+         Razón: Atravesar paredes y volar
+
+5. Archivo: config_default.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\config_default.cfg
+   Comandos prohibidos: 2
+      Línea 45: bind "MOUSE1" "+attack"
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 46: bind "MOUSE2" "+attack2"
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+
+6. Archivo: joy_preset_1.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\joy_preset_1.cfg
+   Comandos prohibidos: 3
+      Línea 7: bind "R_TRIGGER" "+attack"			// RT - Main weapon - Primary trigger
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 8: bind "L_TRIGGER" "+attack2"			// LT - Melee
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 10: bind "L_SHOULDER" "+duck"			// LB - Drop - is also used to give objects to people.
+         Comando: give
+         Severidad: MEDIUM
+         Razón: Dar items sin restricciones
+
+7. Archivo: joy_preset_2.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\joy_preset_2.cfg
+   Comandos prohibidos: 3
+      Línea 7: bind "R_TRIGGER" "+attack2"			// RT - Main weapon - Primary trigger
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 8: bind "L_TRIGGER" "+attack"			// LT - Melee
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 10: bind "L_SHOULDER" "+duck"			// LB - Drop - is also used to give objects to people.
+         Comando: give
+         Severidad: MEDIUM
+         Razón: Dar items sin restricciones
+
+8. Archivo: joy_preset_3.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\joy_preset_3.cfg
+   Comandos prohibidos: 2
+      Línea 7: bind "R_TRIGGER" "+attack"			// RT - Main weapon - Primary trigger
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 9: bind "R_SHOULDER" "+attack2"		// RB - Melee
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+
+9. Archivo: joy_preset_4.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\joy_preset_4.cfg
+   Comandos prohibidos: 2
+      Línea 7: bind "R_TRIGGER" "+attack"			// RT - Main weapon - Primary trigger
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 8: bind "L_TRIGGER" "+attack2"			// LT - Melee
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+
+10. Archivo: perf.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\perf.cfg
+   Comandos prohibidos: 32
+      Línea 2: director_stop
+         Comando: director_
+         Severidad: HIGH
+         Razón: Manipulación del Director AI
+      Línea 4: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 5: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 6: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 7: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 8: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 9: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 10: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 11: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 12: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 13: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 14: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 15: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 16: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 17: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 18: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 19: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 20: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 21: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 22: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 23: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 24: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 25: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 26: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 27: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 28: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 30: z_spawn mob
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 31: z_spawn boomer
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 32: z_spawn boomer
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 33: z_spawn boomer
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 34: z_spawn boomer
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 39: sb_flashlight 1
+         Comando: sb_
+         Severidad: MEDIUM
+         Razón: Comandos de bots supervivientes
+
+11. Archivo: playtest.360.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\playtest.360.cfg
+   Comandos prohibidos: 2
+      Línea 7: sb_perf_collect 1
+         Comando: sb_
+         Severidad: MEDIUM
+         Razón: Comandos de bots supervivientes
+      Línea 8: sb_perf_dump_low 29
+         Comando: sb_
+         Severidad: MEDIUM
+         Razón: Comandos de bots supervivientes
+
+12. Archivo: screenshots.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\screenshots.cfg
+   Comandos prohibidos: 2
+      Línea 1: god 1
+         Comando: god
+         Severidad: CRITICAL
+         Razón: Modo invencibilidad
+      Línea 11: sv_infinite_ammo 1
+         Comando: sv_infinite_ammo
+         Severidad: HIGH
+         Razón: Munición infinita
+
+13. Archivo: screenshots_undo.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\screenshots_undo.cfg
+   Comandos prohibidos: 4
+      Línea 1: god 0
+         Comando: god
+         Severidad: CRITICAL
+         Razón: Modo invencibilidad
+      Línea 5: developer 1
+         Comando: developer 1
+         Severidad: LOW
+         Razón: Modo desarrollador (puede mostrar información extra)
+      Línea 10: bind mouse2 +attack2
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 11: sv_infinite_ammo 0
+         Comando: sv_infinite_ammo
+         Severidad: HIGH
+         Razón: Munición infinita
+
+14. Archivo: test_end.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\test_end.cfg
+   Comandos prohibidos: 1
+      Línea 4: developer 1
+         Comando: developer 1
+         Severidad: LOW
+         Razón: Modo desarrollador (puede mostrar información extra)
+
+15. Archivo: test_start.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\test_start.cfg
+   Comandos prohibidos: 2
+      Línea 1: sv_cheats 1
+         Comando: sv_cheats 1
+         Severidad: CRITICAL
+         Razón: Habilita comandos de trampa
+      Línea 2: director_stop
+         Comando: director_
+         Severidad: HIGH
+         Razón: Manipulación del Director AI
+
+16. Archivo: undo360controller.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\undo360controller.cfg
+   Comandos prohibidos: 2
+      Línea 4: sk_autoaim_mode 0		// Turn off autoaim
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 5: exec config_default.cfg		// Restore default controls
+         Comando: exec
+         Severidad: LOW
+         Razón: Ejecutar archivos externos (puede ser legítimo)
+
+17. Archivo: 360controller.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\360controller.cfg
+   Comandos prohibidos: 11
+      Línea 1: unbindall				// Prevent mouse/keyboard control when gamepad is in use (to prevent autoaim exploit)
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 23: joy_autoaimdampenrange 0.85
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 24: joy_autoaimdampen 0.5
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 31: joy_autoaimdampen 0.3
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 32: joy_autoaimdampenrange 0.85
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 41: bind "R_TRIGGER" "+attack"			// RT - Main weapon - Primary trigger
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 42: bind "L_TRIGGER" "+attack2"			// LT - Melee
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 65: cmd2 bind "R_TRIGGER" "+attack"			// RT - Main weapon - Primary trigger
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 66: cmd2 bind "L_TRIGGER" "+attack2"			// LT - Melee
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 68: cmd2 bind "L_SHOULDER" "toggle_duck"			// LB - Duck - is also used to give objects to people.
+         Comando: give
+         Severidad: MEDIUM
+         Razón: Dar items sin restricciones
+      Línea 83: sk_autoaim_mode 2
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+
+18. Archivo: autoexec.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\autoexec.cfg
+   Comandos prohibidos: 1
+      Línea 4: cl_interp 0.0000
+         Comando: cl_interp 0
+         Severidad: MEDIUM
+         Razón: Interpolación extremadamente baja
+
+19. Archivo: config.360.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\config.360.cfg
+   Comandos prohibidos: 4
+      Línea 51: joy_autoaimdampen 0.3
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 52: joy_autoaimdampenrange 0.85
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 57: exec joy_preset_1.cfg
+         Comando: exec
+         Severidad: LOW
+         Razón: Ejecutar archivos externos (puede ser legítimo)
+      Línea 59: cl_mouselook 0					// turn off mouse look to enable autoaim
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+
+20. Archivo: config.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\config.cfg
+   Comandos prohibidos: 10
+      Línea 39: bind "MOUSE1" "+attack"
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 40: bind "MOUSE2" "+attack2"
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 91: cl_autoaim "1"
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 92: cl_autoaim2 "1"
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 153: joy_autoaimdampen "0"
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 154: joy_autoaimdampenrange "0"
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 263: sk_autoaim_mode "1"
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 287: sv_noclipaccelerate "5"
+         Comando: noclip
+         Severidad: CRITICAL
+         Razón: Atravesar paredes y volar
+      Línea 288: sv_noclipspeed "5"
+         Comando: noclip
+         Severidad: CRITICAL
+         Razón: Atravesar paredes y volar
+      Línea 292: sv_specnoclip "1"
+         Comando: noclip
+         Severidad: CRITICAL
+         Razón: Atravesar paredes y volar
+
+21. Archivo: config_default.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\config_default.cfg
+   Comandos prohibidos: 2
+      Línea 45: bind "MOUSE1" "+attack"
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 46: bind "MOUSE2" "+attack2"
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+
+22. Archivo: joy_preset_1.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\joy_preset_1.cfg
+   Comandos prohibidos: 3
+      Línea 7: bind "R_TRIGGER" "+attack"			// RT - Main weapon - Primary trigger
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 8: bind "L_TRIGGER" "+attack2"			// LT - Melee
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 10: bind "L_SHOULDER" "+duck"			// LB - Drop - is also used to give objects to people.
+         Comando: give
+         Severidad: MEDIUM
+         Razón: Dar items sin restricciones
+
+23. Archivo: joy_preset_2.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\joy_preset_2.cfg
+   Comandos prohibidos: 3
+      Línea 7: bind "R_TRIGGER" "+attack2"			// RT - Main weapon - Primary trigger
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 8: bind "L_TRIGGER" "+attack"			// LT - Melee
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 10: bind "L_SHOULDER" "+duck"			// LB - Drop - is also used to give objects to people.
+         Comando: give
+         Severidad: MEDIUM
+         Razón: Dar items sin restricciones
+
+24. Archivo: joy_preset_3.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\joy_preset_3.cfg
+   Comandos prohibidos: 2
+      Línea 7: bind "R_TRIGGER" "+attack"			// RT - Main weapon - Primary trigger
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 9: bind "R_SHOULDER" "+attack2"		// RB - Melee
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+
+25. Archivo: joy_preset_4.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\joy_preset_4.cfg
+   Comandos prohibidos: 2
+      Línea 7: bind "R_TRIGGER" "+attack"			// RT - Main weapon - Primary trigger
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 8: bind "L_TRIGGER" "+attack2"			// LT - Melee
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+
+26. Archivo: perf.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\perf.cfg
+   Comandos prohibidos: 32
+      Línea 2: director_stop
+         Comando: director_
+         Severidad: HIGH
+         Razón: Manipulación del Director AI
+      Línea 4: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 5: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 6: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 7: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 8: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 9: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 10: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 11: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 12: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 13: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 14: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 15: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 16: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 17: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 18: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 19: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 20: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 21: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 22: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 23: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 24: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 25: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 26: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 27: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 28: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 30: z_spawn mob
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 31: z_spawn boomer
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 32: z_spawn boomer
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 33: z_spawn boomer
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 34: z_spawn boomer
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 39: sb_flashlight 1
+         Comando: sb_
+         Severidad: MEDIUM
+         Razón: Comandos de bots supervivientes
+
+27. Archivo: playtest.360.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\playtest.360.cfg
+   Comandos prohibidos: 2
+      Línea 7: sb_perf_collect 1
+         Comando: sb_
+         Severidad: MEDIUM
+         Razón: Comandos de bots supervivientes
+      Línea 8: sb_perf_dump_low 29
+         Comando: sb_
+         Severidad: MEDIUM
+         Razón: Comandos de bots supervivientes
+
+28. Archivo: screenshots.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\screenshots.cfg
+   Comandos prohibidos: 2
+      Línea 1: god 1
+         Comando: god
+         Severidad: CRITICAL
+         Razón: Modo invencibilidad
+      Línea 11: sv_infinite_ammo 1
+         Comando: sv_infinite_ammo
+         Severidad: HIGH
+         Razón: Munición infinita
+
+29. Archivo: screenshots_undo.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\screenshots_undo.cfg
+   Comandos prohibidos: 4
+      Línea 1: god 0
+         Comando: god
+         Severidad: CRITICAL
+         Razón: Modo invencibilidad
+      Línea 5: developer 1
+         Comando: developer 1
+         Severidad: LOW
+         Razón: Modo desarrollador (puede mostrar información extra)
+      Línea 10: bind mouse2 +attack2
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 11: sv_infinite_ammo 0
+         Comando: sv_infinite_ammo
+         Severidad: HIGH
+         Razón: Munición infinita
+
+30. Archivo: test_end.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\test_end.cfg
+   Comandos prohibidos: 1
+      Línea 4: developer 1
+         Comando: developer 1
+         Severidad: LOW
+         Razón: Modo desarrollador (puede mostrar información extra)
+
+31. Archivo: test_start.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\test_start.cfg
+   Comandos prohibidos: 2
+      Línea 1: sv_cheats 1
+         Comando: sv_cheats 1
+         Severidad: CRITICAL
+         Razón: Habilita comandos de trampa
+      Línea 2: director_stop
+         Comando: director_
+         Severidad: HIGH
+         Razón: Manipulación del Director AI
+
+32. Archivo: undo360controller.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\undo360controller.cfg
+   Comandos prohibidos: 2
+      Línea 4: sk_autoaim_mode 0		// Turn off autoaim
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 5: exec config_default.cfg		// Restore default controls
+         Comando: exec
+         Severidad: LOW
+         Razón: Ejecutar archivos externos (puede ser legítimo)
+
+--------------------------------------------------------------------------------
+MODS EN VERSUS: 1
+--------------------------------------------------------------------------------
+1. Carpeta de mods en Versus detectada: addons
+   Severidad: HIGH
+   Carpeta: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\addons
+
+--------------------------------------------------------------------------------
+TOKEN DE JUGADOR
+--------------------------------------------------------------------------------
+Jugador: Jugador Verificado
+Torneo: Torneo L4D2
+Estado: Token válido y verificado
+
+
+================================================================================
+⚠️ INFORMACIÓN SENSIBLE - DIRECCIONES IP (PRIVADO)
+================================================================================
+
+⚠️ ADVERTENCIA: Esta sección contiene información privada.
+   NO compartir esta sección en streams públicos o capturas de pantalla.
+   Las IPs están al final del archivo para facilitar la censura.
+
+IP Externa: 179.6.171.131
+IP Local: 26.245.48.174
+
+================================================================================
+FIN DEL REPORTE
+================================================================================

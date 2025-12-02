@@ -1,0 +1,68 @@
+# 🛡️ INSTRUCCIONES PARA EVITAR QUE EL ANTIVIRUS BORRE LOS EJECUTABLES
+
+## ⚠️ PROBLEMA COMÚN
+Los antivirus pueden marcar estos ejecutables como "sospechosos" porque:
+- Acceden a información del sistema (normal para un verificador)
+- Escanean procesos en ejecución
+- Obtienen información de hardware (MAC, UUID, etc.)
+- Se conectan a internet para obtener IP externa
+
+## 🔧 SOLUCIONES
+
+### 1. **Windows Defender (Recomendado)**
+1. Abrir **Windows Security**
+2. Ir a **Virus & threat protection**
+3. Hacer clic en **Manage settings** bajo "Virus & threat protection settings"
+4. Hacer clic en **Add or remove exclusions**
+5. Hacer clic en **Add an exclusion** > **Folder**
+6. Seleccionar la carpeta `L4D2_Tournament_System_v2`
+7. Confirmar
+
+### 2. **Antivirus de Terceros**
+- **Avast**: Settings > Exceptions > Add Exception
+- **AVG**: Settings > Exceptions > Add Exception  
+- **Norton**: Settings > Antivirus > Scans and Risks > Exclusions
+- **McAfee**: Settings > Real-Time Scanning > Excluded Files
+- **Kaspersky**: Settings > Threats and Exclusions > Exclusions
+
+### 3. **Método Temporal**
+Si necesitas usar los ejecutables inmediatamente:
+1. **Desactivar temporalmente** el antivirus
+2. **Ejecutar** los programas
+3. **Reactivar** el antivirus después
+
+## 📋 ARCHIVOS A EXCLUIR
+
+Excluir estos archivos específicos:
+- `L4D2_Verifier.exe`
+- `L4D2_Verifier_Console.exe`  
+- `L4D2_Token_Generator.exe`
+
+O mejor aún, excluir toda la carpeta:
+- `L4D2_Tournament_System_v2\`
+
+## ✅ VERIFICACIÓN
+
+Después de agregar las excepciones:
+1. **Ejecutar** `run_verifier.bat`
+2. **Verificar** que no aparezcan alertas del antivirus
+3. **Probar** que los programas funcionen correctamente
+
+## 🚨 IMPORTANTE
+
+- **Estos programas son SEGUROS** - son herramientas legítimas para torneos
+- **El antivirus los marca** porque acceden a información del sistema (normal)
+- **Agregar excepciones** es la solución correcta
+- **NO desinstalar** el antivirus completamente
+
+## 📞 SOPORTE
+
+Si sigues teniendo problemas:
+1. Verificar que las excepciones estén configuradas correctamente
+2. Reiniciar el sistema después de agregar excepciones
+3. Contactar al administrador del torneo
+
+---
+**L4D2 Tournament System v2.0**
+**Programas seguros para verificación de integridad en torneos**
+

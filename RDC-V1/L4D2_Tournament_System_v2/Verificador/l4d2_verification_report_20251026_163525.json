@@ -1,0 +1,110 @@
+{
+  "report_info": {
+    "timestamp": "2025-10-26T16:34:54.960615",
+    "version": "1.0",
+    "generated_by": "L4D2 Tournament Integrity Checker"
+  },
+  "pc_info": {
+    "computer_name": "Administrator",
+    "os": "Windows",
+    "os_version": "10.0.22631",
+    "processor": "Intel64 Family 6 Model 158 Stepping 13, GenuineIntel",
+    "architecture": "64bit",
+    "username": "nhuay",
+    "mac_address": "00:e0:4c:b7:20:d1",
+    "local_ip": "26.245.48.174",
+    "external_ip": "179.6.171.131",
+    "system_uuid": "03000200-0400-0500-0006-000700080009",
+    "disk_serial": "KS5YIES5ENRTSWXDFGVV",
+    "system_fingerprint": "5460fe8468131038bc14ce1102456c79"
+  },
+  "steam_info": {
+    "steam_found": true,
+    "steam_path": "c:/program files (x86)/steam",
+    "l4d2_found": true,
+    "l4d2_path": "c:/program files (x86)/steam\\steamapps\\common\\Left 4 Dead 2"
+  },
+  "mods_analysis": {
+    "mods_detected": true,
+    "mods_count": 2,
+    "mods_list": [
+      {
+        "name": "1118606848.vpk",
+        "size": 75613,
+        "path": "c:/program files (x86)/steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\addons\\1118606848.vpk",
+        "location": "c:/program files (x86)/steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\addons",
+        "suspicious": false,
+        "analysis": "Análisis normal"
+      },
+      {
+        "name": "parish overgrowth.vpk",
+        "size": 179202097,
+        "path": "c:/program files (x86)/steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\addons\\parish overgrowth.vpk",
+        "location": "c:/program files (x86)/steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\addons",
+        "suspicious": true,
+        "analysis": "Archivo muy grande (posible mod completo)"
+      }
+    ],
+    "versus_mods_detected": true,
+    "versus_mods_count": 1,
+    "versus_mods_list": [
+      {
+        "type": "versus_mod_folder",
+        "folder_name": "addons",
+        "folder_path": "c:/program files (x86)/steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\addons",
+        "description": "Carpeta de mods en Versus detectada: addons",
+        "severity": "HIGH",
+        "location": "left4dead2 directory",
+        "analysis": {
+          "file_count": 139,
+          "suspicious_files": [],
+          "total_size": 9311764492,
+          "file_types": {
+            ".vpk": 70,
+            ".txt": 1,
+            ".jpg": 68
+          }
+        }
+      }
+    ],
+    "status": "MODS_FOUND"
+  },
+  "steam_accounts_analysis": {
+    "accounts_count": 1,
+    "accounts_list": [
+      {
+        "steam_id64": "76561199176974317",
+        "username": "Unknown",
+        "steam_id3": "[U:1:1216708589]",
+        "steam_id": "STEAM_0:1:608354294"
+      }
+    ],
+    "suspicious_accounts": false,
+    "status": "CLEAN"
+  },
+  "cheats_analysis": {
+    "suspicious_processes_found": false,
+    "suspicious_processes_count": 0,
+    "suspicious_processes_list": [],
+    "memory_injections_found": false,
+    "memory_injections_count": 0,
+    "memory_injections_list": [],
+    "known_cheat_signatures_found": false,
+    "known_cheat_signatures_count": 0,
+    "known_cheat_signatures_list": [],
+    "status": "CLEAN"
+  },
+  "game_status": {
+    "game_running": false,
+    "game_processes": []
+  },
+  "token_validation": {
+    "player_name": "Jugador Verificado",
+    "tournament_name": "Torneo L4D2",
+    "token_valid": true
+  },
+  "overall_integrity": {
+    "status": "SUSPICIOUS",
+    "summary": "Problemas detectados: Mods detectados: 2, Mods en Versus: 1"
+  }
+}
