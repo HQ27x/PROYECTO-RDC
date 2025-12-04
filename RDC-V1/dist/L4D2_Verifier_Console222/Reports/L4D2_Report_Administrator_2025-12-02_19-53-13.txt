@@ -1,0 +1,1077 @@
+================================================================================
+L4D2 TOURNAMENT - REPORTE COMPLETO DE VERIFICACIÓN DE INTEGRIDAD
+================================================================================
+
+FECHA Y HORA: 2025-12-02T19:53:13.644975
+PC: Administrator
+USUARIO: nhuay
+ESTADO GENERAL: SUSPICIOUS
+RESUMEN: Problemas detectados: Mods detectados: 3, Mods en Versus: 1
+
+--------------------------------------------------------------------------------
+IDENTIFICACIÓN COMPLETA DEL SISTEMA
+--------------------------------------------------------------------------------
+MAC Address: 00:e0:4c:b7:20:d1
+System UUID: 03000200-0400-0500-0006-000700080009
+Disk Serial: KS5YIES5ENRTSWXDFGVV
+System Fingerprint: 5460fe8468131038bc14ce1102456c79
+
+⚠️ NOTA: Las direcciones IP están al final del archivo por privacidad
+
+--------------------------------------------------------------------------------
+CUENTAS STEAM DETECTADAS: 1
+--------------------------------------------------------------------------------
+1. Usuario: Unknown
+   SteamID64: 76561199176974317
+   SteamID3: [U:1:1216708589]
+   SteamID: STEAM_0:1:608354294
+
+--------------------------------------------------------------------------------
+MODS DETECTADOS: 3
+--------------------------------------------------------------------------------
+1. Nombre: 1118606848.vpk
+   Tamaño: 75,613 bytes
+   Ubicación: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\addons
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\addons\1118606848.vpk
+
+2. Nombre: deadbeforedawn2_dc.vpk
+   Tamaño: 1,128,435,447 bytes
+   Ubicación: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\addons
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\addons\deadbeforedawn2_dc.vpk
+   ⚠️ SOSPECHOSO: Archivo muy grande (posible mod completo)
+
+3. Nombre: parish overgrowth.vpk
+   Tamaño: 179,202,097 bytes
+   Ubicación: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\addons
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\addons\parish overgrowth.vpk
+   ⚠️ SOSPECHOSO: Archivo muy grande (posible mod completo)
+
+Ningún mod detectado
+
+--------------------------------------------------------------------------------
+CARPETAS NO OFICIALES EN RAÍZ: 1
+--------------------------------------------------------------------------------
+1. Carpeta: modss
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\modss
+   Severidad: CRITICAL
+   Descripción: Carpeta no oficial detectada en raíz: modss
+
+--------------------------------------------------------------------------------
+VALIDACIÓN DE GAMEINFO.TXT
+--------------------------------------------------------------------------------
+Estado: VALID
+Severidad: NONE
+Descripción: Archivo gameinfo.txt es oficial y no ha sido modificado
+
+--------------------------------------------------------------------------------
+VALIDACIÓN DE ADDONCONFIG.CFG
+--------------------------------------------------------------------------------
+Estado: VALID
+Severidad: NONE
+Descripción: Archivo addonconfig.cfg es oficial y no ha sido modificado
+Ruta: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\addonconfig.cfg
+
+--------------------------------------------------------------------------------
+FIRMAS DE CHEATS CONOCIDOS: 0
+--------------------------------------------------------------------------------
+Ninguna firma de cheat conocido detectada
+
+--------------------------------------------------------------------------------
+PROCESOS SOSPECHOSOS: 0
+--------------------------------------------------------------------------------
+Ningún proceso sospechoso detectado
+
+--------------------------------------------------------------------------------
+ARCHIVOS/CARPETAS DE CHEATS: 22
+--------------------------------------------------------------------------------
+1. CARPETA: dload
+   Ruta Completa: C:\Users\nhuay\Downloads\dload
+   Total de archivos: 3
+   Archivos sospechosos: 0
+
+2. CARPETA: Downloads
+   Ruta Completa: C:\Users\nhuay\Downloads\Downloads
+   Total de archivos: 10
+   Archivos sospechosos: 0
+
+3. CARPETA: drive-download-20251021T143310Z-1-001
+   Ruta Completa: C:\Users\nhuay\Downloads\drive-download-20251021T143310Z-1-001
+   Total de archivos: 5
+   Archivos sospechosos: 0
+
+4. CARPETA: models
+   Ruta Completa: C:\Users\nhuay\Downloads\models
+   Total de archivos: 3
+   Archivos sospechosos: 0
+
+5. CARPETA: Downloads
+   Ruta Completa: C:\Users\nhuay\Downloads\Downloads\Downloads
+   Total de archivos: 8
+   Archivos sospechosos: 0
+
+6. ARCHIVO: HfcDisableService.exe
+   Ruta Completa: C:\Users\nhuay\Downloads\DRIVER HP\dchu_f6\HfcDisableService.exe
+   Tamaño: 1917440 bytes
+   Ubicación: C:\Users\nhuay\Downloads\DRIVER HP\dchu_f6
+
+7. ARCHIVO: iaStorAfsService.exe
+   Ruta Completa: C:\Users\nhuay\Downloads\DRIVER HP\dchu_f6\iaStorAfsService.exe
+   Tamaño: 2900480 bytes
+   Ubicación: C:\Users\nhuay\Downloads\DRIVER HP\dchu_f6
+
+8. ARCHIVO: RstMwService.exe
+   Ruta Completa: C:\Users\nhuay\Downloads\DRIVER HP\dchu_f6\RstMwService.exe
+   Tamaño: 2241536 bytes
+   Ubicación: C:\Users\nhuay\Downloads\DRIVER HP\dchu_f6
+
+9. CARPETA: Extreme.Injector.v3.7.3.-.by.master131
+   Ruta Completa: C:\Users\nhuay\Downloads\Extreme.Injector.v3.7.3.-.by.master131\Extreme.Injector.v3.7.3.-.by.master131
+   Total de archivos: 2
+   Archivos sospechosos: 1
+   Ejemplos de archivos:
+      - Extreme Injector v3.exe (1968128 bytes)
+        Ruta: C:\Users\nhuay\Downloads\Extreme.Injector.v3.7.3.-.by.master131\Extreme.Injector.v3.7.3.-.by.master131\Extreme Injector v3.exe
+
+10. ARCHIVO: Extreme Injector v3.exe
+   Ruta Completa: C:\Users\nhuay\Downloads\Extreme.Injector.v3.7.3.-.by.master131\Extreme.Injector.v3.7.3.-.by.master131\Extreme Injector v3.exe
+   Tamaño: 1968128 bytes
+   Ubicación: C:\Users\nhuay\Downloads\Extreme.Injector.v3.7.3.-.by.master131\Extreme.Injector.v3.7.3.-.by.master131
+
+11. CARPETA: L4D2 Multihack [NEW]
+   Ruta Completa: C:\Users\nhuay\Downloads\L4D2_Multihack__NEW_\L4D2 Multihack [NEW]
+   Total de archivos: 1
+   Archivos sospechosos: 1
+   Ejemplos de archivos:
+      - pol.dll (242688 bytes)
+        Ruta: C:\Users\nhuay\Downloads\L4D2_Multihack__NEW_\L4D2 Multihack [NEW]\pol.dll
+
+12. ARCHIVO: pol.dll
+   Ruta Completa: C:\Users\nhuay\Downloads\L4D2_Multihack__NEW_\L4D2 Multihack [NEW]\pol.dll
+   Tamaño: 242688 bytes
+   Ubicación: C:\Users\nhuay\Downloads\L4D2_Multihack__NEW_\L4D2 Multihack [NEW]
+
+13. CARPETA: modules
+   Ruta Completa: C:\Users\nhuay\Downloads\SourceCode_ESET-KeyGen-v1.5.5.9\ESET-KeyGen-v1.5.5.9\modules
+   Total de archivos: 8
+   Archivos sospechosos: 0
+
+14. CARPETA: .tlauncher
+   Ruta Completa: C:\Users\nhuay\AppData\Roaming\.tlauncher
+   Total de archivos: 4
+   Archivos sospechosos: 2
+   Ejemplos de archivos:
+      - lua5.3.dll (404880 bytes)
+        Ruta: C:\Users\nhuay\AppData\Roaming\.tlauncher\lua5.3.dll
+      - tl-uninstall.exe (1826136 bytes)
+        Ruta: C:\Users\nhuay\AppData\Roaming\.tlauncher\tl-uninstall.exe
+
+15. CARPETA: CoA_p6gamelauncher_147919520
+   Ruta Completa: C:\Users\nhuay\AppData\Roaming\CoA_p6gamelauncher_147919520
+   Total de archivos: 6
+   Archivos sospechosos: 0
+
+16. CARPETA: czdownloader
+   Ruta Completa: C:\Users\nhuay\AppData\Roaming\czdownloader
+   Total de archivos: 1
+   Archivos sospechosos: 0
+
+17. CARPETA: DAEMON Tools Pro
+   Ruta Completa: C:\Users\nhuay\AppData\Roaming\DAEMON Tools Pro
+   Total de archivos: 1
+   Archivos sospechosos: 0
+
+18. CARPETA: EasyAntiCheat
+   Ruta Completa: C:\Users\nhuay\AppData\Roaming\EasyAntiCheat
+   Total de archivos: 3
+   Archivos sospechosos: 1
+   Ejemplos de archivos:
+      - anticheatlauncher.log (451469 bytes)
+        Ruta: C:\Users\nhuay\AppData\Roaming\EasyAntiCheat\anticheatlauncher.log
+
+19. CARPETA: UI Launcher
+   Ruta Completa: C:\Users\nhuay\AppData\Roaming\UI Launcher
+   Total de archivos: 2
+   Archivos sospechosos: 0
+
+20. CARPETA: ConnectedDevicesPlatform
+   Ruta Completa: C:\Users\nhuay\AppData\Local\ConnectedDevicesPlatform
+   Total de archivos: 6
+   Archivos sospechosos: 0
+
+21. CARPETA: d5_launcher
+   Ruta Completa: C:\Users\nhuay\AppData\Local\d5_launcher
+   Total de archivos: 1
+   Archivos sospechosos: 0
+
+22. CARPETA: EpicGamesLauncher
+   Ruta Completa: C:\Users\nhuay\AppData\Local\EpicGamesLauncher
+   Total de archivos: 1
+   Archivos sospechosos: 0
+
+--------------------------------------------------------------------------------
+PROGRAMAS EJECUTADOS RECIENTEMENTE: 4
+--------------------------------------------------------------------------------
+1. Programa: EXTREME INJECTOR V3.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 19:38:52
+   Hace: 0.25 horas
+   Ruta: C:\Windows\Prefetch\EXTREME INJECTOR V3.EXE-7E436F03.pf
+   Archivo Prefetch: EXTREME INJECTOR V3.EXE-7E436F03.pf
+   Severidad: CRITICAL
+   Confianza: ALTA
+   Análisis: Nombre específico de cheat detectado: EXTREME INJECTOR V3.EXE
+
+2. Programa: PROCESSHACKER
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 19:48:00
+   Hace: 0.1 horas
+   Ruta: C:\Windows\Prefetch\PROCESSHACKER-2.39-SETUP.EXE-6BD69FD6.pf
+   Archivo Prefetch: PROCESSHACKER-2.39-SETUP.EXE-6BD69FD6.pf
+   Severidad: CRITICAL
+   Confianza: ALTA
+   Análisis: Nombre específico de cheat detectado: PROCESSHACKER
+
+3. Programa: PROCESSHACKER
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 19:48:00
+   Hace: 0.1 horas
+   Ruta: C:\Windows\Prefetch\PROCESSHACKER-2.39-SETUP.TMP-5C02FAA1.pf
+   Archivo Prefetch: PROCESSHACKER-2.39-SETUP.TMP-5C02FAA1.pf
+   Severidad: CRITICAL
+   Confianza: ALTA
+   Análisis: Nombre específico de cheat detectado: PROCESSHACKER
+
+4. Programa: PROCESSHACKER
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 19:48:00
+   Hace: 0.1 horas
+   Ruta: C:\Windows\Prefetch\PROCESSHACKER-2.39-SETUP.TMP-85FB89DC.pf
+   Archivo Prefetch: PROCESSHACKER-2.39-SETUP.TMP-85FB89DC.pf
+   Severidad: CRITICAL
+   Confianza: ALTA
+   Análisis: Nombre específico de cheat detectado: PROCESSHACKER
+
+--------------------------------------------------------------------------------
+ARCHIVOS CFG CON COMANDOS SOSPECHOSOS: 32
+--------------------------------------------------------------------------------
+1. Archivo: 360controller.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\360controller.cfg
+   Comandos prohibidos: 11
+      Línea 1: unbindall				// Prevent mouse/keyboard control when gamepad is in use (to prevent autoaim exploit)
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 23: joy_autoaimdampenrange 0.85
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 24: joy_autoaimdampen 0.5
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 31: joy_autoaimdampen 0.3
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 32: joy_autoaimdampenrange 0.85
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 41: bind "R_TRIGGER" "+attack"			// RT - Main weapon - Primary trigger
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 42: bind "L_TRIGGER" "+attack2"			// LT - Melee
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 65: cmd2 bind "R_TRIGGER" "+attack"			// RT - Main weapon - Primary trigger
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 66: cmd2 bind "L_TRIGGER" "+attack2"			// LT - Melee
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 68: cmd2 bind "L_SHOULDER" "toggle_duck"			// LB - Duck - is also used to give objects to people.
+         Comando: give
+         Severidad: MEDIUM
+         Razón: Dar items sin restricciones
+      Línea 83: sk_autoaim_mode 2
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+
+2. Archivo: autoexec.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\autoexec.cfg
+   Comandos prohibidos: 1
+      Línea 4: cl_interp 0.0000
+         Comando: cl_interp 0
+         Severidad: MEDIUM
+         Razón: Interpolación extremadamente baja
+
+3. Archivo: config.360.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\config.360.cfg
+   Comandos prohibidos: 4
+      Línea 51: joy_autoaimdampen 0.3
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 52: joy_autoaimdampenrange 0.85
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 57: exec joy_preset_1.cfg
+         Comando: exec
+         Severidad: LOW
+         Razón: Ejecutar archivos externos (puede ser legítimo)
+      Línea 59: cl_mouselook 0					// turn off mouse look to enable autoaim
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+
+4. Archivo: config.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\config.cfg
+   Comandos prohibidos: 10
+      Línea 39: bind "MOUSE1" "+attack"
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 40: bind "MOUSE2" "+attack2"
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 91: cl_autoaim "1"
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 92: cl_autoaim2 "1"
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 153: joy_autoaimdampen "0"
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 154: joy_autoaimdampenrange "0"
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 263: sk_autoaim_mode "1"
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 287: sv_noclipaccelerate "5"
+         Comando: noclip
+         Severidad: CRITICAL
+         Razón: Atravesar paredes y volar
+      Línea 288: sv_noclipspeed "5"
+         Comando: noclip
+         Severidad: CRITICAL
+         Razón: Atravesar paredes y volar
+      Línea 292: sv_specnoclip "1"
+         Comando: noclip
+         Severidad: CRITICAL
+         Razón: Atravesar paredes y volar
+
+5. Archivo: config_default.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\config_default.cfg
+   Comandos prohibidos: 2
+      Línea 45: bind "MOUSE1" "+attack"
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 46: bind "MOUSE2" "+attack2"
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+
+6. Archivo: joy_preset_1.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\joy_preset_1.cfg
+   Comandos prohibidos: 3
+      Línea 7: bind "R_TRIGGER" "+attack"			// RT - Main weapon - Primary trigger
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 8: bind "L_TRIGGER" "+attack2"			// LT - Melee
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 10: bind "L_SHOULDER" "+duck"			// LB - Drop - is also used to give objects to people.
+         Comando: give
+         Severidad: MEDIUM
+         Razón: Dar items sin restricciones
+
+7. Archivo: joy_preset_2.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\joy_preset_2.cfg
+   Comandos prohibidos: 3
+      Línea 7: bind "R_TRIGGER" "+attack2"			// RT - Main weapon - Primary trigger
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 8: bind "L_TRIGGER" "+attack"			// LT - Melee
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 10: bind "L_SHOULDER" "+duck"			// LB - Drop - is also used to give objects to people.
+         Comando: give
+         Severidad: MEDIUM
+         Razón: Dar items sin restricciones
+
+8. Archivo: joy_preset_3.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\joy_preset_3.cfg
+   Comandos prohibidos: 2
+      Línea 7: bind "R_TRIGGER" "+attack"			// RT - Main weapon - Primary trigger
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 9: bind "R_SHOULDER" "+attack2"		// RB - Melee
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+
+9. Archivo: joy_preset_4.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\joy_preset_4.cfg
+   Comandos prohibidos: 2
+      Línea 7: bind "R_TRIGGER" "+attack"			// RT - Main weapon - Primary trigger
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 8: bind "L_TRIGGER" "+attack2"			// LT - Melee
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+
+10. Archivo: perf.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\perf.cfg
+   Comandos prohibidos: 32
+      Línea 2: director_stop
+         Comando: director_
+         Severidad: HIGH
+         Razón: Manipulación del Director AI
+      Línea 4: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 5: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 6: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 7: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 8: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 9: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 10: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 11: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 12: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 13: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 14: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 15: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 16: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 17: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 18: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 19: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 20: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 21: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 22: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 23: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 24: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 25: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 26: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 27: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 28: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 30: z_spawn mob
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 31: z_spawn boomer
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 32: z_spawn boomer
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 33: z_spawn boomer
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 34: z_spawn boomer
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 39: sb_flashlight 1
+         Comando: sb_
+         Severidad: MEDIUM
+         Razón: Comandos de bots supervivientes
+
+11. Archivo: playtest.360.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\playtest.360.cfg
+   Comandos prohibidos: 2
+      Línea 7: sb_perf_collect 1
+         Comando: sb_
+         Severidad: MEDIUM
+         Razón: Comandos de bots supervivientes
+      Línea 8: sb_perf_dump_low 29
+         Comando: sb_
+         Severidad: MEDIUM
+         Razón: Comandos de bots supervivientes
+
+12. Archivo: screenshots.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\screenshots.cfg
+   Comandos prohibidos: 2
+      Línea 1: god 1
+         Comando: god
+         Severidad: CRITICAL
+         Razón: Modo invencibilidad
+      Línea 11: sv_infinite_ammo 1
+         Comando: sv_infinite_ammo
+         Severidad: HIGH
+         Razón: Munición infinita
+
+13. Archivo: screenshots_undo.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\screenshots_undo.cfg
+   Comandos prohibidos: 4
+      Línea 1: god 0
+         Comando: god
+         Severidad: CRITICAL
+         Razón: Modo invencibilidad
+      Línea 5: developer 1
+         Comando: developer 1
+         Severidad: LOW
+         Razón: Modo desarrollador (puede mostrar información extra)
+      Línea 10: bind mouse2 +attack2
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 11: sv_infinite_ammo 0
+         Comando: sv_infinite_ammo
+         Severidad: HIGH
+         Razón: Munición infinita
+
+14. Archivo: test_end.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\test_end.cfg
+   Comandos prohibidos: 1
+      Línea 4: developer 1
+         Comando: developer 1
+         Severidad: LOW
+         Razón: Modo desarrollador (puede mostrar información extra)
+
+15. Archivo: test_start.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\test_start.cfg
+   Comandos prohibidos: 2
+      Línea 1: sv_cheats 1
+         Comando: sv_cheats 1
+         Severidad: CRITICAL
+         Razón: Habilita comandos de trampa
+      Línea 2: director_stop
+         Comando: director_
+         Severidad: HIGH
+         Razón: Manipulación del Director AI
+
+16. Archivo: undo360controller.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\undo360controller.cfg
+   Comandos prohibidos: 2
+      Línea 4: sk_autoaim_mode 0		// Turn off autoaim
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 5: exec config_default.cfg		// Restore default controls
+         Comando: exec
+         Severidad: LOW
+         Razón: Ejecutar archivos externos (puede ser legítimo)
+
+17. Archivo: 360controller.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\360controller.cfg
+   Comandos prohibidos: 11
+      Línea 1: unbindall				// Prevent mouse/keyboard control when gamepad is in use (to prevent autoaim exploit)
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 23: joy_autoaimdampenrange 0.85
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 24: joy_autoaimdampen 0.5
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 31: joy_autoaimdampen 0.3
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 32: joy_autoaimdampenrange 0.85
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 41: bind "R_TRIGGER" "+attack"			// RT - Main weapon - Primary trigger
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 42: bind "L_TRIGGER" "+attack2"			// LT - Melee
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 65: cmd2 bind "R_TRIGGER" "+attack"			// RT - Main weapon - Primary trigger
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 66: cmd2 bind "L_TRIGGER" "+attack2"			// LT - Melee
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 68: cmd2 bind "L_SHOULDER" "toggle_duck"			// LB - Duck - is also used to give objects to people.
+         Comando: give
+         Severidad: MEDIUM
+         Razón: Dar items sin restricciones
+      Línea 83: sk_autoaim_mode 2
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+
+18. Archivo: autoexec.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\autoexec.cfg
+   Comandos prohibidos: 1
+      Línea 4: cl_interp 0.0000
+         Comando: cl_interp 0
+         Severidad: MEDIUM
+         Razón: Interpolación extremadamente baja
+
+19. Archivo: config.360.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\config.360.cfg
+   Comandos prohibidos: 4
+      Línea 51: joy_autoaimdampen 0.3
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 52: joy_autoaimdampenrange 0.85
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 57: exec joy_preset_1.cfg
+         Comando: exec
+         Severidad: LOW
+         Razón: Ejecutar archivos externos (puede ser legítimo)
+      Línea 59: cl_mouselook 0					// turn off mouse look to enable autoaim
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+
+20. Archivo: config.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\config.cfg
+   Comandos prohibidos: 10
+      Línea 39: bind "MOUSE1" "+attack"
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 40: bind "MOUSE2" "+attack2"
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 91: cl_autoaim "1"
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 92: cl_autoaim2 "1"
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 153: joy_autoaimdampen "0"
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 154: joy_autoaimdampenrange "0"
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 263: sk_autoaim_mode "1"
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 287: sv_noclipaccelerate "5"
+         Comando: noclip
+         Severidad: CRITICAL
+         Razón: Atravesar paredes y volar
+      Línea 288: sv_noclipspeed "5"
+         Comando: noclip
+         Severidad: CRITICAL
+         Razón: Atravesar paredes y volar
+      Línea 292: sv_specnoclip "1"
+         Comando: noclip
+         Severidad: CRITICAL
+         Razón: Atravesar paredes y volar
+
+21. Archivo: config_default.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\config_default.cfg
+   Comandos prohibidos: 2
+      Línea 45: bind "MOUSE1" "+attack"
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 46: bind "MOUSE2" "+attack2"
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+
+22. Archivo: joy_preset_1.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\joy_preset_1.cfg
+   Comandos prohibidos: 3
+      Línea 7: bind "R_TRIGGER" "+attack"			// RT - Main weapon - Primary trigger
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 8: bind "L_TRIGGER" "+attack2"			// LT - Melee
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 10: bind "L_SHOULDER" "+duck"			// LB - Drop - is also used to give objects to people.
+         Comando: give
+         Severidad: MEDIUM
+         Razón: Dar items sin restricciones
+
+23. Archivo: joy_preset_2.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\joy_preset_2.cfg
+   Comandos prohibidos: 3
+      Línea 7: bind "R_TRIGGER" "+attack2"			// RT - Main weapon - Primary trigger
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 8: bind "L_TRIGGER" "+attack"			// LT - Melee
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 10: bind "L_SHOULDER" "+duck"			// LB - Drop - is also used to give objects to people.
+         Comando: give
+         Severidad: MEDIUM
+         Razón: Dar items sin restricciones
+
+24. Archivo: joy_preset_3.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\joy_preset_3.cfg
+   Comandos prohibidos: 2
+      Línea 7: bind "R_TRIGGER" "+attack"			// RT - Main weapon - Primary trigger
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 9: bind "R_SHOULDER" "+attack2"		// RB - Melee
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+
+25. Archivo: joy_preset_4.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\joy_preset_4.cfg
+   Comandos prohibidos: 2
+      Línea 7: bind "R_TRIGGER" "+attack"			// RT - Main weapon - Primary trigger
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 8: bind "L_TRIGGER" "+attack2"			// LT - Melee
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+
+26. Archivo: perf.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\perf.cfg
+   Comandos prohibidos: 32
+      Línea 2: director_stop
+         Comando: director_
+         Severidad: HIGH
+         Razón: Manipulación del Director AI
+      Línea 4: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 5: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 6: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 7: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 8: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 9: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 10: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 11: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 12: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 13: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 14: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 15: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 16: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 17: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 18: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 19: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 20: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 21: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 22: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 23: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 24: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 25: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 26: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 27: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 28: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 30: z_spawn mob
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 31: z_spawn boomer
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 32: z_spawn boomer
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 33: z_spawn boomer
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 34: z_spawn boomer
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 39: sb_flashlight 1
+         Comando: sb_
+         Severidad: MEDIUM
+         Razón: Comandos de bots supervivientes
+
+27. Archivo: playtest.360.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\playtest.360.cfg
+   Comandos prohibidos: 2
+      Línea 7: sb_perf_collect 1
+         Comando: sb_
+         Severidad: MEDIUM
+         Razón: Comandos de bots supervivientes
+      Línea 8: sb_perf_dump_low 29
+         Comando: sb_
+         Severidad: MEDIUM
+         Razón: Comandos de bots supervivientes
+
+28. Archivo: screenshots.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\screenshots.cfg
+   Comandos prohibidos: 2
+      Línea 1: god 1
+         Comando: god
+         Severidad: CRITICAL
+         Razón: Modo invencibilidad
+      Línea 11: sv_infinite_ammo 1
+         Comando: sv_infinite_ammo
+         Severidad: HIGH
+         Razón: Munición infinita
+
+29. Archivo: screenshots_undo.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\screenshots_undo.cfg
+   Comandos prohibidos: 4
+      Línea 1: god 0
+         Comando: god
+         Severidad: CRITICAL
+         Razón: Modo invencibilidad
+      Línea 5: developer 1
+         Comando: developer 1
+         Severidad: LOW
+         Razón: Modo desarrollador (puede mostrar información extra)
+      Línea 10: bind mouse2 +attack2
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 11: sv_infinite_ammo 0
+         Comando: sv_infinite_ammo
+         Severidad: HIGH
+         Razón: Munición infinita
+
+30. Archivo: test_end.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\test_end.cfg
+   Comandos prohibidos: 1
+      Línea 4: developer 1
+         Comando: developer 1
+         Severidad: LOW
+         Razón: Modo desarrollador (puede mostrar información extra)
+
+31. Archivo: test_start.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\test_start.cfg
+   Comandos prohibidos: 2
+      Línea 1: sv_cheats 1
+         Comando: sv_cheats 1
+         Severidad: CRITICAL
+         Razón: Habilita comandos de trampa
+      Línea 2: director_stop
+         Comando: director_
+         Severidad: HIGH
+         Razón: Manipulación del Director AI
+
+32. Archivo: undo360controller.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\undo360controller.cfg
+   Comandos prohibidos: 2
+      Línea 4: sk_autoaim_mode 0		// Turn off autoaim
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 5: exec config_default.cfg		// Restore default controls
+         Comando: exec
+         Severidad: LOW
+         Razón: Ejecutar archivos externos (puede ser legítimo)
+
+--------------------------------------------------------------------------------
+MODS EN VERSUS: 1
+--------------------------------------------------------------------------------
+1. Carpeta de mods en Versus detectada: addons
+   Severidad: HIGH
+   Carpeta: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\addons
+
+--------------------------------------------------------------------------------
+TOKEN DE JUGADOR
+--------------------------------------------------------------------------------
+Jugador: Jugador Verificado
+Torneo: Torneo L4D2
+Estado: Token válido y verificado
+
+
+================================================================================
+⚠️ INFORMACIÓN SENSIBLE - DIRECCIONES IP (PRIVADO)
+================================================================================
+
+⚠️ ADVERTENCIA: Esta sección contiene información privada.
+   NO compartir esta sección en streams públicos o capturas de pantalla.
+   Las IPs están al final del archivo para facilitar la censura.
+
+IP Externa: 179.6.171.131
+IP Local: 26.245.48.174
+
+================================================================================
+FIN DEL REPORTE
+================================================================================

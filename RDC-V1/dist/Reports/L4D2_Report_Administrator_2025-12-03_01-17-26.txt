@@ -1,0 +1,3097 @@
+================================================================================
+L4D2 TOURNAMENT - REPORTE COMPLETO DE VERIFICACIÓN DE INTEGRIDAD
+================================================================================
+
+FECHA Y HORA: 2025-12-03T01:17:26.038559
+PC: Administrator
+USUARIO: nhuay
+ESTADO GENERAL: SUSPICIOUS
+RESUMEN: Problemas detectados: Mods detectados: 3, Mods en Versus: 1
+
+--------------------------------------------------------------------------------
+IDENTIFICACIÓN COMPLETA DEL SISTEMA
+--------------------------------------------------------------------------------
+MAC Address: 00:e0:4c:b7:20:d1
+System UUID: 03000200-0400-0500-0006-000700080009
+Disk Serial: KS5YIES5ENRTSWXDFGVV
+System Fingerprint: 5460fe8468131038bc14ce1102456c79
+
+⚠️ NOTA: Las direcciones IP están al final del archivo por privacidad
+
+--------------------------------------------------------------------------------
+CUENTAS STEAM DETECTADAS: 1
+--------------------------------------------------------------------------------
+1. Usuario: Unknown
+   SteamID64: 76561199176974317
+   SteamID3: [U:1:1216708589]
+   SteamID: STEAM_0:1:608354294
+
+--------------------------------------------------------------------------------
+MODS DETECTADOS: 3
+--------------------------------------------------------------------------------
+1. Nombre: 1118606848.vpk
+   Tamaño: 75,613 bytes
+   Ubicación: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\addons
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\addons\1118606848.vpk
+
+2. Nombre: deadbeforedawn2_dc.vpk
+   Tamaño: 1,128,435,447 bytes
+   Ubicación: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\addons
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\addons\deadbeforedawn2_dc.vpk
+   ⚠️ SOSPECHOSO: Archivo muy grande (posible mod completo)
+
+3. Nombre: parish overgrowth.vpk
+   Tamaño: 179,202,097 bytes
+   Ubicación: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\addons
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\addons\parish overgrowth.vpk
+   ⚠️ SOSPECHOSO: Archivo muy grande (posible mod completo)
+
+Ningún mod detectado
+
+--------------------------------------------------------------------------------
+CARPETAS NO OFICIALES EN RAÍZ: 1
+--------------------------------------------------------------------------------
+1. Carpeta: modss
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\modss
+   Severidad: CRITICAL
+   Descripción: Carpeta no oficial detectada en raíz: modss
+
+--------------------------------------------------------------------------------
+VALIDACIÓN DE GAMEINFO.TXT
+--------------------------------------------------------------------------------
+Estado: VALID
+Severidad: NONE
+Descripción: Archivo gameinfo.txt es oficial y no ha sido modificado
+
+--------------------------------------------------------------------------------
+VALIDACIÓN DE ADDONCONFIG.CFG
+--------------------------------------------------------------------------------
+Estado: VALID
+Severidad: NONE
+Descripción: Archivo addonconfig.cfg es oficial y no ha sido modificado
+Ruta: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\addonconfig.cfg
+
+--------------------------------------------------------------------------------
+FIRMAS DE CHEATS CONOCIDOS: 0
+--------------------------------------------------------------------------------
+Ninguna firma de cheat conocido detectada
+
+--------------------------------------------------------------------------------
+PROCESOS SOSPECHOSOS: 0
+--------------------------------------------------------------------------------
+Ningún proceso sospechoso detectado
+
+--------------------------------------------------------------------------------
+ARCHIVOS/CARPETAS DE CHEATS: 22
+--------------------------------------------------------------------------------
+1. CARPETA: dload
+   Ruta Completa: C:\Users\nhuay\Downloads\dload
+   Total de archivos: 3
+   Archivos sospechosos: 0
+
+2. CARPETA: Downloads
+   Ruta Completa: C:\Users\nhuay\Downloads\Downloads
+   Total de archivos: 10
+   Archivos sospechosos: 0
+
+3. CARPETA: drive-download-20251021T143310Z-1-001
+   Ruta Completa: C:\Users\nhuay\Downloads\drive-download-20251021T143310Z-1-001
+   Total de archivos: 5
+   Archivos sospechosos: 0
+
+4. CARPETA: models
+   Ruta Completa: C:\Users\nhuay\Downloads\models
+   Total de archivos: 3
+   Archivos sospechosos: 0
+
+5. CARPETA: Downloads
+   Ruta Completa: C:\Users\nhuay\Downloads\Downloads\Downloads
+   Total de archivos: 8
+   Archivos sospechosos: 0
+
+6. ARCHIVO: HfcDisableService.exe
+   Ruta Completa: C:\Users\nhuay\Downloads\DRIVER HP\dchu_f6\HfcDisableService.exe
+   Tamaño: 1917440 bytes
+   Ubicación: C:\Users\nhuay\Downloads\DRIVER HP\dchu_f6
+
+7. ARCHIVO: iaStorAfsService.exe
+   Ruta Completa: C:\Users\nhuay\Downloads\DRIVER HP\dchu_f6\iaStorAfsService.exe
+   Tamaño: 2900480 bytes
+   Ubicación: C:\Users\nhuay\Downloads\DRIVER HP\dchu_f6
+
+8. ARCHIVO: RstMwService.exe
+   Ruta Completa: C:\Users\nhuay\Downloads\DRIVER HP\dchu_f6\RstMwService.exe
+   Tamaño: 2241536 bytes
+   Ubicación: C:\Users\nhuay\Downloads\DRIVER HP\dchu_f6
+
+9. CARPETA: Extreme.Injector.v3.7.3.-.by.master131
+   Ruta Completa: C:\Users\nhuay\Downloads\Extreme.Injector.v3.7.3.-.by.master131\Extreme.Injector.v3.7.3.-.by.master131
+   Total de archivos: 2
+   Archivos sospechosos: 1
+   Ejemplos de archivos:
+      - Extreme Injector v3.exe (1968128 bytes)
+        Ruta: C:\Users\nhuay\Downloads\Extreme.Injector.v3.7.3.-.by.master131\Extreme.Injector.v3.7.3.-.by.master131\Extreme Injector v3.exe
+
+10. ARCHIVO: Extreme Injector v3.exe
+   Ruta Completa: C:\Users\nhuay\Downloads\Extreme.Injector.v3.7.3.-.by.master131\Extreme.Injector.v3.7.3.-.by.master131\Extreme Injector v3.exe
+   Tamaño: 1968128 bytes
+   Ubicación: C:\Users\nhuay\Downloads\Extreme.Injector.v3.7.3.-.by.master131\Extreme.Injector.v3.7.3.-.by.master131
+
+11. CARPETA: L4D2 Multihack [NEW]
+   Ruta Completa: C:\Users\nhuay\Downloads\L4D2_Multihack__NEW_\L4D2 Multihack [NEW]
+   Total de archivos: 1
+   Archivos sospechosos: 1
+   Ejemplos de archivos:
+      - pol.dll (242688 bytes)
+        Ruta: C:\Users\nhuay\Downloads\L4D2_Multihack__NEW_\L4D2 Multihack [NEW]\pol.dll
+
+12. ARCHIVO: pol.dll
+   Ruta Completa: C:\Users\nhuay\Downloads\L4D2_Multihack__NEW_\L4D2 Multihack [NEW]\pol.dll
+   Tamaño: 242688 bytes
+   Ubicación: C:\Users\nhuay\Downloads\L4D2_Multihack__NEW_\L4D2 Multihack [NEW]
+
+13. CARPETA: modules
+   Ruta Completa: C:\Users\nhuay\Downloads\SourceCode_ESET-KeyGen-v1.5.5.9\ESET-KeyGen-v1.5.5.9\modules
+   Total de archivos: 8
+   Archivos sospechosos: 0
+
+14. CARPETA: .tlauncher
+   Ruta Completa: C:\Users\nhuay\AppData\Roaming\.tlauncher
+   Total de archivos: 4
+   Archivos sospechosos: 2
+   Ejemplos de archivos:
+      - lua5.3.dll (404880 bytes)
+        Ruta: C:\Users\nhuay\AppData\Roaming\.tlauncher\lua5.3.dll
+      - tl-uninstall.exe (1826136 bytes)
+        Ruta: C:\Users\nhuay\AppData\Roaming\.tlauncher\tl-uninstall.exe
+
+15. CARPETA: CoA_p6gamelauncher_147919520
+   Ruta Completa: C:\Users\nhuay\AppData\Roaming\CoA_p6gamelauncher_147919520
+   Total de archivos: 6
+   Archivos sospechosos: 0
+
+16. CARPETA: czdownloader
+   Ruta Completa: C:\Users\nhuay\AppData\Roaming\czdownloader
+   Total de archivos: 1
+   Archivos sospechosos: 0
+
+17. CARPETA: DAEMON Tools Pro
+   Ruta Completa: C:\Users\nhuay\AppData\Roaming\DAEMON Tools Pro
+   Total de archivos: 1
+   Archivos sospechosos: 0
+
+18. CARPETA: EasyAntiCheat
+   Ruta Completa: C:\Users\nhuay\AppData\Roaming\EasyAntiCheat
+   Total de archivos: 3
+   Archivos sospechosos: 1
+   Ejemplos de archivos:
+      - anticheatlauncher.log (451469 bytes)
+        Ruta: C:\Users\nhuay\AppData\Roaming\EasyAntiCheat\anticheatlauncher.log
+
+19. CARPETA: UI Launcher
+   Ruta Completa: C:\Users\nhuay\AppData\Roaming\UI Launcher
+   Total de archivos: 2
+   Archivos sospechosos: 0
+
+20. CARPETA: ConnectedDevicesPlatform
+   Ruta Completa: C:\Users\nhuay\AppData\Local\ConnectedDevicesPlatform
+   Total de archivos: 6
+   Archivos sospechosos: 0
+
+21. CARPETA: d5_launcher
+   Ruta Completa: C:\Users\nhuay\AppData\Local\d5_launcher
+   Total de archivos: 1
+   Archivos sospechosos: 0
+
+22. CARPETA: EpicGamesLauncher
+   Ruta Completa: C:\Users\nhuay\AppData\Local\EpicGamesLauncher
+   Total de archivos: 1
+   Archivos sospechosos: 0
+
+--------------------------------------------------------------------------------
+PROGRAMAS EJECUTADOS RECIENTEMENTE: 206
+--------------------------------------------------------------------------------
+1. Programa: GAMEBAR.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 01:18:32
+   Hace: 0.01 horas
+   Ruta: C:\Windows\Prefetch\GAMEBAR.EXE-426F6DAA.pf
+   Archivo Prefetch: GAMEBAR.EXE-426F6DAA.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+2. Programa: GAMEBARFTSERVER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 01:18:32
+   Hace: 0.01 horas
+   Ruta: C:\Windows\Prefetch\GAMEBARFTSERVER.EXE-0CAA787F.pf
+   Archivo Prefetch: GAMEBARFTSERVER.EXE-0CAA787F.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+3. Programa: GAMEBARPRESENCEWRITER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 01:18:31
+   Hace: 0.01 horas
+   Ruta: C:\Windows\Prefetch\GAMEBARPRESENCEWRITER.EXE-5ADEE7C2.pf
+   Archivo Prefetch: GAMEBARPRESENCEWRITER.EXE-5ADEE7C2.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+4. Programa: L4D2_TOKEN_GENERATOR.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 01:18:01
+   Hace: 0.01 horas
+   Ruta: C:\Windows\Prefetch\L4D2_TOKEN_GENERATOR.EXE-CC50E5C8.pf
+   Archivo Prefetch: L4D2_TOKEN_GENERATOR.EXE-CC50E5C8.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+5. Programa: PMA.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 01:18:27
+   Hace: 0.01 horas
+   Ruta: C:\Windows\Prefetch\PMA.EXE-2D0D18EE.pf
+   Archivo Prefetch: PMA.EXE-2D0D18EE.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+6. Programa: RUNTIMEBROKER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 01:18:32
+   Hace: 0.01 horas
+   Ruta: C:\Windows\Prefetch\RUNTIMEBROKER.EXE-4E509B6C.pf
+   Archivo Prefetch: RUNTIMEBROKER.EXE-4E509B6C.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+7. Programa: SVCHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 01:18:31
+   Hace: 0.01 horas
+   Ruta: C:\Windows\Prefetch\SVCHOST.EXE-3D497EFC.pf
+   Archivo Prefetch: SVCHOST.EXE-3D497EFC.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+8. Programa: SVCHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 01:18:32
+   Hace: 0.01 horas
+   Ruta: C:\Windows\Prefetch\SVCHOST.EXE-73D024B2.pf
+   Archivo Prefetch: SVCHOST.EXE-73D024B2.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+9. Programa: WMIC.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 01:18:19
+   Hace: 0.01 horas
+   Ruta: C:\Windows\Prefetch\WMIC.EXE-98223A30.pf
+   Archivo Prefetch: WMIC.EXE-98223A30.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+10. Programa: CMD.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 01:17:25
+   Hace: 0.02 horas
+   Ruta: C:\Windows\Prefetch\CMD.EXE-0BD30981.pf
+   Archivo Prefetch: CMD.EXE-0BD30981.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+11. Programa: CONSENT.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 01:17:24
+   Hace: 0.02 horas
+   Ruta: C:\Windows\Prefetch\CONSENT.EXE-40419367.pf
+   Archivo Prefetch: CONSENT.EXE-40419367.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+12. Programa: CTFMON.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 01:17:27
+   Hace: 0.02 horas
+   Ruta: C:\Windows\Prefetch\CTFMON.EXE-795F8130.pf
+   Archivo Prefetch: CTFMON.EXE-795F8130.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+13. Programa: L4D2_VERIFIER_CONSOLE.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 01:17:25
+   Hace: 0.02 horas
+   Ruta: C:\Windows\Prefetch\L4D2_VERIFIER_CONSOLE.EXE-57E2E383.pf
+   Archivo Prefetch: L4D2_VERIFIER_CONSOLE.EXE-57E2E383.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+14. Programa: NETSH.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 01:17:25
+   Hace: 0.02 horas
+   Ruta: C:\Windows\Prefetch\NETSH.EXE-A596235F.pf
+   Archivo Prefetch: NETSH.EXE-A596235F.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+15. Programa: SEARCHPROTOCOLHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 01:17:29
+   Hace: 0.02 horas
+   Ruta: C:\Windows\Prefetch\SEARCHPROTOCOLHOST.EXE-69C456C3.pf
+   Archivo Prefetch: SEARCHPROTOCOLHOST.EXE-69C456C3.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+16. Programa: SVCHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 01:17:36
+   Hace: 0.02 horas
+   Ruta: C:\Windows\Prefetch\SVCHOST.EXE-9D041ABC.pf
+   Archivo Prefetch: SVCHOST.EXE-9D041ABC.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+17. Programa: BACKGROUNDTASKHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 01:16:48
+   Hace: 0.03 horas
+   Ruta: C:\Windows\Prefetch\BACKGROUNDTASKHOST.EXE-CAD1DF16.pf
+   Archivo Prefetch: BACKGROUNDTASKHOST.EXE-CAD1DF16.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+18. Programa: DLLHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 01:16:51
+   Hace: 0.03 horas
+   Ruta: C:\Windows\Prefetch\DLLHOST.EXE-1BAE06BB.pf
+   Archivo Prefetch: DLLHOST.EXE-1BAE06BB.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+19. Programa: DLLHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 01:17:05
+   Hace: 0.03 horas
+   Ruta: C:\Windows\Prefetch\DLLHOST.EXE-7D5CE0CA.pf
+   Archivo Prefetch: DLLHOST.EXE-7D5CE0CA.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+20. Programa: ROBLOXCRASHHANDLER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 01:17:03
+   Hace: 0.03 horas
+   Ruta: C:\Windows\Prefetch\ROBLOXCRASHHANDLER.EXE-8827CB14.pf
+   Archivo Prefetch: ROBLOXCRASHHANDLER.EXE-8827CB14.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+21. Programa: ROBLOXPLAYERBETA.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 01:16:51
+   Hace: 0.03 horas
+   Ruta: C:\Windows\Prefetch\ROBLOXPLAYERBETA.EXE-5BE15316.pf
+   Archivo Prefetch: ROBLOXPLAYERBETA.EXE-5BE15316.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+22. Programa: RUNTIMEBROKER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 01:16:56
+   Hace: 0.03 horas
+   Ruta: C:\Windows\Prefetch\RUNTIMEBROKER.EXE-2C5A250C.pf
+   Archivo Prefetch: RUNTIMEBROKER.EXE-2C5A250C.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+23. Programa: SVCHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 01:17:04
+   Hace: 0.03 horas
+   Ruta: C:\Windows\Prefetch\SVCHOST.EXE-7CA96BCB.pf
+   Archivo Prefetch: SVCHOST.EXE-7CA96BCB.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+24. Programa: SVCHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 01:17:01
+   Hace: 0.03 horas
+   Ruta: C:\Windows\Prefetch\SVCHOST.EXE-EA9BB143.pf
+   Archivo Prefetch: SVCHOST.EXE-EA9BB143.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+25. Programa: WINRAR.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 01:17:19
+   Hace: 0.03 horas
+   Ruta: C:\Windows\Prefetch\WINRAR.EXE-A3466FE3.pf
+   Archivo Prefetch: WINRAR.EXE-A3466FE3.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+26. Programa: BRAVEUPDATE.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 01:12:45
+   Hace: 0.1 horas
+   Ruta: C:\Windows\Prefetch\BRAVEUPDATE.EXE-71F336A7.pf
+   Archivo Prefetch: BRAVEUPDATE.EXE-71F336A7.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+27. Programa: MSEDGE.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 01:12:52
+   Hace: 0.1 horas
+   Ruta: C:\Windows\Prefetch\MSEDGE.EXE-37D25FA3.pf
+   Archivo Prefetch: MSEDGE.EXE-37D25FA3.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+28. Programa: ROUTE.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 01:12:46
+   Hace: 0.1 horas
+   Ruta: C:\Windows\Prefetch\ROUTE.EXE-121C5018.pf
+   Archivo Prefetch: ROUTE.EXE-121C5018.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+29. Programa: CHROME.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 01:09:28
+   Hace: 0.16 horas
+   Ruta: C:\Windows\Prefetch\CHROME.EXE-AED7BA45.pf
+   Archivo Prefetch: CHROME.EXE-AED7BA45.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+30. Programa: SVCHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 01:08:46
+   Hace: 0.17 horas
+   Ruta: C:\Windows\Prefetch\SVCHOST.EXE-59780EBF.pf
+   Archivo Prefetch: SVCHOST.EXE-59780EBF.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+31. Programa: MICROSOFTEDGEUPDATE.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 01:08:07
+   Hace: 0.18 horas
+   Ruta: C:\Windows\Prefetch\MICROSOFTEDGEUPDATE.EXE-7A595326.pf
+   Archivo Prefetch: MICROSOFTEDGEUPDATE.EXE-7A595326.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+32. Programa: MSPCMANAGERCORE.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 01:03:45
+   Hace: 0.25 horas
+   Ruta: C:\Windows\Prefetch\MSPCMANAGERCORE.EXE-93B3008A.pf
+   Archivo Prefetch: MSPCMANAGERCORE.EXE-93B3008A.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+33. Programa: WMIAPSRV.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 01:01:48
+   Hace: 0.28 horas
+   Ruta: C:\Windows\Prefetch\WMIAPSRV.EXE-FC8436DD.pf
+   Archivo Prefetch: WMIAPSRV.EXE-FC8436DD.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+34. Programa: SVCHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 00:59:54
+   Hace: 0.32 horas
+   Ruta: C:\Windows\Prefetch\SVCHOST.EXE-C625B657.pf
+   Archivo Prefetch: SVCHOST.EXE-C625B657.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+35. Programa: WMIPRVSE.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 00:59:53
+   Hace: 0.32 horas
+   Ruta: C:\Windows\Prefetch\WMIPRVSE.EXE-E8B8DD29.pf
+   Archivo Prefetch: WMIPRVSE.EXE-E8B8DD29.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+36. Programa: SDBINST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 00:59:00
+   Hace: 0.33 horas
+   Ruta: C:\Windows\Prefetch\SDBINST.EXE-49E8B208.pf
+   Archivo Prefetch: SDBINST.EXE-49E8B208.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+37. Programa: CHROME.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 00:56:50
+   Hace: 0.37 horas
+   Ruta: C:\Windows\Prefetch\CHROME.EXE-AED7BA3D.pf
+   Archivo Prefetch: CHROME.EXE-AED7BA3D.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+38. Programa: SVCHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 00:51:25
+   Hace: 0.46 horas
+   Ruta: C:\Windows\Prefetch\SVCHOST.EXE-18C5C6E4.pf
+   Archivo Prefetch: SVCHOST.EXE-18C5C6E4.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+39. Programa: ANYDESK.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 00:31:10
+   Hace: 0.79 horas
+   Ruta: C:\Windows\Prefetch\ANYDESK.EXE-DB935E04.pf
+   Archivo Prefetch: ANYDESK.EXE-DB935E04.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+40. Programa: BACKGROUNDTASKHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 00:31:02
+   Hace: 0.8 horas
+   Ruta: C:\Windows\Prefetch\BACKGROUNDTASKHOST.EXE-8AE8317A.pf
+   Archivo Prefetch: BACKGROUNDTASKHOST.EXE-8AE8317A.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+41. Programa: RUNTIMEBROKER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 00:31:07
+   Hace: 0.8 horas
+   Ruta: C:\Windows\Prefetch\RUNTIMEBROKER.EXE-EC707770.pf
+   Archivo Prefetch: RUNTIMEBROKER.EXE-EC707770.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+42. Programa: CHROME.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 00:12:53
+   Hace: 1.1 horas
+   Ruta: C:\Windows\Prefetch\CHROME.EXE-AED7BA3C.pf
+   Archivo Prefetch: CHROME.EXE-AED7BA3C.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+43. Programa: CHROME.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 00:12:53
+   Hace: 1.1 horas
+   Ruta: C:\Windows\Prefetch\CHROME.EXE-AED7BA40.pf
+   Archivo Prefetch: CHROME.EXE-AED7BA40.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+44. Programa: MSEDGE.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 00:10:37
+   Hace: 1.14 horas
+   Ruta: C:\Windows\Prefetch\MSEDGE.EXE-37D25FA8.pf
+   Archivo Prefetch: MSEDGE.EXE-37D25FA8.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+45. Programa: SEARCHFILTERHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 00:06:03
+   Hace: 1.21 horas
+   Ruta: C:\Windows\Prefetch\SEARCHFILTERHOST.EXE-44162447.pf
+   Archivo Prefetch: SEARCHFILTERHOST.EXE-44162447.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+46. Programa: PYTHON.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 00:05:47
+   Hace: 1.22 horas
+   Ruta: C:\Windows\Prefetch\PYTHON.EXE-75CFECD2.pf
+   Archivo Prefetch: PYTHON.EXE-75CFECD2.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+47. Programa: SVCHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-03 00:03:46
+   Hace: 1.25 horas
+   Ruta: C:\Windows\Prefetch\SVCHOST.EXE-D8C907E1.pf
+   Archivo Prefetch: SVCHOST.EXE-D8C907E1.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+48. Programa: NOTEPAD.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 23:59:43
+   Hace: 1.32 horas
+   Ruta: C:\Windows\Prefetch\NOTEPAD.EXE-37E078B5.pf
+   Archivo Prefetch: NOTEPAD.EXE-37E078B5.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+49. Programa: RG.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 23:56:16
+   Hace: 1.38 horas
+   Ruta: C:\Windows\Prefetch\RG.EXE-B7EA673B.pf
+   Archivo Prefetch: RG.EXE-B7EA673B.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+50. Programa: SVCHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 23:55:52
+   Hace: 1.38 horas
+   Ruta: C:\Windows\Prefetch\SVCHOST.EXE-F952D9A9.pf
+   Archivo Prefetch: SVCHOST.EXE-F952D9A9.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+51. Programa: GIT.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 23:54:28
+   Hace: 1.41 horas
+   Ruta: C:\Windows\Prefetch\GIT.EXE-49C87D8C.pf
+   Archivo Prefetch: GIT.EXE-49C87D8C.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+52. Programa: GIT.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 23:54:28
+   Hace: 1.41 horas
+   Ruta: C:\Windows\Prefetch\GIT.EXE-52A8D03B.pf
+   Archivo Prefetch: GIT.EXE-52A8D03B.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+53. Programa: DLLHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 23:53:30
+   Hace: 1.42 horas
+   Ruta: C:\Windows\Prefetch\DLLHOST.EXE-1C5D0AE3.pf
+   Archivo Prefetch: DLLHOST.EXE-1C5D0AE3.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+54. Programa: DLLHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 23:53:30
+   Hace: 1.42 horas
+   Ruta: C:\Windows\Prefetch\DLLHOST.EXE-B8720A9F.pf
+   Archivo Prefetch: DLLHOST.EXE-B8720A9F.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+55. Programa: SVCHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 23:48:37
+   Hace: 1.5 horas
+   Ruta: C:\Windows\Prefetch\SVCHOST.EXE-5F87ABED.pf
+   Archivo Prefetch: SVCHOST.EXE-5F87ABED.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+56. Programa: MOUSOCOREWORKER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 23:44:37
+   Hace: 1.57 horas
+   Ruta: C:\Windows\Prefetch\MOUSOCOREWORKER.EXE-44A01CE7.pf
+   Archivo Prefetch: MOUSOCOREWORKER.EXE-44A01CE7.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+57. Programa: SVCHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 23:44:37
+   Hace: 1.57 horas
+   Ruta: C:\Windows\Prefetch\SVCHOST.EXE-9A28EB78.pf
+   Archivo Prefetch: SVCHOST.EXE-9A28EB78.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+58. Programa: TIWORKER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 23:44:38
+   Hace: 1.57 horas
+   Ruta: C:\Windows\Prefetch\TIWORKER.EXE-2C3B9E73.pf
+   Archivo Prefetch: TIWORKER.EXE-2C3B9E73.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+59. Programa: TRUSTEDINSTALLER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 23:44:38
+   Hace: 1.57 horas
+   Ruta: C:\Windows\Prefetch\TRUSTEDINSTALLER.EXE-766EFF52.pf
+   Archivo Prefetch: TRUSTEDINSTALLER.EXE-766EFF52.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+60. Programa: UIEORCHESTRATOR.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 23:44:30
+   Hace: 1.57 horas
+   Ruta: C:\Windows\Prefetch\UIEORCHESTRATOR.EXE-C9987E34.pf
+   Archivo Prefetch: UIEORCHESTRATOR.EXE-C9987E34.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+61. Programa: QUALIFICATION_APP.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 23:42:46
+   Hace: 1.6 horas
+   Ruta: C:\Windows\Prefetch\QUALIFICATION_APP.EXE-1CA3E97A.pf
+   Archivo Prefetch: QUALIFICATION_APP.EXE-1CA3E97A.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+62. Programa: UPDATER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 23:42:46
+   Hace: 1.6 horas
+   Ruta: C:\Windows\Prefetch\UPDATER.EXE-DF42943C.pf
+   Archivo Prefetch: UPDATER.EXE-DF42943C.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+63. Programa: UPDATER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 23:42:32
+   Hace: 1.61 horas
+   Ruta: C:\Windows\Prefetch\UPDATER.EXE-9ACC6CC5.pf
+   Archivo Prefetch: UPDATER.EXE-9ACC6CC5.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+64. Programa: CHROME.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 23:39:59
+   Hace: 1.65 horas
+   Ruta: C:\Windows\Prefetch\CHROME.EXE-AED7BA4A.pf
+   Archivo Prefetch: CHROME.EXE-AED7BA4A.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+65. Programa: PICKERHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 23:33:05
+   Hace: 1.76 horas
+   Ruta: C:\Windows\Prefetch\PICKERHOST.EXE-DE4B8E61.pf
+   Archivo Prefetch: PICKERHOST.EXE-DE4B8E61.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+66. Programa: MSPAINT.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 23:13:20
+   Hace: 2.09 horas
+   Ruta: C:\Windows\Prefetch\MSPAINT.EXE-AFC072C8.pf
+   Archivo Prefetch: MSPAINT.EXE-AFC072C8.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+67. Programa: DLLHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 23:13:03
+   Hace: 2.1 horas
+   Ruta: C:\Windows\Prefetch\DLLHOST.EXE-2AA4317B.pf
+   Archivo Prefetch: DLLHOST.EXE-2AA4317B.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+68. Programa: DLLHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 23:07:32
+   Hace: 2.19 horas
+   Ruta: C:\Windows\Prefetch\DLLHOST.EXE-C075B212.pf
+   Archivo Prefetch: DLLHOST.EXE-C075B212.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+69. Programa: DLLHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 23:04:27
+   Hace: 2.24 horas
+   Ruta: C:\Windows\Prefetch\DLLHOST.EXE-CE1932AE.pf
+   Archivo Prefetch: DLLHOST.EXE-CE1932AE.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+70. Programa: DLLHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 23:04:33
+   Hace: 2.24 horas
+   Ruta: C:\Windows\Prefetch\DLLHOST.EXE-F3F0CC98.pf
+   Archivo Prefetch: DLLHOST.EXE-F3F0CC98.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+71. Programa: GAMEOVERLAYUI64.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 22:36:29
+   Hace: 2.71 horas
+   Ruta: C:\Windows\Prefetch\GAMEOVERLAYUI64.EXE-E518705C.pf
+   Archivo Prefetch: GAMEOVERLAYUI64.EXE-E518705C.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+72. Programa: LEFT4DEAD2.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 22:36:23
+   Hace: 2.71 horas
+   Ruta: C:\Windows\Prefetch\LEFT4DEAD2.EXE-D7E760F5.pf
+   Archivo Prefetch: LEFT4DEAD2.EXE-D7E760F5.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+73. Programa: STEAMWEBHELPER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 22:24:51
+   Hace: 2.9 horas
+   Ruta: C:\Windows\Prefetch\STEAMWEBHELPER.EXE-D4733812.pf
+   Archivo Prefetch: STEAMWEBHELPER.EXE-D4733812.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+74. Programa: STEAMWEBHELPER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 22:18:10
+   Hace: 3.01 horas
+   Ruta: C:\Windows\Prefetch\STEAMWEBHELPER.EXE-D4733810.pf
+   Archivo Prefetch: STEAMWEBHELPER.EXE-D4733810.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+75. Programa: SPOTIFY.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 22:17:27
+   Hace: 3.02 horas
+   Ruta: C:\Windows\Prefetch\SPOTIFY.EXE-C844D4DD.pf
+   Archivo Prefetch: SPOTIFY.EXE-C844D4DD.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+76. Programa: SPOTIFY.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 22:16:27
+   Hace: 3.04 horas
+   Ruta: C:\Windows\Prefetch\SPOTIFY.EXE-C844D4D9.pf
+   Archivo Prefetch: SPOTIFY.EXE-C844D4D9.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+77. Programa: STEAM.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 22:16:19
+   Hace: 3.04 horas
+   Ruta: C:\Windows\Prefetch\STEAM.EXE-D936A6F2.pf
+   Archivo Prefetch: STEAM.EXE-D936A6F2.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+78. Programa: STEAMSERVICE.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 22:16:19
+   Hace: 3.04 horas
+   Ruta: C:\Windows\Prefetch\STEAMSERVICE.EXE-2A912AE7.pf
+   Archivo Prefetch: STEAMSERVICE.EXE-2A912AE7.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: Programa reconocido como legítimo: STEAMSERVICE.EXE
+
+79. Programa: STEAMSYSINFO.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 22:16:09
+   Hace: 3.04 horas
+   Ruta: C:\Windows\Prefetch\STEAMSYSINFO.EXE-63257559.pf
+   Archivo Prefetch: STEAMSYSINFO.EXE-63257559.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+80. Programa: STEAMWEBHELPER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 22:16:12
+   Hace: 3.04 horas
+   Ruta: C:\Windows\Prefetch\STEAMWEBHELPER.EXE-D4733806.pf
+   Archivo Prefetch: STEAMWEBHELPER.EXE-D4733806.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+81. Programa: STEAMWEBHELPER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 22:16:21
+   Hace: 3.04 horas
+   Ruta: C:\Windows\Prefetch\STEAMWEBHELPER.EXE-D4733807.pf
+   Archivo Prefetch: STEAMWEBHELPER.EXE-D4733807.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+82. Programa: STEAMWEBHELPER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 22:16:20
+   Hace: 3.04 horas
+   Ruta: C:\Windows\Prefetch\STEAMWEBHELPER.EXE-D4733808.pf
+   Archivo Prefetch: STEAMWEBHELPER.EXE-D4733808.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+83. Programa: STEAMWEBHELPER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 22:16:19
+   Hace: 3.04 horas
+   Ruta: C:\Windows\Prefetch\STEAMWEBHELPER.EXE-D473380A.pf
+   Archivo Prefetch: STEAMWEBHELPER.EXE-D473380A.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+84. Programa: STEAMWEBHELPER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 22:16:20
+   Hace: 3.04 horas
+   Ruta: C:\Windows\Prefetch\STEAMWEBHELPER.EXE-D4733811.pf
+   Archivo Prefetch: STEAMWEBHELPER.EXE-D4733811.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+85. Programa: STEAMWEBHELPER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 22:16:20
+   Hace: 3.04 horas
+   Ruta: C:\Windows\Prefetch\STEAMWEBHELPER.EXE-D4733813.pf
+   Archivo Prefetch: STEAMWEBHELPER.EXE-D4733813.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+86. Programa: STEAMWEBHELPER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 22:16:18
+   Hace: 3.04 horas
+   Ruta: C:\Windows\Prefetch\STEAMWEBHELPER.EXE-D4733814.pf
+   Archivo Prefetch: STEAMWEBHELPER.EXE-D4733814.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+87. Programa: VULKANDRIVERQUERY.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 22:16:13
+   Hace: 3.04 horas
+   Ruta: C:\Windows\Prefetch\VULKANDRIVERQUERY.EXE-2CBBE840.pf
+   Archivo Prefetch: VULKANDRIVERQUERY.EXE-2CBBE840.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+88. Programa: VULKANDRIVERQUERY64.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 22:16:12
+   Hace: 3.04 horas
+   Ruta: C:\Windows\Prefetch\VULKANDRIVERQUERY64.EXE-A4F35522.pf
+   Archivo Prefetch: VULKANDRIVERQUERY64.EXE-A4F35522.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+89. Programa: ATIEAH32.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 22:16:08
+   Hace: 3.05 horas
+   Ruta: C:\Windows\Prefetch\ATIEAH32.EXE-8E994E56.pf
+   Archivo Prefetch: ATIEAH32.EXE-8E994E56.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+90. Programa: SPOTIFY.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 22:14:28
+   Hace: 3.07 horas
+   Ruta: C:\Windows\Prefetch\SPOTIFY.EXE-C844D4CF.pf
+   Archivo Prefetch: SPOTIFY.EXE-C844D4CF.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+91. Programa: SPOTIFY.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 22:14:38
+   Hace: 3.07 horas
+   Ruta: C:\Windows\Prefetch\SPOTIFY.EXE-C844D4D0.pf
+   Archivo Prefetch: SPOTIFY.EXE-C844D4D0.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+92. Programa: SPOTIFY.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 22:14:37
+   Hace: 3.07 horas
+   Ruta: C:\Windows\Prefetch\SPOTIFY.EXE-C844D4D1.pf
+   Archivo Prefetch: SPOTIFY.EXE-C844D4D1.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+93. Programa: SPOTIFY.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 22:14:37
+   Hace: 3.07 horas
+   Ruta: C:\Windows\Prefetch\SPOTIFY.EXE-C844D4DA.pf
+   Archivo Prefetch: SPOTIFY.EXE-C844D4DA.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+94. Programa: SPOTIFY.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 22:14:37
+   Hace: 3.07 horas
+   Ruta: C:\Windows\Prefetch\SPOTIFY.EXE-C844D4DC.pf
+   Archivo Prefetch: SPOTIFY.EXE-C844D4DC.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+95. Programa: DISCORD.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 21:58:33
+   Hace: 3.34 horas
+   Ruta: C:\Windows\Prefetch\DISCORD.EXE-6FDEE3BE.pf
+   Archivo Prefetch: DISCORD.EXE-6FDEE3BE.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+96. Programa: DISCORD.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 21:58:33
+   Hace: 3.34 horas
+   Ruta: C:\Windows\Prefetch\DISCORD.EXE-6FDEE3C0.pf
+   Archivo Prefetch: DISCORD.EXE-6FDEE3C0.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+97. Programa: DISCORD.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 21:58:33
+   Hace: 3.34 horas
+   Ruta: C:\Windows\Prefetch\DISCORD.EXE-6FDEE3C9.pf
+   Archivo Prefetch: DISCORD.EXE-6FDEE3C9.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+98. Programa: DISCORD.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 21:20:06
+   Hace: 3.98 horas
+   Ruta: C:\Windows\Prefetch\DISCORD.EXE-6FDEE3CA.pf
+   Archivo Prefetch: DISCORD.EXE-6FDEE3CA.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+99. Programa: DISCORD.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 21:20:02
+   Hace: 3.98 horas
+   Ruta: C:\Windows\Prefetch\DISCORD.EXE-6FDEE3CC.pf
+   Archivo Prefetch: DISCORD.EXE-6FDEE3CC.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+100. Programa: BLIZZARDBROWSER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 21:19:13
+   Hace: 3.99 horas
+   Ruta: C:\Windows\Prefetch\BLIZZARDBROWSER.EXE-7B13026F.pf
+   Archivo Prefetch: BLIZZARDBROWSER.EXE-7B13026F.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+101. Programa: DISCORD.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 21:19:17
+   Hace: 3.99 horas
+   Ruta: C:\Windows\Prefetch\DISCORD.EXE-6FDEE3BF.pf
+   Archivo Prefetch: DISCORD.EXE-6FDEE3BF.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+102. Programa: SNIPPINGTOOL.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 21:19:30
+   Hace: 3.99 horas
+   Ruta: C:\Windows\Prefetch\SNIPPINGTOOL.EXE-035A70DF.pf
+   Archivo Prefetch: SNIPPINGTOOL.EXE-035A70DF.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+103. Programa: AGENT.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 21:18:49
+   Hace: 4.0 horas
+   Ruta: C:\Windows\Prefetch\AGENT.EXE-18106501.pf
+   Archivo Prefetch: AGENT.EXE-18106501.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+104. Programa: DISCORDHOOKHELPER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 21:19:06
+   Hace: 4.0 horas
+   Ruta: C:\Windows\Prefetch\DISCORDHOOKHELPER.EXE-E0BD33B6.pf
+   Archivo Prefetch: DISCORDHOOKHELPER.EXE-E0BD33B6.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+105. Programa: DISCORDHOOKHELPER64.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 21:19:06
+   Hace: 4.0 horas
+   Ruta: C:\Windows\Prefetch\DISCORDHOOKHELPER64.EXE-1FE16F38.pf
+   Archivo Prefetch: DISCORDHOOKHELPER64.EXE-1FE16F38.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+106. Programa: SC2SWITCHER_X64.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 21:18:53
+   Hace: 4.0 horas
+   Ruta: C:\Windows\Prefetch\SC2SWITCHER_X64.EXE-D1B3E013.pf
+   Archivo Prefetch: SC2SWITCHER_X64.EXE-D1B3E013.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+107. Programa: SC2_X64.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 21:18:46
+   Hace: 4.0 horas
+   Ruta: C:\Windows\Prefetch\SC2_X64.EXE-5E16F29D.pf
+   Archivo Prefetch: SC2_X64.EXE-5E16F29D.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+108. Programa: AGENT.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 21:17:34
+   Hace: 4.02 horas
+   Ruta: C:\Windows\Prefetch\AGENT.EXE-60E61D9D.pf
+   Archivo Prefetch: AGENT.EXE-60E61D9D.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+109. Programa: BATTLE.NET.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 21:17:35
+   Hace: 4.02 horas
+   Ruta: C:\Windows\Prefetch\BATTLE.NET.EXE-B9577940.pf
+   Archivo Prefetch: BATTLE.NET.EXE-B9577940.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+110. Programa: BATTLE.NET.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 21:17:46
+   Hace: 4.02 horas
+   Ruta: C:\Windows\Prefetch\BATTLE.NET.EXE-B9577941.pf
+   Archivo Prefetch: BATTLE.NET.EXE-B9577941.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+111. Programa: STARCRAFT II.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 21:17:35
+   Hace: 4.02 horas
+   Ruta: C:\Windows\Prefetch\STARCRAFT II.EXE-A0A06BE6.pf
+   Archivo Prefetch: STARCRAFT II.EXE-A0A06BE6.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+112. Programa: SVCHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 21:17:39
+   Hace: 4.02 horas
+   Ruta: C:\Windows\Prefetch\SVCHOST.EXE-8CE690C0.pf
+   Archivo Prefetch: SVCHOST.EXE-8CE690C0.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+113. Programa: DATAEXCHANGEHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 20:45:54
+   Hace: 4.55 horas
+   Ruta: C:\Windows\Prefetch\DATAEXCHANGEHOST.EXE-8B66795C.pf
+   Archivo Prefetch: DATAEXCHANGEHOST.EXE-8B66795C.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+114. Programa: SVCHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 20:41:26
+   Hace: 4.62 horas
+   Ruta: C:\Windows\Prefetch\SVCHOST.EXE-84F32335.pf
+   Archivo Prefetch: SVCHOST.EXE-84F32335.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+115. Programa: SVCHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 20:32:25
+   Hace: 4.77 horas
+   Ruta: C:\Windows\Prefetch\SVCHOST.EXE-BD1A4B01.pf
+   Archivo Prefetch: SVCHOST.EXE-BD1A4B01.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+116. Programa: GIT
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 20:20:11
+   Hace: 4.98 horas
+   Ruta: C:\Windows\Prefetch\GIT-CREDENTIAL-DESKTOP.EXE-6418D25D.pf
+   Archivo Prefetch: GIT-CREDENTIAL-DESKTOP.EXE-6418D25D.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+117. Programa: GIT
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 20:20:14
+   Hace: 4.98 horas
+   Ruta: C:\Windows\Prefetch\GIT-REMOTE-HTTPS.EXE-895A45BA.pf
+   Archivo Prefetch: GIT-REMOTE-HTTPS.EXE-895A45BA.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+118. Programa: SH.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 20:20:11
+   Hace: 4.98 horas
+   Ruta: C:\Windows\Prefetch\SH.EXE-6479F10E.pf
+   Archivo Prefetch: SH.EXE-6479F10E.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+119. Programa: GIT.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 20:18:36
+   Hace: 5.0 horas
+   Ruta: C:\Windows\Prefetch\GIT.EXE-9E9D6BB4.pf
+   Archivo Prefetch: GIT.EXE-9E9D6BB4.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+120. Programa: GIT.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 20:18:36
+   Hace: 5.0 horas
+   Ruta: C:\Windows\Prefetch\GIT.EXE-C73854C5.pf
+   Archivo Prefetch: GIT.EXE-C73854C5.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+121. Programa: SVCHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 20:17:04
+   Hace: 5.03 horas
+   Ruta: C:\Windows\Prefetch\SVCHOST.EXE-3CDB0077.pf
+   Archivo Prefetch: SVCHOST.EXE-3CDB0077.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+122. Programa: UPDATE.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 20:12:24
+   Hace: 5.11 horas
+   Ruta: C:\Windows\Prefetch\UPDATE.EXE-6B2F8C21.pf
+   Archivo Prefetch: UPDATE.EXE-6B2F8C21.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+123. Programa: SVCHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 20:09:41
+   Hace: 5.15 horas
+   Ruta: C:\Windows\Prefetch\SVCHOST.EXE-852EC587.pf
+   Archivo Prefetch: SVCHOST.EXE-852EC587.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+124. Programa: WINPREFETCHVIEW.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 20:09:05
+   Hace: 5.16 horas
+   Ruta: C:\Windows\Prefetch\WINPREFETCHVIEW.EXE-F9B84312.pf
+   Archivo Prefetch: WINPREFETCHVIEW.EXE-F9B84312.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+125. Programa: WINPREFETCHVIEW.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 20:00:19
+   Hace: 5.31 horas
+   Ruta: C:\Windows\Prefetch\WINPREFETCHVIEW.EXE-198456BC.pf
+   Archivo Prefetch: WINPREFETCHVIEW.EXE-198456BC.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+126. Programa: BACKGROUNDTASKHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 19:57:54
+   Hace: 5.35 horas
+   Ruta: C:\Windows\Prefetch\BACKGROUNDTASKHOST.EXE-97CA74D0.pf
+   Archivo Prefetch: BACKGROUNDTASKHOST.EXE-97CA74D0.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+127. Programa: TIMEOUT.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 19:53:58
+   Hace: 5.41 horas
+   Ruta: C:\Windows\Prefetch\TIMEOUT.EXE-7D53A680.pf
+   Archivo Prefetch: TIMEOUT.EXE-7D53A680.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+128. Programa: L4D2_VERIFIER_CONSOLE.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 19:53:23
+   Hace: 5.42 horas
+   Ruta: C:\Windows\Prefetch\L4D2_VERIFIER_CONSOLE.EXE-DE541054.pf
+   Archivo Prefetch: L4D2_VERIFIER_CONSOLE.EXE-DE541054.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+129. Programa: AI.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 19:52:11
+   Hace: 5.44 horas
+   Ruta: C:\Windows\Prefetch\AI.EXE-C5B0F666.pf
+   Archivo Prefetch: AI.EXE-C5B0F666.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+130. Programa: AIMGR.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 19:52:10
+   Hace: 5.44 horas
+   Ruta: C:\Windows\Prefetch\AIMGR.EXE-815BA720.pf
+   Archivo Prefetch: AIMGR.EXE-815BA720.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+131. Programa: FILECOAUTH.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 19:52:07
+   Hace: 5.45 horas
+   Ruta: C:\Windows\Prefetch\FILECOAUTH.EXE-942C52CE.pf
+   Archivo Prefetch: FILECOAUTH.EXE-942C52CE.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+132. Programa: WINWORD.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 19:52:00
+   Hace: 5.45 horas
+   Ruta: C:\Windows\Prefetch\WINWORD.EXE-AB6EC2FA.pf
+   Archivo Prefetch: WINWORD.EXE-AB6EC2FA.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+133. Programa: WORD.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 19:51:36
+   Hace: 5.45 horas
+   Ruta: C:\Windows\Prefetch\WORD.EXE-08BC9B6E.pf
+   Archivo Prefetch: WORD.EXE-08BC9B6E.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+134. Programa: WORD.TMP
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 19:51:36
+   Hace: 5.45 horas
+   Ruta: C:\Windows\Prefetch\WORD.TMP-243FB82B.pf
+   Archivo Prefetch: WORD.TMP-243FB82B.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+135. Programa: WORD.TMP
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 19:51:36
+   Hace: 5.45 horas
+   Ruta: C:\Windows\Prefetch\WORD.TMP-D20B5AC6.pf
+   Archivo Prefetch: WORD.TMP-D20B5AC6.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+136. Programa: PROCESSHACKER
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 19:48:00
+   Hace: 5.51 horas
+   Ruta: C:\Windows\Prefetch\PROCESSHACKER-2.39-SETUP.EXE-6BD69FD6.pf
+   Archivo Prefetch: PROCESSHACKER-2.39-SETUP.EXE-6BD69FD6.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: Nombre específico de cheat detectado: PROCESSHACKER
+
+137. Programa: PROCESSHACKER
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 19:48:00
+   Hace: 5.51 horas
+   Ruta: C:\Windows\Prefetch\PROCESSHACKER-2.39-SETUP.TMP-5C02FAA1.pf
+   Archivo Prefetch: PROCESSHACKER-2.39-SETUP.TMP-5C02FAA1.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: Nombre específico de cheat detectado: PROCESSHACKER
+
+138. Programa: PROCESSHACKER
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 19:48:00
+   Hace: 5.51 horas
+   Ruta: C:\Windows\Prefetch\PROCESSHACKER-2.39-SETUP.TMP-85FB89DC.pf
+   Archivo Prefetch: PROCESSHACKER-2.39-SETUP.TMP-85FB89DC.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: Nombre específico de cheat detectado: PROCESSHACKER
+
+139. Programa: MSEDGE.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 19:41:42
+   Hace: 5.62 horas
+   Ruta: C:\Windows\Prefetch\MSEDGE.EXE-37D25FA4.pf
+   Archivo Prefetch: MSEDGE.EXE-37D25FA4.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+140. Programa: IDENTITY_HELPER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 19:39:52
+   Hace: 5.65 horas
+   Ruta: C:\Windows\Prefetch\IDENTITY_HELPER.EXE-2A7EE993.pf
+   Archivo Prefetch: IDENTITY_HELPER.EXE-2A7EE993.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+141. Programa: MSEDGE.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 19:39:41
+   Hace: 5.65 horas
+   Ruta: C:\Windows\Prefetch\MSEDGE.EXE-37D25F9B.pf
+   Archivo Prefetch: MSEDGE.EXE-37D25F9B.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+142. Programa: MSEDGE.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 19:39:41
+   Hace: 5.65 horas
+   Ruta: C:\Windows\Prefetch\MSEDGE.EXE-37D25F9C.pf
+   Archivo Prefetch: MSEDGE.EXE-37D25F9C.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+143. Programa: MSEDGE.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 19:39:41
+   Hace: 5.65 horas
+   Ruta: C:\Windows\Prefetch\MSEDGE.EXE-37D25F9E.pf
+   Archivo Prefetch: MSEDGE.EXE-37D25F9E.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+144. Programa: MSEDGE.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 19:39:41
+   Hace: 5.65 horas
+   Ruta: C:\Windows\Prefetch\MSEDGE.EXE-37D25FA5.pf
+   Archivo Prefetch: MSEDGE.EXE-37D25FA5.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+145. Programa: MSEDGE.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 19:39:41
+   Hace: 5.65 horas
+   Ruta: C:\Windows\Prefetch\MSEDGE.EXE-37D25FA7.pf
+   Archivo Prefetch: MSEDGE.EXE-37D25FA7.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+146. Programa: MSEDGE.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 19:39:42
+   Hace: 5.65 horas
+   Ruta: C:\Windows\Prefetch\MSEDGE.EXE-37D25FAA.pf
+   Archivo Prefetch: MSEDGE.EXE-37D25FAA.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+147. Programa: ELEVATION_SERVICE.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 19:39:31
+   Hace: 5.66 horas
+   Ruta: C:\Windows\Prefetch\ELEVATION_SERVICE.EXE-E921B82C.pf
+   Archivo Prefetch: ELEVATION_SERVICE.EXE-E921B82C.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: Programa sospechoso: ELEVATION_SERVICE.EXE
+
+148. Programa: OPENWITH.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 19:39:31
+   Hace: 5.66 horas
+   Ruta: C:\Windows\Prefetch\OPENWITH.EXE-8B50D58B.pf
+   Archivo Prefetch: OPENWITH.EXE-8B50D58B.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+149. Programa: EXTREME INJECTOR V3.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 19:38:52
+   Hace: 5.67 horas
+   Ruta: C:\Windows\Prefetch\EXTREME INJECTOR V3.EXE-7E436F03.pf
+   Archivo Prefetch: EXTREME INJECTOR V3.EXE-7E436F03.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: Nombre específico de cheat detectado: EXTREME INJECTOR V3.EXE
+
+150. Programa: SMARTSCREEN.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 19:38:51
+   Hace: 5.67 horas
+   Ruta: C:\Windows\Prefetch\SMARTSCREEN.EXE-EACC1250.pf
+   Archivo Prefetch: SMARTSCREEN.EXE-EACC1250.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+151. Programa: L4D2_VERIFIER_CONSOLE.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 19:30:56
+   Hace: 5.8 horas
+   Ruta: C:\Windows\Prefetch\L4D2_VERIFIER_CONSOLE.EXE-A0085DF0.pf
+   Archivo Prefetch: L4D2_VERIFIER_CONSOLE.EXE-A0085DF0.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+152. Programa: FD.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 19:04:26
+   Hace: 6.24 horas
+   Ruta: C:\Windows\Prefetch\FD.EXE-43EABA57.pf
+   Archivo Prefetch: FD.EXE-43EABA57.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+153. Programa: SVCHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 19:03:29
+   Hace: 6.26 horas
+   Ruta: C:\Windows\Prefetch\SVCHOST.EXE-FC42C687.pf
+   Archivo Prefetch: SVCHOST.EXE-FC42C687.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+154. Programa: WINRAR.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 19:02:06
+   Hace: 6.28 horas
+   Ruta: C:\Windows\Prefetch\WINRAR.EXE-BA8CDB31.pf
+   Archivo Prefetch: WINRAR.EXE-BA8CDB31.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+155. Programa: WCCHROMENATIVEMESSAGINGHOST.E
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 18:57:07
+   Hace: 6.36 horas
+   Ruta: C:\Windows\Prefetch\WCCHROMENATIVEMESSAGINGHOST.E-B1403123.pf
+   Archivo Prefetch: WCCHROMENATIVEMESSAGINGHOST.E-B1403123.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+156. Programa: WINPREFETCHVIEW.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 18:50:20
+   Hace: 6.48 horas
+   Ruta: C:\Windows\Prefetch\WINPREFETCHVIEW.EXE-FC978339.pf
+   Archivo Prefetch: WINPREFETCHVIEW.EXE-FC978339.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+157. Programa: AM_DELTA.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 18:48:33
+   Hace: 6.5 horas
+   Ruta: C:\Windows\Prefetch\AM_DELTA.EXE-78CA83B0.pf
+   Archivo Prefetch: AM_DELTA.EXE-78CA83B0.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+158. Programa: HPSUPD
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 18:48:37
+   Hace: 6.5 horas
+   Ruta: C:\Windows\Prefetch\HPSUPD-WIN32EXE.EXE-58D7F742.pf
+   Archivo Prefetch: HPSUPD-WIN32EXE.EXE-58D7F742.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+159. Programa: SVCHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 18:48:47
+   Hace: 6.5 horas
+   Ruta: C:\Windows\Prefetch\SVCHOST.EXE-55013EA5.pf
+   Archivo Prefetch: SVCHOST.EXE-55013EA5.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+160. Programa: SVCHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 18:48:35
+   Hace: 6.5 horas
+   Ruta: C:\Windows\Prefetch\SVCHOST.EXE-BE3D0421.pf
+   Archivo Prefetch: SVCHOST.EXE-BE3D0421.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+161. Programa: SVCHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 18:48:33
+   Hace: 6.5 horas
+   Ruta: C:\Windows\Prefetch\SVCHOST.EXE-EBBF67E6.pf
+   Archivo Prefetch: SVCHOST.EXE-EBBF67E6.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+162. Programa: DLLHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 18:48:29
+   Hace: 6.51 horas
+   Ruta: C:\Windows\Prefetch\DLLHOST.EXE-6F625E57.pf
+   Archivo Prefetch: DLLHOST.EXE-6F625E57.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+163. Programa: DLLHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 18:48:10
+   Hace: 6.51 horas
+   Ruta: C:\Windows\Prefetch\DLLHOST.EXE-A15F3076.pf
+   Archivo Prefetch: DLLHOST.EXE-A15F3076.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+164. Programa: MPCMDRUN.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 18:48:25
+   Hace: 6.51 horas
+   Ruta: C:\Windows\Prefetch\MPCMDRUN.EXE-30893678.pf
+   Archivo Prefetch: MPCMDRUN.EXE-30893678.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+165. Programa: CHROME.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 18:46:53
+   Hace: 6.53 horas
+   Ruta: C:\Windows\Prefetch\CHROME.EXE-AED7BA48.pf
+   Archivo Prefetch: CHROME.EXE-AED7BA48.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+166. Programa: COMPPKGSRV.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 18:46:51
+   Hace: 6.53 horas
+   Ruta: C:\Windows\Prefetch\COMPPKGSRV.EXE-4780F0C1.pf
+   Archivo Prefetch: COMPPKGSRV.EXE-4780F0C1.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+167. Programa: AUDIODG.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 18:44:26
+   Hace: 6.57 horas
+   Ruta: C:\Windows\Prefetch\AUDIODG.EXE-AB22E9A6.pf
+   Archivo Prefetch: AUDIODG.EXE-AB22E9A6.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+168. Programa: L4D2_TOKEN_GENERATOR.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 18:44:41
+   Hace: 6.57 horas
+   Ruta: C:\Windows\Prefetch\L4D2_TOKEN_GENERATOR.EXE-C47CA08B.pf
+   Archivo Prefetch: L4D2_TOKEN_GENERATOR.EXE-C47CA08B.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+169. Programa: L4D2_VERIFIER_CONSOLE 
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 18:44:28
+   Hace: 6.57 horas
+   Ruta: C:\Windows\Prefetch\L4D2_VERIFIER_CONSOLE - COPIA-98A56980.pf
+   Archivo Prefetch: L4D2_VERIFIER_CONSOLE - COPIA-98A56980.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+170. Programa: CHROME.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 18:44:13
+   Hace: 6.58 horas
+   Ruta: C:\Windows\Prefetch\CHROME.EXE-AED7BA46.pf
+   Archivo Prefetch: CHROME.EXE-AED7BA46.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+171. Programa: OPENCONSOLE.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 18:44:13
+   Hace: 6.58 horas
+   Ruta: C:\Windows\Prefetch\OPENCONSOLE.EXE-A617E510.pf
+   Archivo Prefetch: OPENCONSOLE.EXE-A617E510.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+172. Programa: RUNTIMEBROKER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 18:44:20
+   Hace: 6.58 horas
+   Ruta: C:\Windows\Prefetch\RUNTIMEBROKER.EXE-967B2208.pf
+   Archivo Prefetch: RUNTIMEBROKER.EXE-967B2208.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+173. Programa: WINDOWSTERMINAL.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 18:44:13
+   Hace: 6.58 horas
+   Ruta: C:\Windows\Prefetch\WINDOWSTERMINAL.EXE-DD240BFA.pf
+   Archivo Prefetch: WINDOWSTERMINAL.EXE-DD240BFA.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+174. Programa: CHROME.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 18:42:23
+   Hace: 6.61 horas
+   Ruta: C:\Windows\Prefetch\CHROME.EXE-AED7BA3E.pf
+   Archivo Prefetch: CHROME.EXE-AED7BA3E.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+175. Programa: CHROME.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 18:42:23
+   Hace: 6.61 horas
+   Ruta: C:\Windows\Prefetch\CHROME.EXE-AED7BA47.pf
+   Archivo Prefetch: CHROME.EXE-AED7BA47.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+176. Programa: CHROME.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 18:42:23
+   Hace: 6.61 horas
+   Ruta: C:\Windows\Prefetch\CHROME.EXE-AED7BA49.pf
+   Archivo Prefetch: CHROME.EXE-AED7BA49.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+177. Programa: ELEVATION_SERVICE.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 18:42:13
+   Hace: 6.61 horas
+   Ruta: C:\Windows\Prefetch\ELEVATION_SERVICE.EXE-A4ECCC57.pf
+   Archivo Prefetch: ELEVATION_SERVICE.EXE-A4ECCC57.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: Programa sospechoso: ELEVATION_SERVICE.EXE
+
+178. Programa: RUNTIMEBROKER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 18:42:22
+   Hace: 6.61 horas
+   Ruta: C:\Windows\Prefetch\RUNTIMEBROKER.EXE-4551A062.pf
+   Archivo Prefetch: RUNTIMEBROKER.EXE-4551A062.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+179. Programa: NISSRV.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 18:38:26
+   Hace: 6.67 horas
+   Ruta: C:\Windows\Prefetch\NISSRV.EXE-E1E40093.pf
+   Archivo Prefetch: NISSRV.EXE-E1E40093.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+180. Programa: SECURITYHEALTHHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 18:38:43
+   Hace: 6.67 horas
+   Ruta: C:\Windows\Prefetch\SECURITYHEALTHHOST.EXE-430D2FE6.pf
+   Archivo Prefetch: SECURITYHEALTHHOST.EXE-430D2FE6.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+181. Programa: MALWAREBYTES_ASSISTANT.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 18:38:10
+   Hace: 6.68 horas
+   Ruta: C:\Windows\Prefetch\MALWAREBYTES_ASSISTANT.EXE-C3209CFE.pf
+   Archivo Prefetch: MALWAREBYTES_ASSISTANT.EXE-C3209CFE.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+182. Programa: MBAMWSC.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 18:38:16
+   Hace: 6.68 horas
+   Ruta: C:\Windows\Prefetch\MBAMWSC.EXE-2DADCD3B.pf
+   Archivo Prefetch: MBAMWSC.EXE-2DADCD3B.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+183. Programa: MSMPENG.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 18:38:17
+   Hace: 6.68 horas
+   Ruta: C:\Windows\Prefetch\MSMPENG.EXE-17495ACD.pf
+   Archivo Prefetch: MSMPENG.EXE-17495ACD.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+184. Programa: WEVTUTIL.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 18:38:11
+   Hace: 6.68 horas
+   Ruta: C:\Windows\Prefetch\WEVTUTIL.EXE-1E154F39.pf
+   Archivo Prefetch: WEVTUTIL.EXE-1E154F39.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+185. Programa: MSEDGEWEBVIEW2.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 17:56:21
+   Hace: 7.37 horas
+   Ruta: C:\Windows\Prefetch\MSEDGEWEBVIEW2.EXE-8720012E.pf
+   Archivo Prefetch: MSEDGEWEBVIEW2.EXE-8720012E.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+186. Programa: MSEDGEWEBVIEW2.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 17:56:21
+   Hace: 7.37 horas
+   Ruta: C:\Windows\Prefetch\MSEDGEWEBVIEW2.EXE-8720012F.pf
+   Archivo Prefetch: MSEDGEWEBVIEW2.EXE-8720012F.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+187. Programa: MSEDGEWEBVIEW2.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 17:56:21
+   Hace: 7.37 horas
+   Ruta: C:\Windows\Prefetch\MSEDGEWEBVIEW2.EXE-87200130.pf
+   Archivo Prefetch: MSEDGEWEBVIEW2.EXE-87200130.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+188. Programa: MSEDGEWEBVIEW2.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 17:56:21
+   Hace: 7.37 horas
+   Ruta: C:\Windows\Prefetch\MSEDGEWEBVIEW2.EXE-87200132.pf
+   Archivo Prefetch: MSEDGEWEBVIEW2.EXE-87200132.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+189. Programa: MSEDGEWEBVIEW2.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 17:56:21
+   Hace: 7.37 horas
+   Ruta: C:\Windows\Prefetch\MSEDGEWEBVIEW2.EXE-87200139.pf
+   Archivo Prefetch: MSEDGEWEBVIEW2.EXE-87200139.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+190. Programa: MSEDGEWEBVIEW2.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 17:56:21
+   Hace: 7.37 horas
+   Ruta: C:\Windows\Prefetch\MSEDGEWEBVIEW2.EXE-8720013B.pf
+   Archivo Prefetch: MSEDGEWEBVIEW2.EXE-8720013B.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+191. Programa: ADOBE CRASH PROCESSOR.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 17:56:09
+   Hace: 7.38 horas
+   Ruta: C:\Windows\Prefetch\ADOBE CRASH PROCESSOR.EXE-82E5373A.pf
+   Archivo Prefetch: ADOBE CRASH PROCESSOR.EXE-82E5373A.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+192. Programa: ADOBE CRASH PROCESSOR.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 17:56:05
+   Hace: 7.38 horas
+   Ruta: C:\Windows\Prefetch\ADOBE CRASH PROCESSOR.EXE-AA293CAC.pf
+   Archivo Prefetch: ADOBE CRASH PROCESSOR.EXE-AA293CAC.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+193. Programa: ADOBEIPCBROKER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 17:56:10
+   Hace: 7.38 horas
+   Ruta: C:\Windows\Prefetch\ADOBEIPCBROKER.EXE-E5C53ED0.pf
+   Archivo Prefetch: ADOBEIPCBROKER.EXE-E5C53ED0.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+194. Programa: CCXPROCESS.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 17:56:17
+   Hace: 7.38 horas
+   Ruta: C:\Windows\Prefetch\CCXPROCESS.EXE-1D612A90.pf
+   Archivo Prefetch: CCXPROCESS.EXE-1D612A90.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+195. Programa: CRLOGTRANSPORT.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 17:56:06
+   Hace: 7.38 horas
+   Ruta: C:\Windows\Prefetch\CRLOGTRANSPORT.EXE-51F38F24.pf
+   Archivo Prefetch: CRLOGTRANSPORT.EXE-51F38F24.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+196. Programa: CRLOGTRANSPORT.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 17:56:00
+   Hace: 7.38 horas
+   Ruta: C:\Windows\Prefetch\CRLOGTRANSPORT.EXE-A30DBC02.pf
+   Archivo Prefetch: CRLOGTRANSPORT.EXE-A30DBC02.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+197. Programa: CRWINDOWSCLIENTSERVICE.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 17:56:00
+   Hace: 7.38 horas
+   Ruta: C:\Windows\Prefetch\CRWINDOWSCLIENTSERVICE.EXE-0167D756.pf
+   Archivo Prefetch: CRWINDOWSCLIENTSERVICE.EXE-0167D756.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: Programa reconocido como legítimo: CRWINDOWSCLIENTSERVICE.EXE
+
+198. Programa: CRWINDOWSCLIENTSERVICE.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 17:56:06
+   Hace: 7.38 horas
+   Ruta: C:\Windows\Prefetch\CRWINDOWSCLIENTSERVICE.EXE-FC28F5F8.pf
+   Archivo Prefetch: CRWINDOWSCLIENTSERVICE.EXE-FC28F5F8.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: Programa reconocido como legítimo: CRWINDOWSCLIENTSERVICE.EXE
+
+199. Programa: NODE.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 17:56:06
+   Hace: 7.38 horas
+   Ruta: C:\Windows\Prefetch\NODE.EXE-8A751A1B.pf
+   Archivo Prefetch: NODE.EXE-8A751A1B.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+200. Programa: PHOTOSHOP.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 17:55:57
+   Hace: 7.38 horas
+   Ruta: C:\Windows\Prefetch\PHOTOSHOP.EXE-11478C52.pf
+   Archivo Prefetch: PHOTOSHOP.EXE-11478C52.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+201. Programa: REG.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 17:56:08
+   Hace: 7.38 horas
+   Ruta: C:\Windows\Prefetch\REG.EXE-A93A1343.pf
+   Archivo Prefetch: REG.EXE-A93A1343.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+202. Programa: SNIFFER.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 17:56:01
+   Hace: 7.38 horas
+   Ruta: C:\Windows\Prefetch\SNIFFER.EXE-9B796EF7.pf
+   Archivo Prefetch: SNIFFER.EXE-9B796EF7.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+203. Programa: SVCHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 17:56:09
+   Hace: 7.38 horas
+   Ruta: C:\Windows\Prefetch\SVCHOST.EXE-AA89143F.pf
+   Archivo Prefetch: SVCHOST.EXE-AA89143F.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+204. Programa: XPUINFOIPC.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 17:56:00
+   Hace: 7.38 horas
+   Ruta: C:\Windows\Prefetch\XPUINFOIPC.EXE-405FADC7.pf
+   Archivo Prefetch: XPUINFOIPC.EXE-405FADC7.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+205. Programa: SVCHOST.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 17:38:43
+   Hace: 7.67 horas
+   Ruta: C:\Windows\Prefetch\SVCHOST.EXE-502A129B.pf
+   Archivo Prefetch: SVCHOST.EXE-502A129B.pf
+   Severidad: LOW
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+206. Programa: ANTIGRAVITY.EXE
+   Fuente: Prefetch
+   Última ejecución: 2025-12-02 17:20:41
+   Hace: 7.97 horas
+   Ruta: C:\Windows\Prefetch\ANTIGRAVITY.EXE-68F16008.pf
+   Archivo Prefetch: ANTIGRAVITY.EXE-68F16008.pf
+   Severidad: MEDIUM
+   Confianza: BAJA
+   Análisis: ⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre.
+
+--------------------------------------------------------------------------------
+ARCHIVOS CFG CON COMANDOS SOSPECHOSOS: 32
+--------------------------------------------------------------------------------
+1. Archivo: 360controller.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\360controller.cfg
+   Comandos prohibidos: 11
+      Línea 1: unbindall				// Prevent mouse/keyboard control when gamepad is in use (to prevent autoaim exploit)
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 23: joy_autoaimdampenrange 0.85
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 24: joy_autoaimdampen 0.5
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 31: joy_autoaimdampen 0.3
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 32: joy_autoaimdampenrange 0.85
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 41: bind "R_TRIGGER" "+attack"			// RT - Main weapon - Primary trigger
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 42: bind "L_TRIGGER" "+attack2"			// LT - Melee
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 65: cmd2 bind "R_TRIGGER" "+attack"			// RT - Main weapon - Primary trigger
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 66: cmd2 bind "L_TRIGGER" "+attack2"			// LT - Melee
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 68: cmd2 bind "L_SHOULDER" "toggle_duck"			// LB - Duck - is also used to give objects to people.
+         Comando: give
+         Severidad: MEDIUM
+         Razón: Dar items sin restricciones
+      Línea 83: sk_autoaim_mode 2
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+
+2. Archivo: autoexec.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\autoexec.cfg
+   Comandos prohibidos: 1
+      Línea 4: cl_interp 0.0000
+         Comando: cl_interp 0
+         Severidad: MEDIUM
+         Razón: Interpolación extremadamente baja
+
+3. Archivo: config.360.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\config.360.cfg
+   Comandos prohibidos: 4
+      Línea 51: joy_autoaimdampen 0.3
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 52: joy_autoaimdampenrange 0.85
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 57: exec joy_preset_1.cfg
+         Comando: exec
+         Severidad: LOW
+         Razón: Ejecutar archivos externos (puede ser legítimo)
+      Línea 59: cl_mouselook 0					// turn off mouse look to enable autoaim
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+
+4. Archivo: config.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\config.cfg
+   Comandos prohibidos: 10
+      Línea 39: bind "MOUSE1" "+attack"
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 40: bind "MOUSE2" "+attack2"
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 91: cl_autoaim "1"
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 92: cl_autoaim2 "1"
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 153: joy_autoaimdampen "0"
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 154: joy_autoaimdampenrange "0"
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 263: sk_autoaim_mode "1"
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 287: sv_noclipaccelerate "5"
+         Comando: noclip
+         Severidad: CRITICAL
+         Razón: Atravesar paredes y volar
+      Línea 288: sv_noclipspeed "5"
+         Comando: noclip
+         Severidad: CRITICAL
+         Razón: Atravesar paredes y volar
+      Línea 292: sv_specnoclip "1"
+         Comando: noclip
+         Severidad: CRITICAL
+         Razón: Atravesar paredes y volar
+
+5. Archivo: config_default.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\config_default.cfg
+   Comandos prohibidos: 2
+      Línea 45: bind "MOUSE1" "+attack"
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 46: bind "MOUSE2" "+attack2"
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+
+6. Archivo: joy_preset_1.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\joy_preset_1.cfg
+   Comandos prohibidos: 3
+      Línea 7: bind "R_TRIGGER" "+attack"			// RT - Main weapon - Primary trigger
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 8: bind "L_TRIGGER" "+attack2"			// LT - Melee
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 10: bind "L_SHOULDER" "+duck"			// LB - Drop - is also used to give objects to people.
+         Comando: give
+         Severidad: MEDIUM
+         Razón: Dar items sin restricciones
+
+7. Archivo: joy_preset_2.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\joy_preset_2.cfg
+   Comandos prohibidos: 3
+      Línea 7: bind "R_TRIGGER" "+attack2"			// RT - Main weapon - Primary trigger
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 8: bind "L_TRIGGER" "+attack"			// LT - Melee
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 10: bind "L_SHOULDER" "+duck"			// LB - Drop - is also used to give objects to people.
+         Comando: give
+         Severidad: MEDIUM
+         Razón: Dar items sin restricciones
+
+8. Archivo: joy_preset_3.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\joy_preset_3.cfg
+   Comandos prohibidos: 2
+      Línea 7: bind "R_TRIGGER" "+attack"			// RT - Main weapon - Primary trigger
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 9: bind "R_SHOULDER" "+attack2"		// RB - Melee
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+
+9. Archivo: joy_preset_4.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\joy_preset_4.cfg
+   Comandos prohibidos: 2
+      Línea 7: bind "R_TRIGGER" "+attack"			// RT - Main weapon - Primary trigger
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 8: bind "L_TRIGGER" "+attack2"			// LT - Melee
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+
+10. Archivo: perf.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\perf.cfg
+   Comandos prohibidos: 32
+      Línea 2: director_stop
+         Comando: director_
+         Severidad: HIGH
+         Razón: Manipulación del Director AI
+      Línea 4: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 5: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 6: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 7: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 8: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 9: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 10: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 11: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 12: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 13: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 14: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 15: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 16: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 17: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 18: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 19: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 20: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 21: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 22: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 23: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 24: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 25: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 26: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 27: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 28: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 30: z_spawn mob
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 31: z_spawn boomer
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 32: z_spawn boomer
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 33: z_spawn boomer
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 34: z_spawn boomer
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 39: sb_flashlight 1
+         Comando: sb_
+         Severidad: MEDIUM
+         Razón: Comandos de bots supervivientes
+
+11. Archivo: playtest.360.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\playtest.360.cfg
+   Comandos prohibidos: 2
+      Línea 7: sb_perf_collect 1
+         Comando: sb_
+         Severidad: MEDIUM
+         Razón: Comandos de bots supervivientes
+      Línea 8: sb_perf_dump_low 29
+         Comando: sb_
+         Severidad: MEDIUM
+         Razón: Comandos de bots supervivientes
+
+12. Archivo: screenshots.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\screenshots.cfg
+   Comandos prohibidos: 2
+      Línea 1: god 1
+         Comando: god
+         Severidad: CRITICAL
+         Razón: Modo invencibilidad
+      Línea 11: sv_infinite_ammo 1
+         Comando: sv_infinite_ammo
+         Severidad: HIGH
+         Razón: Munición infinita
+
+13. Archivo: screenshots_undo.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\screenshots_undo.cfg
+   Comandos prohibidos: 4
+      Línea 1: god 0
+         Comando: god
+         Severidad: CRITICAL
+         Razón: Modo invencibilidad
+      Línea 5: developer 1
+         Comando: developer 1
+         Severidad: LOW
+         Razón: Modo desarrollador (puede mostrar información extra)
+      Línea 10: bind mouse2 +attack2
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 11: sv_infinite_ammo 0
+         Comando: sv_infinite_ammo
+         Severidad: HIGH
+         Razón: Munición infinita
+
+14. Archivo: test_end.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\test_end.cfg
+   Comandos prohibidos: 1
+      Línea 4: developer 1
+         Comando: developer 1
+         Severidad: LOW
+         Razón: Modo desarrollador (puede mostrar información extra)
+
+15. Archivo: test_start.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\test_start.cfg
+   Comandos prohibidos: 2
+      Línea 1: sv_cheats 1
+         Comando: sv_cheats 1
+         Severidad: CRITICAL
+         Razón: Habilita comandos de trampa
+      Línea 2: director_stop
+         Comando: director_
+         Severidad: HIGH
+         Razón: Manipulación del Director AI
+
+16. Archivo: undo360controller.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\undo360controller.cfg
+   Comandos prohibidos: 2
+      Línea 4: sk_autoaim_mode 0		// Turn off autoaim
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 5: exec config_default.cfg		// Restore default controls
+         Comando: exec
+         Severidad: LOW
+         Razón: Ejecutar archivos externos (puede ser legítimo)
+
+17. Archivo: 360controller.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\360controller.cfg
+   Comandos prohibidos: 11
+      Línea 1: unbindall				// Prevent mouse/keyboard control when gamepad is in use (to prevent autoaim exploit)
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 23: joy_autoaimdampenrange 0.85
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 24: joy_autoaimdampen 0.5
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 31: joy_autoaimdampen 0.3
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 32: joy_autoaimdampenrange 0.85
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 41: bind "R_TRIGGER" "+attack"			// RT - Main weapon - Primary trigger
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 42: bind "L_TRIGGER" "+attack2"			// LT - Melee
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 65: cmd2 bind "R_TRIGGER" "+attack"			// RT - Main weapon - Primary trigger
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 66: cmd2 bind "L_TRIGGER" "+attack2"			// LT - Melee
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 68: cmd2 bind "L_SHOULDER" "toggle_duck"			// LB - Duck - is also used to give objects to people.
+         Comando: give
+         Severidad: MEDIUM
+         Razón: Dar items sin restricciones
+      Línea 83: sk_autoaim_mode 2
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+
+18. Archivo: autoexec.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\autoexec.cfg
+   Comandos prohibidos: 1
+      Línea 4: cl_interp 0.0000
+         Comando: cl_interp 0
+         Severidad: MEDIUM
+         Razón: Interpolación extremadamente baja
+
+19. Archivo: config.360.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\config.360.cfg
+   Comandos prohibidos: 4
+      Línea 51: joy_autoaimdampen 0.3
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 52: joy_autoaimdampenrange 0.85
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 57: exec joy_preset_1.cfg
+         Comando: exec
+         Severidad: LOW
+         Razón: Ejecutar archivos externos (puede ser legítimo)
+      Línea 59: cl_mouselook 0					// turn off mouse look to enable autoaim
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+
+20. Archivo: config.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\config.cfg
+   Comandos prohibidos: 10
+      Línea 39: bind "MOUSE1" "+attack"
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 40: bind "MOUSE2" "+attack2"
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 91: cl_autoaim "1"
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 92: cl_autoaim2 "1"
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 153: joy_autoaimdampen "0"
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 154: joy_autoaimdampenrange "0"
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 263: sk_autoaim_mode "1"
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 287: sv_noclipaccelerate "5"
+         Comando: noclip
+         Severidad: CRITICAL
+         Razón: Atravesar paredes y volar
+      Línea 288: sv_noclipspeed "5"
+         Comando: noclip
+         Severidad: CRITICAL
+         Razón: Atravesar paredes y volar
+      Línea 292: sv_specnoclip "1"
+         Comando: noclip
+         Severidad: CRITICAL
+         Razón: Atravesar paredes y volar
+
+21. Archivo: config_default.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\config_default.cfg
+   Comandos prohibidos: 2
+      Línea 45: bind "MOUSE1" "+attack"
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 46: bind "MOUSE2" "+attack2"
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+
+22. Archivo: joy_preset_1.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\joy_preset_1.cfg
+   Comandos prohibidos: 3
+      Línea 7: bind "R_TRIGGER" "+attack"			// RT - Main weapon - Primary trigger
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 8: bind "L_TRIGGER" "+attack2"			// LT - Melee
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 10: bind "L_SHOULDER" "+duck"			// LB - Drop - is also used to give objects to people.
+         Comando: give
+         Severidad: MEDIUM
+         Razón: Dar items sin restricciones
+
+23. Archivo: joy_preset_2.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\joy_preset_2.cfg
+   Comandos prohibidos: 3
+      Línea 7: bind "R_TRIGGER" "+attack2"			// RT - Main weapon - Primary trigger
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 8: bind "L_TRIGGER" "+attack"			// LT - Melee
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 10: bind "L_SHOULDER" "+duck"			// LB - Drop - is also used to give objects to people.
+         Comando: give
+         Severidad: MEDIUM
+         Razón: Dar items sin restricciones
+
+24. Archivo: joy_preset_3.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\joy_preset_3.cfg
+   Comandos prohibidos: 2
+      Línea 7: bind "R_TRIGGER" "+attack"			// RT - Main weapon - Primary trigger
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 9: bind "R_SHOULDER" "+attack2"		// RB - Melee
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+
+25. Archivo: joy_preset_4.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\joy_preset_4.cfg
+   Comandos prohibidos: 2
+      Línea 7: bind "R_TRIGGER" "+attack"			// RT - Main weapon - Primary trigger
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 8: bind "L_TRIGGER" "+attack2"			// LT - Melee
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+
+26. Archivo: perf.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\perf.cfg
+   Comandos prohibidos: 32
+      Línea 2: director_stop
+         Comando: director_
+         Severidad: HIGH
+         Razón: Manipulación del Director AI
+      Línea 4: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 5: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 6: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 7: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 8: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 9: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 10: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 11: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 12: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 13: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 14: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 15: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 16: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 17: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 18: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 19: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 20: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 21: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 22: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 23: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 24: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 25: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 26: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 27: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 28: z_spawn common
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 30: z_spawn mob
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 31: z_spawn boomer
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 32: z_spawn boomer
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 33: z_spawn boomer
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 34: z_spawn boomer
+         Comando: z_spawn
+         Severidad: CRITICAL
+         Razón: Spawn de zombies/items
+      Línea 39: sb_flashlight 1
+         Comando: sb_
+         Severidad: MEDIUM
+         Razón: Comandos de bots supervivientes
+
+27. Archivo: playtest.360.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\playtest.360.cfg
+   Comandos prohibidos: 2
+      Línea 7: sb_perf_collect 1
+         Comando: sb_
+         Severidad: MEDIUM
+         Razón: Comandos de bots supervivientes
+      Línea 8: sb_perf_dump_low 29
+         Comando: sb_
+         Severidad: MEDIUM
+         Razón: Comandos de bots supervivientes
+
+28. Archivo: screenshots.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\screenshots.cfg
+   Comandos prohibidos: 2
+      Línea 1: god 1
+         Comando: god
+         Severidad: CRITICAL
+         Razón: Modo invencibilidad
+      Línea 11: sv_infinite_ammo 1
+         Comando: sv_infinite_ammo
+         Severidad: HIGH
+         Razón: Munición infinita
+
+29. Archivo: screenshots_undo.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\screenshots_undo.cfg
+   Comandos prohibidos: 4
+      Línea 1: god 0
+         Comando: god
+         Severidad: CRITICAL
+         Razón: Modo invencibilidad
+      Línea 5: developer 1
+         Comando: developer 1
+         Severidad: LOW
+         Razón: Modo desarrollador (puede mostrar información extra)
+      Línea 10: bind mouse2 +attack2
+         Comando: +attack
+         Severidad: LOW
+         Razón: Auto-ataque potencial (revisar contexto)
+      Línea 11: sv_infinite_ammo 0
+         Comando: sv_infinite_ammo
+         Severidad: HIGH
+         Razón: Munición infinita
+
+30. Archivo: test_end.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\test_end.cfg
+   Comandos prohibidos: 1
+      Línea 4: developer 1
+         Comando: developer 1
+         Severidad: LOW
+         Razón: Modo desarrollador (puede mostrar información extra)
+
+31. Archivo: test_start.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\test_start.cfg
+   Comandos prohibidos: 2
+      Línea 1: sv_cheats 1
+         Comando: sv_cheats 1
+         Severidad: CRITICAL
+         Razón: Habilita comandos de trampa
+      Línea 2: director_stop
+         Comando: director_
+         Severidad: HIGH
+         Razón: Manipulación del Director AI
+
+32. Archivo: undo360controller.cfg
+   Ruta Completa: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\cfg\undo360controller.cfg
+   Comandos prohibidos: 2
+      Línea 4: sk_autoaim_mode 0		// Turn off autoaim
+         Comando: autoaim
+         Severidad: CRITICAL
+         Razón: Auto-aim detectado
+      Línea 5: exec config_default.cfg		// Restore default controls
+         Comando: exec
+         Severidad: LOW
+         Razón: Ejecutar archivos externos (puede ser legítimo)
+
+--------------------------------------------------------------------------------
+MODS EN VERSUS: 1
+--------------------------------------------------------------------------------
+1. Carpeta de mods en Versus detectada: addons
+   Severidad: HIGH
+   Carpeta: c:/program files (x86)/steam\steamapps\common\Left 4 Dead 2\left4dead2\addons
+
+--------------------------------------------------------------------------------
+TOKEN DE JUGADOR
+--------------------------------------------------------------------------------
+Jugador: Jugador Verificado
+Torneo: Torneo L4D2
+Estado: Token válido y verificado
+
+
+================================================================================
+⚠️ INFORMACIÓN SENSIBLE - DIRECCIONES IP (PRIVADO)
+================================================================================
+
+⚠️ ADVERTENCIA: Esta sección contiene información privada.
+   NO compartir esta sección en streams públicos o capturas de pantalla.
+   Las IPs están al final del archivo para facilitar la censura.
+
+IP Externa: 179.6.171.131
+IP Local: 26.245.48.174
+
+================================================================================
+FIN DEL REPORTE
+================================================================================

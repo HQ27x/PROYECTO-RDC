@@ -40,6 +40,7 @@ a = Analysis(
     datas=[
         ('gentoke', 'gentoke'),
         ('loading.gif', '.'),
+        ('pfprogam', 'pfprogam'),
     ],
     hiddenimports=[
         'psutil',
@@ -121,6 +122,7 @@ a = Analysis(
     datas=[
         ('gentoke', 'gentoke'),
         ('loading.gif', '.'),
+        ('pfprogam', 'pfprogam'),
     ],
     hiddenimports=[
         'psutil',

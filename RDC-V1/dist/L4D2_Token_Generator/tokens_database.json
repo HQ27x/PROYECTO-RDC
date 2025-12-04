@@ -1,0 +1,35 @@
+{
+  "4f3961216c68dfff80e056a6e0f10cba5276c0cc8a9954ff506ef90441a16b98": {
+    "player_name": "2",
+    "tournament_name": "2",
+    "token": "QGh134CcFKVt3syi2kw6GN2rf0MD4_kU_KIXZp2NI5Q",
+    "token_hash": "4f3961216c68dfff80e056a6e0f10cba5276c0cc8a9954ff506ef90441a16b98",
+    "created_date": "2025-12-02T19:15:58.059610",
+    "expires_date": "2025-12-04T19:15:58.059610",
+    "is_active": true,
+    "used_count": 0,
+    "last_used": null
+  },
+  "87264adccca3145d68491618cbb050c8a2a80a78bbd180051034cc4f517201e8": {
+    "player_name": "3",
+    "tournament_name": "3",
+    "token": "yH5i5O3vclh_G_PYHFz7WjO0REFwIfoODpMIgY1l3Qo",
+    "token_hash": "87264adccca3145d68491618cbb050c8a2a80a78bbd180051034cc4f517201e8",
+    "created_date": "2025-12-03T01:17:38.550538",
+    "expires_date": "2025-12-06T01:17:38.550538",
+    "is_active": true,
+    "used_count": 0,
+    "last_used": null
+  },
+  "f129aeb3920673a498522db85e1281fa459a1be2722841874d0f2a69382abb18": {
+    "player_name": "r",
+    "tournament_name": "r",
+    "token": "mEg_lk4WFvlv6HkIY8mFxh43eHDGjougHa-nDlG_PfE",
+    "token_hash": "f129aeb3920673a498522db85e1281fa459a1be2722841874d0f2a69382abb18",
+    "created_date": "2025-12-03T01:18:08.414628",
+    "expires_date": "2025-12-04T01:18:08.414628",
+    "is_active": true,
+    "used_count": 0,
+    "last_used": null
+  }
+}

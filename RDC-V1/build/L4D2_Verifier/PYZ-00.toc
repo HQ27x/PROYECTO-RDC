@@ -1,5 +1,5 @@
-('C:\\Users\\nhuay\\Downloads\\Nueva carpeta '
- '(3)\\RDC-V1\\RDC-V1\\build\\L4D2_Verifier\\PYZ-00.pyz',
+('C:\\Users\\nhuay\\Downloads\\Nueva carpeta (3)\\RDC-V1\\RDC-V1 - '
+ 'copia\\build\\L4D2_Verifier\\PYZ-00.pyz',
  [('PIL',
    'C:\\Users\\nhuay\\AppData\\Roaming\\Python\\Python312\\site-packages\\PIL\\__init__.py',
    'PYMODULE'),

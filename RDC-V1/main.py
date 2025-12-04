@@ -22,6 +22,7 @@ import tkinter as tk
 from tkinter import ttk, messagebox, scrolledtext, simpledialog
 import threading
 import requests
+import tempfile
 
 # Importar el generador de tokens
 sys.path.append(os.path.join(os.path.dirname(__file__), 'gentoke'))
@@ -34,6 +35,504 @@ except ImportError:
 def is_compiled():
     """Verifica si el programa está ejecutándose como ejecutable compilado"""
     return getattr(sys, 'frozen', False) and hasattr(sys, '_MEIPASS')
+
+# ============================================================================
+# BASE DE DATOS DE FIRMAS DE CHEATS CONOCIDOS DE L4D2
+# ============================================================================
+KNOWN_CHEAT_SIGNATURES = {
+    # Aimware - Sistema de aimbot profesional
+    'aimware': {
+        'patterns': ['aimware', 'aim-ware', 'aim_ware', 'aw.dll', 'aw_', 'aimw'],
+        'severity': 'CRITICAL',
+        'description': 'Sistema de aimbot profesional (Aimware)'
+    },
+    
+    # No Vomit/Boomer - Elimina efecto de vómito
+    'no_vomit': {
+        'patterns': ['novomit', 'no_vomit', 'no-vomit', 'noboomer', 'no_boomer',
+                     'removevomit', 'vomit_remove', 'clearvomit', 'vomitremove',
+                     'disable_vomit', 'disablevomit', 'vomit_off', 'vomitoff'],
+        'severity': 'CRITICAL',
+        'description': 'Elimina efecto de vómito del Boomer'
+    },
+    
+    # No Smoke - Elimina humo del Smoker
+    'no_smoke': {
+        'patterns': ['nosmoke', 'no_smoke', 'no-smoke', 'nosmoker', 'no_smoker',
+                     'removesmoke', 'smoke_remove', 'clearsmoke', 'smokeremove',
+                     'disable_smoke', 'disablesmoke', 'smoke_off', 'smokeoff'],
+        'severity': 'CRITICAL',
+        'description': 'Elimina humo del Smoker'
+    },
+    
+    # Fast Fire - Disparo rápido
+    'fast_fire': {
+        'patterns': ['fastfire', 'fast_fire', 'fast-fire', 'rapidfire', 'rapid_fire',
+                     'autofire', 'auto_fire', 'quickfire', 'quick_fire', 'firemod',
+                     'fire_mod', 'speedfire', 'speed_fire', 'fastshoot', 'fast_shoot'],
+        'severity': 'CRITICAL',
+        'description': 'Disparo rápido automático (Fast Fire)'
+    },
+    
+    # Fast Melee - Golpe rápido
+    'fast_melee': {
+        'patterns': ['fastmelee', 'fast_melee', 'fast-melee', 'rapidmelee', 'rapid_melee',
+                     'quickmelee', 'quick_melee', 'meleemod', 'melee_mod', 'speedmelee',
+                     'speed_melee', 'meleefast', 'melee_fast', 'fastpunch', 'fast_punch'],
+        'severity': 'CRITICAL',
+        'description': 'Golpe cuerpo a cuerpo acelerado (Fast Melee)'
+    },
+    
+    # No Recoil - Sin retroceso
+    'no_recoil': {
+        'patterns': ['norecoil', 'no_recoil', 'no-recoil', 'removerecoil', 'recoil_remove',
+                     'recoiloff', 'recoil_off', 'disable_recoil', 'disablerecoil'],
+        'severity': 'CRITICAL',
+        'description': 'Elimina retroceso de armas (No Recoil)'
+    },
+    
+    # Infinite Ammo - Munición infinita
+    'infinite_ammo': {
+        'patterns': ['infiniteammo', 'infinite_ammo', 'infinite-ammo', 'unlimitedammo',
+                     'unlimited_ammo', 'noammo', 'ammo_infinite', 'ammoinfinite'],
+        'severity': 'CRITICAL',
+        'description': 'Munición infinita'
+    },
+    
+    # God Mode - Invulnerabilidad
+    'god_mode': {
+        'patterns': ['godmode', 'god_mode', 'god-mode', 'invincible', 'invulnerable',
+                     'nohurt', 'no_hurt', 'nodamage', 'no_damage', 'immortal'],
+        'severity': 'CRITICAL',
+        'description': 'Modo invulnerabilidad (God Mode)'
+    },
+    
+    # Speed Hack - Velocidad aumentada
+    'speed_hack': {
+        'patterns': ['speedhack', 'speed_hack', 'speed-hack', 'fastrun', 'fast_run',
+                     'speedmod', 'speed_mod', 'runfast', 'run_fast', 'velocity'],
+        'severity': 'CRITICAL',
+        'description': 'Velocidad de movimiento aumentada (Speed Hack)'
+    },
+    
+    # Wallhack/ESP - Ver a través de paredes
+    'wallhack_esp': {
+        'patterns': ['wallhack', 'wall_hack', 'wall-hack', 'esp', 'extrasensory',
+                     'seethru', 'see_thru', 'xray', 'x-ray', 'walls'],
+        'severity': 'CRITICAL',
+        'description': 'Ver a través de paredes (Wallhack/ESP)'
+    },
+    
+    # Bhop - Bunny hop automático
+    'bhop': {
+        'patterns': ['bhop', 'bunnyhop', 'bunny_hop', 'bunny-hop', 'autobhop',
+                     'auto_bhop', 'auto-bhop', 'jumpmod', 'jump_mod'],
+        'severity': 'HIGH',
+        'description': 'Bunny hop automático (Bhop)'
+    },
+    
+    # No Flash - Elimina cegamiento
+    'no_flash': {
+        'patterns': ['noflash', 'no_flash', 'no-flash', 'flashremove', 'flash_remove',
+                     'disableflash', 'disable_flash', 'flashoff', 'flash_off'],
+        'severity': 'HIGH',
+        'description': 'Elimina efecto de cegamiento'
+    }
+}
+
+# ============================================================================
+# CARPETAS OFICIALES DE LEFT 4 DEAD 2 (WHITELIST)
+# ============================================================================
+OFFICIAL_L4D2_FOLDERS = {
+    'bin',                          # Ejecutables y DLLs del motor Source
+    'config',                       # Configuración de Steam
+    'hl2',                          # Motor Half-Life 2
+    'left4dead2',                   # Carpeta principal del juego
+    'left4dead2_dlc1',              # DLC 1
+    'left4dead2_dlc2',              # DLC 2
+    'left4dead2_dlc3',              # DLC 3
+    'left4dead2_dlc3_spanish',      # DLC 3 español
+    'left4dead2_spanish',           # Archivos en español
+    'platform',                     # Plataforma Steam
+    'sdk_content',                  # Contenido del SDK
+    'sdk_tools',                    # Herramientas del SDK
+    'update'                        # Archivos de actualización
+}
+
+# ============================================================================
+# CONTENIDO OFICIAL DE GAMEINFO.TXT (PARA VALIDACIÓN)
+# ============================================================================
+OFFICIAL_GAMEINFO_CONTENT = '''"GameInfo"
+{
+	game	"Left 4 Dead 2"	// Window title
+	type multiplayer_only
+	nomodels 1
+	nohimodel 1
+	l4dcrosshair 1
+	hidden_maps
+	{
+		"test_speakers"			1
+		"test_hardware"			1
+	}
+	nodegraph 0
+	perfwizard 0
+	SupportsXbox360 1
+	SupportsDX8	0
+	GameData	"left4dead2.fgd"
+
+	FileSystem
+	{
+		SteamAppId				550		// This will mount all the GCFs we need (240=CS:S, 220=HL2).
+		ToolsAppId				563		// Tools will load this (ie: source SDK caches) to get things like materials\\debug, materials\\editor, etc.
+		
+		//
+		// The code that loads this file automatically does a few things here:
+		//
+		// 1. For each "Game" search path, it adds a "GameBin" path, in <dir>\\bin
+		// 2. For each "Game" search path, it adds another "Game" path in front of it with _<langage> at the end.
+		//    For example: c:\\hl2\\cstrike on a french machine would get a c:\\hl2\\cstrike_french path added to it.
+		// 3. For the first "Game" search path, it adds a search path called "MOD".
+		// 4. For the first "Game" search path, it adds a search path called "DEFAULT_WRITE_PATH".
+		//
+
+		//
+		// Search paths are relative to the base directory, which is where hl2.exe is found.
+		//
+		// |gameinfo_path| points at the directory where gameinfo.txt is.
+		// We always want to mount that directory relative to gameinfo.txt, so
+		// people can mount stuff in c:\\mymod, and the main game resources are in
+		// someplace like c:\\program files\\valve\\steam\\steamapps\\<username>\\half-life 2.
+		//
+		SearchPaths
+		{
+			Game				update
+			Game				left4dead2_dlc3
+			Game				left4dead2_dlc2
+			Game				left4dead2_dlc1
+			Game				|gameinfo_path|.
+			Game				hl2
+		}
+	}
+}'''
+
+# ============================================================================
+# CONTENIDO OFICIAL DE ADDONCONFIG.CFG (PARA VALIDACIÓN)
+# ============================================================================
+OFFICIAL_ADDONCONFIG_CONTENT = '''//------------------------------------------------------------------------------
+// Used by the server to determine whether or not custom content should be allowed
+// in a particular game mode. 
+//
+//	0 = no restrictions on custom content (default)
+//	1 = block custom content
+//
+// This doesn't affect custom campaigns, just client-side replacements for models,
+// skins, sounds, etc.
+//
+// If an entry for the exact mode name isn't found, the base mode will be used.
+// If the base mode isn't found, the default will be used.
+//------------------------------------------------------------------------------
+
+"RestrictAddons"
+{
+	"default"	"0"
+	"versus"	"1"
+	"scavenge"	"1"
+	"mutation15"	"1" // versus survival
+}'''
+
+# ============================================================================
+# CONTENIDO OFICIAL DE 360CONTROLLER.CFG (PARA VALIDACIÓN)
+# ============================================================================
+OFFICIAL_360CONTROLLER_CONTENT = '''unbindall				// Prevent mouse/keyboard control when gamepad is in use (to prevent autoaim exploit)
+
+joystick 1
+joy_advanced "1"			// use advanced joystick options (allows for multiple axes)
+
+joy_name "L4D Xbox360 Joystick Configuration"
+joy_advaxisx 3				// x-axis controls GAME_AXIS_SIDE (strafing left and right)
+joy_advaxisy 1				// y-axis controls GAME_AXIS_FORWARD (move forward and back)
+joy_advaxisz 0				// z-axis is treated like a button
+joy_advaxisr 2				// r-axis controls GAME_AXIS_PITCH (look up and down)
+joy_advaxisu 4				// u-axis controls GAME_AXIS_YAW (look left and right)
+joy_advaxisv 0				// v-axis is unused
+joy_forwardsensitivity -1.0	// movement sensitivity
+joy_sidesensitivity 1.0
+joy_forwardthreshold 0.1	// movement dead zone settings
+joy_sidethreshold 0.1
+joy_pitchsensitivity 1.0	// look sensitivity
+joy_yawsensitivity -1.5
+joy_pitchthreshold 0.1		// look dead zone settings
+joy_yawthreshold 0.0
+
+joy_variable_frametime 1
+joy_autoaimdampenrange 0.85
+joy_autoaimdampen 0.5
+joy_lowend 0.65
+joy_lowmap 0.15
+joy_accelscale 3.0
+joy_accelmax 4.0
+joy_response_move 5
+joy_response_look 1
+joy_autoaimdampen 0.3
+joy_autoaimdampenrange 0.85
+joyadvancedupdate			// advanced joystick update allows for analog control of move and look
+
+// Alternate control 1
++jlook					// enable joystick look
+bind "A_BUTTON" "+jump;+menuAccept"		// (A) button - Jump  -menuAccpt allows us to make selections on hud menus
+bind "B_BUTTON" "+reload"			// (B) button - Reload
+bind "X_BUTTON" "+use"				// (X) Use
+bind "Y_BUTTON" "lastinv"			// (Y) button - swap pistol/rifle or z_abort -used to respawn as a ghost.
+bind "R_TRIGGER" "+attack"			// RT - Main weapon - Primary trigger
+bind "L_TRIGGER" "+attack2"			// LT - Melee
+bind "R_SHOULDER" "+lookspin"			// RB - Fast 180 spin
+bind "L_SHOULDER" "toggle_duck"			// LB - Duck
+bind "STICK1" "vocalize smartlook"		// LS - vocalize
+bind "STICK2" "+zoom"				// RS click - Rifle Zoom
+
+// Fixed bindings, do not change these across joystick presets
+bind "BACK" "togglescores"			// (back) button - scores
+bind "START" "gameui_activate"		// (start) button - pause
+bind "S1_UP" "+menuUp"				// Hud menu Up
+bind "S1_DOWN" "+menuDown"			// Hud menu Down
+bind "UP" "impulse 100"				// DPad Up - Toggle flashlight
+bind "LEFT" "slot3"					// DPad Left - grenade
+bind "RIGHT" "slot4"				// DPad Right - health
+bind "DOWN" "slot5"					// DPad Down - Pills
+
+
+// controller2 bindings
++jlook					// enable joystick look
+cmd2 bind "A_BUTTON" "+jump;+menuAccept"		// (A) button - Jump  -menuAccpt allows us to make selections on hud menus
+cmd2 bind "B_BUTTON" "+reload"			// (B) button - Reload
+cmd2 bind "X_BUTTON" "+use"				// (X) Use
+cmd2 bind "Y_BUTTON" "lastinv"			// (Y) button - swap pistol/rifle or z_abort -used to respawn as a ghost.
+cmd2 bind "R_TRIGGER" "+attack"			// RT - Main weapon - Primary trigger
+cmd2 bind "L_TRIGGER" "+attack2"			// LT - Melee
+cmd2 bind "R_SHOULDER" "+lookspin"			// RB - Fast 180 spin
+cmd2 bind "L_SHOULDER" "toggle_duck"			// LB - Duck - is also used to give objects to people.
+cmd2 bind "STICK1" "vocalize smartlook"		// LS - vocalize
+cmd2 bind "STICK2" "+zoom"				// RS click - Rifle Zoom
+
+// Fixed bindings, do not change these across joystick presets
+cmd2 bind "BACK" "togglescores"			// (back) button - scores
+cmd2 bind "START" "gameui_activate"		// (start) button - pause
+cmd2 bind "S1_UP" "+menuUp"				// Hud menu Up
+cmd2 bind "S1_DOWN" "+menuDown"			// Hud menu Down
+cmd2 bind "UP" "impulse 100"				// DPad Up - Toggle flashlight
+cmd2 bind "LEFT" "slot3"					// DPad Left - grenade
+cmd2 bind "RIGHT" "slot4"				// DPad Right - health
+cmd2 bind "DOWN" "slot5"					// DPad Down - Pills
+
+
+sk_autoaim_mode 2'''
+
+# ============================================================================
+# CONTENIDO OFICIAL DE PERF.CFG (PARA VALIDACIÓN)
+# ============================================================================
+OFFICIAL_PERF_CONTENT = '''host_framerate 30
+director_stop
+nb_delete_all
+z_spawn common
+z_spawn common
+z_spawn common
+z_spawn common
+z_spawn common
+z_spawn common
+z_spawn common
+z_spawn common
+z_spawn common
+z_spawn common
+z_spawn common
+z_spawn common
+z_spawn common
+z_spawn common
+z_spawn common
+z_spawn common
+z_spawn common
+z_spawn common
+z_spawn common
+z_spawn common
+z_spawn common
+z_spawn common
+z_spawn common
+z_spawn common
+z_spawn common
+z_common_limit 30
+z_spawn mob
+z_spawn boomer
+z_spawn boomer
+z_spawn boomer
+z_spawn boomer
+quit
+warp_far_survivor_here
+warp_far_survivor_here
+warp_far_survivor_here
+sb_flashlight 1'''
+
+# ============================================================================
+# WHITELIST DE PROGRAMAS LEGÍTIMOS (PARA REDUCIR FALSOS POSITIVOS)
+# ============================================================================
+LEGITIMATE_PROGRAMS_WHITELIST = {
+    # ===== WINDOWS SYSTEM =====
+    'applicationframehost.exe', 'audiodg.exe', 'consent.exe',
+    'credentialuibroker.exe', 'dllhost.exe', 'filecoauth.exe',
+    'fulltrustnotifier.exe', 'gamebarpresencewriter.exe',
+    'mousocoreworker.exe', 'rundll32.exe', 'runonce.exe',
+    'runtimebroker.exe', 'setuphost.exe', 'shellexperiencehost.exe',
+    'sppextcomobj.exe', 'startmenuexperiencehost.exe',
+    'werfault.exe', 'widgetservice.exe', 'wuaucltcore.exe',
+    'dwm.exe', 'explorer.exe', 'winlogon.exe', 'csrss.exe',
+    'svchost.exe', 'services.exe', 'lsass.exe', 'smss.exe',
+    'conhost.exe', 'fontdrvhost.exe', 'sihost.exe',
+    'taskhostw.exe', 'searchindexer.exe', 'searchprotocolhost.exe',
+    'searchfilterhost.exe', 'ctfmon.exe', 'textinputhost.exe',
+    
+    # ===== MICROSOFT OFFICE =====
+    'excel.exe', 'winword.exe', 'powerpnt.exe', 'outlook.exe',
+    'onenote.exe', 'msaccess.exe', 'mspub.exe', 'visio.exe',
+    'officeclicktorun.exe', 'officebackgroundtaskhandler.exe',
+    
+    # ===== ADOBE =====
+    'acrocef.exe', 'adobe crash processor.exe', 'adobecollabsync.exe',
+    'adobeipcbroker.exe', 'ccxprocess.exe', 'photoshop.exe',
+    'illustrator.exe', 'indesign.exe', 'premiere pro.exe',
+    'after effects.exe', 'acrobat.exe', 'acrord32.exe',
+    'creative cloud.exe', 'adobe desktop service.exe',
+    
+    # ===== BROWSERS =====
+    'chrome.exe', 'firefox.exe', 'msedge.exe', 'iexplore.exe',
+    'opera.exe', 'brave.exe', 'vivaldi.exe',
+    
+    # ===== COMMUNICATION APPS =====
+    'whatsapp.exe', 'zoom.exe', 'teams.exe', 'slack.exe',
+    'discord.exe', 'skype.exe', 'telegram.exe',
+    
+    # ===== MEDIA APPS =====
+    'photos.exe', 'movies & tv.exe', 'groove music.exe',
+    'spotify.exe', 'vlc.exe', 'wmplayer.exe', 'itunes.exe',
+    'videoeditorqt.exe',
+    
+    # ===== DEVELOPMENT TOOLS =====
+    # IDEs
+    'code.exe', 'devenv.exe', 'pycharm64.exe', 'idea64.exe',
+    'webstorm64.exe', 'phpstorm64.exe', 'rider64.exe',
+    'clion64.exe', 'goland64.exe', 'datagrip64.exe',
+    'atom.exe', 'sublime_text.exe', 'notepad++.exe',
+    
+    # Setup/Installers de IDEs
+    'codesetup', 'antigravitysetup', 'windsurfsetup',
+    
+    # Build Tools
+    'esbuild.exe', 'webpack.exe', 'vite.exe', 'rollup.exe',
+    'node.exe', 'npm.exe', 'yarn.exe', 'pnpm.exe',
+    
+    # Language Servers
+    'devsense.php.ls.exe', 'omnisharp.exe', 'rust-analyzer.exe',
+    
+    # Version Control
+    'git.exe', 'git-bash.exe', 'github desktop.exe',
+    
+    # Package Managers
+    'vsce-sign.exe',
+    
+    # ===== DATABASES & SERVERS =====
+    'mysqld.exe', 'postgres.exe', 'mongod.exe', 'redis-server.exe',
+    'php.exe', 'apache.exe', 'nginx.exe', 'xampp-control.exe',
+    'xampp_start.exe', 'wampmanager.exe',
+    
+    # ===== CLOUD SERVICES =====
+    'onedrive.exe', 'dropbox.exe', 'googledrivesync.exe',
+    'box.exe', 'megasync.exe', 'pcloud.exe',
+    
+    # ===== ANTIVIRUS & SECURITY =====
+    'mbamservice.exe', 'malwarebytes.exe', 'avast.exe',
+    'avg.exe', 'norton.exe', 'kaspersky.exe', 'bitdefender.exe',
+    'mpcmdrun.exe', 'msmpeng.exe', 'nissrv.exe',
+    
+    # ===== SYSTEM UTILITIES =====
+    'makecab.exe', 'msiexec.exe', 'netcfgnotifyobjecthost.exe',
+    'regedit.exe', 'taskmgr.exe', 'perfmon.exe', 'resmon.exe',
+    'cleanmgr.exe', 'defrag.exe', 'chkdsk.exe',
+    '7zfm.exe', 'winrar.exe', 'winzip.exe',
+    
+    # ===== HARDWARE/DRIVERS =====
+    'nvcontainer.exe', 'nvspcaps64.exe', 'nvdisplay.container.exe',
+    'amdrsserv.exe', 'radeonse ttings.exe',
+    'realtekaudiosvc.exe', 'nahimicsvc.exe',
+    'discsoftbusservicepro.exe', 'daemon tools.exe',
+    'jhi_service.exe', 'intel.exe',
+    
+    # ===== GAMING PLATFORMS =====
+    'steam.exe', 'steamservice.exe', 'steamwebhelper.exe',
+    'epicgameslauncher.exe', 'origin.exe', 'uplay.exe',
+    'battle.net.exe', 'gog galaxy.exe', 'riotclientservices.exe',
+    'gamelaunchhelper.exe', 'gameinputsvc.exe', 'gamingservicesui.exe',
+    
+    # ===== POPULAR GAMES =====
+    'robloxplayerbeta.exe', 'minecraft.exe', 'league of legends.exe',
+    'valorant.exe', 'fortnite.exe', 'gta5.exe',
+    
+    # ===== GOOGLE SERVICES =====
+    'elevation_service.exe', 'googleupdate.exe', 'googledrivefs.exe',
+    
+    # ===== MICROSOFT SERVICES =====
+    'mspcmanagerservice.exe', 'microsoftedgeupdate.exe',
+    
+    # ===== STREAMING/RECORDING =====
+    'obs64.exe', 'obs32.exe', 'streamlabs obs.exe', 'xsplit.exe',
+    'nvidia share.exe', 'nvidia shadowplay.exe',
+    
+    # ===== PRODUCTIVITY =====
+    'notion.exe', 'evernote.exe', 'onenote.exe', 'trello.exe',
+    'asana.exe', 'monday.exe',
+    
+    # ===== FILE SHARING =====
+    'shareit.exe', 'airdroid.exe', 'pushbullet.exe',
+    
+    # ===== NETWORK TOOLS =====
+    'packettracer.exe', 'wireshark.exe', 'putty.exe',
+    'winscp.exe', 'filezilla.exe',
+    
+    # ===== VIRTUALIZATION =====
+    'vmware.exe', 'virtualbox.exe', 'vmwareservice.exe',
+    'vboxsvc.exe', 'qemu.exe',
+    
+    # ===== PLEX =====
+    'plex update service.exe', 'plex media server.exe',
+    
+    # ===== QT APPLICATIONS =====
+    'qtwebengineprocess.exe',
+    
+    # ===== HARDWARE TOOLS =====
+    'ch341programmer.exe', 'arduino.exe', 'platformio.exe',
+    
+    # ===== MISC TOOLS =====
+    'perfboost.exe', 'gpucheck.exe', 'graphics-check.exe',
+    'get-graphics-offsets32.exe', 'get-graphics-offsets64.exe',
+    'fd.exe', 'where.exe', 'installer.exe', 'service.exe',
+    'fab_x64.exe', 'am_delta_patch', 'genp'
+}
+
+# Rutas legítimas de Windows (no marcar como sospechosas)
+LEGITIMATE_PATHS = [
+    r'C:\Windows',
+    r'C:\Program Files',
+    r'C:\Program Files (x86)',
+    r'C:\ProgramData\Microsoft',
+    r'C:\ProgramData\Package Cache'
+]
+
+# Rutas sospechosas (SÍ marcar como sospechosas)
+SUSPICIOUS_PATHS = [
+    r'\AppData\Local\Temp',
+    r'\Downloads',
+    r'\Desktop',
+    r'\Documents\cheat',
+    r'\Documents\hack',
+    r'\AppData\Roaming\cheat',
+    r'\AppData\Roaming\hack'
+]
 
 class L4D2IntegrityChecker:
     def __init__(self):
@@ -443,6 +942,558 @@ class L4D2IntegrityChecker:
         except Exception:
             return "Error en análisis"
     
+    def detect_unofficial_folders(self):
+        """Detecta carpetas no oficiales en la raíz de Left 4 Dead 2"""
+        if not self.l4d2_path:
+            return False
+        
+        unofficial_folders = []
+        
+        try:
+            # Listar todas las carpetas en la raíz de L4D2
+            for item in os.listdir(self.l4d2_path):
+                item_path = os.path.join(self.l4d2_path, item)
+                
+                # Solo verificar carpetas, no archivos
+                if os.path.isdir(item_path):
+                    # Verificar si la carpeta está en la whitelist oficial
+                    if item.lower() not in OFFICIAL_L4D2_FOLDERS:
+                        # Carpeta no oficial detectada
+                        folder_info = {
+                            'folder_name': item,
+                            'folder_path': item_path,
+                            'severity': 'CRITICAL',
+                            'description': f'Carpeta no oficial detectada en raíz: {item}',
+                            'reason': 'Esta carpeta no es parte de la instalación oficial de L4D2'
+                        }
+                        
+                        # Analizar contenido de la carpeta sospechosa
+                        try:
+                            files_count = len([f for f in os.listdir(item_path) if os.path.isfile(os.path.join(item_path, f))])
+                            folder_info['files_count'] = files_count
+                        except (PermissionError, OSError):
+                            folder_info['files_count'] = 'No accesible'
+                        
+                        unofficial_folders.append(folder_info)
+        
+        except (PermissionError, OSError) as e:
+            print(f"Error al escanear carpetas de L4D2: {e}")
+        
+        self.results['unofficial_folders'] = unofficial_folders
+        return len(unofficial_folders) > 0
+    
+    def validate_gameinfo_txt(self):
+        """Valida la integridad del archivo gameinfo.txt"""
+        if not self.l4d2_path:
+            return False
+        
+        gameinfo_path = os.path.join(self.l4d2_path, "left4dead2", "gameinfo.txt")
+        
+        if not os.path.exists(gameinfo_path):
+            self.results['gameinfo_validation'] = {
+                'status': 'MISSING',
+                'severity': 'CRITICAL',
+                'description': 'Archivo gameinfo.txt no encontrado'
+            }
+            return True  # Es sospechoso que no exista
+        
+        try:
+            with open(gameinfo_path, 'r', encoding='utf-8', errors='ignore') as f:
+                current_content = f.read()
+            
+            # Normalizar espacios en blanco para comparación
+            current_normalized = ' '.join(current_content.split())
+            official_normalized = ' '.join(OFFICIAL_GAMEINFO_CONTENT.split())
+            
+            if current_normalized == official_normalized:
+                self.results['gameinfo_validation'] = {
+                    'status': 'VALID',
+                    'severity': 'NONE',
+                    'description': 'Archivo gameinfo.txt es oficial y no ha sido modificado'
+                }
+                return False
+            else:
+                # Detectar qué fue modificado
+                modifications = []
+                
+                # Buscar líneas de SearchPaths adicionales
+                if 'SearchPaths' in current_content:
+                    # Extraer sección SearchPaths
+                    import re
+                    search_paths_match = re.search(r'SearchPaths\s*{([^}]*)}', current_content, re.DOTALL)
+                    if search_paths_match:
+                        search_paths_content = search_paths_match.group(1)
+                        
+                        # Buscar Game paths no oficiales
+                        game_paths = re.findall(r'Game\s+([^\s\n]+)', search_paths_content)
+                        official_game_paths = ['update', 'left4dead2_dlc3', 'left4dead2_dlc2', 
+                                              'left4dead2_dlc1', '|gameinfo_path|.', 'hl2']
+                        
+                        for game_path in game_paths:
+                            if game_path not in official_game_paths:
+                                modifications.append(f'Game path no oficial: {game_path}')
+                
+                self.results['gameinfo_validation'] = {
+                    'status': 'MODIFIED',
+                    'severity': 'CRITICAL',
+                    'description': 'Archivo gameinfo.txt ha sido modificado',
+                    'modifications': modifications if modifications else ['Contenido general modificado'],
+                    'file_path': gameinfo_path
+                }
+                return True
+        
+        except Exception as e:
+            self.results['gameinfo_validation'] = {
+                'status': 'ERROR',
+                'severity': 'HIGH',
+                'description': f'Error al validar gameinfo.txt: {e}'
+            }
+            return False
+    
+    def validate_addonconfig_cfg(self):
+        """Valida la integridad del archivo addonconfig.cfg"""
+        if not self.l4d2_path:
+            return False
+        
+        addonconfig_path = os.path.join(self.l4d2_path, "left4dead2", "cfg", "addonconfig.cfg")
+        
+        if not os.path.exists(addonconfig_path):
+            self.results['addonconfig_validation'] = {
+                'status': 'MISSING',
+                'severity': 'CRITICAL',
+                'description': 'Archivo addonconfig.cfg no encontrado',
+                'file_path': addonconfig_path
+            }
+            return True  # Es sospechoso que no exista
+        
+        try:
+            with open(addonconfig_path, 'r', encoding='utf-8', errors='ignore') as f:
+                current_content = f.read()
+            
+            # Normalizar espacios en blanco para comparación
+            current_normalized = ' '.join(current_content.split())
+            official_normalized = ' '.join(OFFICIAL_ADDONCONFIG_CONTENT.split())
+            
+            if current_normalized == official_normalized:
+                self.results['addonconfig_validation'] = {
+                    'status': 'VALID',
+                    'severity': 'NONE',
+                    'description': 'Archivo addonconfig.cfg es oficial y no ha sido modificado',
+                    'file_path': addonconfig_path
+                }
+                return False
+            else:
+                # Detectar qué fue modificado - CRÍTICO: versus, scavenge y mutation15 deben ser "1"
+                issues = []
+                
+                # Extraer valores de RestrictAddons
+                import re
+                
+                # Buscar valores específicos
+                modes_to_check = {
+                    'versus': '1',
+                    'scavenge': '1',
+                    'mutation15': '1'
+                }
+                
+                for mode, expected_value in modes_to_check.items():
+                    # Buscar patrón: "modo"  "valor"
+                    pattern = rf'"{mode}"\s+"(\d+)"'
+                    match = re.search(pattern, current_content)
+                    
+                    if match:
+                        actual_value = match.group(1)
+                        if actual_value != expected_value:
+                            issues.append(f'Modo "{mode}" tiene valor "{actual_value}" (debe ser "{expected_value}")')
+                    else:
+                        issues.append(f'Modo "{mode}" no encontrado en archivo')
+                
+                # Verificar si default está presente
+                default_match = re.search(r'"default"\s+"(\d+)"', current_content)
+                if not default_match:
+                    issues.append('Modo "default" no encontrado')
+                
+                if issues:
+                    self.results['addonconfig_validation'] = {
+                        'status': 'MODIFIED',
+                        'severity': 'CRITICAL',
+                        'description': 'Archivo addonconfig.cfg ha sido modificado - ADDONS PERMITIDOS EN VERSUS',
+                        'issues': issues,
+                        'file_path': addonconfig_path
+                    }
+                    return True
+                else:
+                    # Contenido diferente pero valores correctos
+                    self.results['addonconfig_validation'] = {
+                        'status': 'MODIFIED_FORMAT',
+                        'severity': 'LOW',
+                        'description': 'Archivo addonconfig.cfg tiene formato diferente pero valores correctos',
+                        'file_path': addonconfig_path
+                    }
+                    return False
+        
+        except Exception as e:
+            self.results['addonconfig_validation'] = {
+                'status': 'ERROR',
+                'severity': 'HIGH',
+                'description': f'Error al validar addonconfig.cfg: {e}',
+                'file_path': addonconfig_path
+            }
+            return False
+    
+    def validate_360controller_cfg(self):
+        """Valida la integridad del archivo 360controller.cfg"""
+        if not self.l4d2_path:
+            return False
+        
+        controller_path = os.path.join(self.l4d2_path, "left4dead2", "cfg", "360controller.cfg")
+        
+        if not os.path.exists(controller_path):
+            self.results['controller_validation'] = {
+                'status': 'MISSING',
+                'severity': 'MEDIUM',
+                'description': 'Archivo 360controller.cfg no encontrado (solo necesario si se usa mando)',
+                'file_path': controller_path
+            }
+            return False  # No es crítico si no existe (no todos usan mando)
+        
+        try:
+            with open(controller_path, 'r', encoding='utf-8', errors='ignore') as f:
+                current_content = f.read()
+            
+            # Normalizar espacios en blanco para comparación
+            current_normalized = ' '.join(current_content.split())
+            official_normalized = ' '.join(OFFICIAL_360CONTROLLER_CONTENT.split())
+            
+            if current_normalized == official_normalized:
+                self.results['controller_validation'] = {
+                    'status': 'VALID',
+                    'severity': 'NONE',
+                    'description': 'Archivo 360controller.cfg es oficial y no ha sido modificado',
+                    'file_path': controller_path
+                }
+                return False
+            else:
+                # Detectar qué fue modificado - CRÍTICO: sk_autoaim_mode debe ser 2
+                issues = []
+                
+                import re
+                
+                # Buscar sk_autoaim_mode
+                autoaim_match = re.search(r'sk_autoaim_mode\s+(\d+)', current_content)
+                
+                if autoaim_match:
+                    autoaim_value = autoaim_match.group(1)
+                    if autoaim_value != '2':
+                        issues.append(f'sk_autoaim_mode tiene valor "{autoaim_value}" (debe ser "2") - POSIBLE AUTOAIM EXPLOIT')
+                else:
+                    issues.append('sk_autoaim_mode no encontrado en archivo - POSIBLE AUTOAIM EXPLOIT')
+                
+                # Verificar unbindall al inicio (previene exploit de mouse/teclado con mando)
+                if 'unbindall' not in current_content.lower():
+                    issues.append('Comando "unbindall" no encontrado - permite usar mouse/teclado con mando (AUTOAIM EXPLOIT)')
+                
+                if issues:
+                    self.results['controller_validation'] = {
+                        'status': 'MODIFIED',
+                        'severity': 'CRITICAL',
+                        'description': 'Archivo 360controller.cfg ha sido modificado - POSIBLE AUTOAIM EXPLOIT',
+                        'issues': issues,
+                        'file_path': controller_path
+                    }
+                    return True
+                else:
+                    # Contenido diferente pero valores críticos correctos
+                    self.results['controller_validation'] = {
+                        'status': 'MODIFIED_FORMAT',
+                        'severity': 'LOW',
+                        'description': 'Archivo 360controller.cfg tiene formato diferente pero valores críticos correctos',
+                        'file_path': controller_path
+                    }
+                    return False
+        
+        except Exception as e:
+            self.results['controller_validation'] = {
+                'status': 'ERROR',
+                'severity': 'MEDIUM',
+                'description': f'Error al validar 360controller.cfg: {e}',
+                'file_path': controller_path
+            }
+            return False
+    
+    def validate_perf_cfg(self):
+        """Valida la integridad del archivo perf.cfg"""
+        if not self.l4d2_path:
+            return False
+        
+        perf_path = os.path.join(self.l4d2_path, "left4dead2", "cfg", "perf.cfg")
+        
+        if not os.path.exists(perf_path):
+            self.results['perf_validation'] = {
+                'status': 'MISSING',
+                'severity': 'NONE',
+                'description': 'Archivo perf.cfg no encontrado (solo necesario para pruebas de rendimiento)',
+                'file_path': perf_path
+            }
+            return False  # No es crítico si no existe
+        
+        try:
+            with open(perf_path, 'r', encoding='utf-8', errors='ignore') as f:
+                current_content = f.read()
+            
+            # Normalizar espacios en blanco para comparación
+            current_normalized = ' '.join(current_content.split())
+            official_normalized = ' '.join(OFFICIAL_PERF_CONTENT.split())
+            
+            if current_normalized == official_normalized:
+                self.results['perf_validation'] = {
+                    'status': 'VALID',
+                    'severity': 'NONE',
+                    'description': 'Archivo perf.cfg es oficial y no ha sido modificado',
+                    'file_path': perf_path
+                }
+                return False
+            else:
+                # Detectar comandos sospechosos en perf.cfg
+                issues = []
+                
+                import re
+                
+                # Comandos que NO deberían estar en perf.cfg (comandos de cheat)
+                forbidden_commands = [
+                    'sv_cheats', 'god', 'noclip', 'buddha', 'give', 'impulse 101',
+                    'z_health', 'nb_blind', 'director_force', 'z_spawn tank',
+                    'z_spawn witch', 'sb_all_bot_game', 'mp_gamemode'
+                ]
+                
+                for cmd in forbidden_commands:
+                    if cmd in current_content.lower():
+                        issues.append(f'Comando prohibido encontrado: "{cmd}"')
+                
+                if issues:
+                    self.results['perf_validation'] = {
+                        'status': 'MODIFIED',
+                        'severity': 'CRITICAL',
+                        'description': 'Archivo perf.cfg contiene comandos prohibidos',
+                        'issues': issues,
+                        'file_path': perf_path
+                    }
+                    return True
+                else:
+                    # Contenido diferente pero sin comandos prohibidos
+                    self.results['perf_validation'] = {
+                        'status': 'MODIFIED_FORMAT',
+                        'severity': 'LOW',
+                        'description': 'Archivo perf.cfg tiene formato diferente pero sin comandos prohibidos',
+                        'file_path': perf_path
+                    }
+                    return False
+        
+        except Exception as e:
+            self.results['perf_validation'] = {
+                'status': 'ERROR',
+                'severity': 'MEDIUM',
+                'description': f'Error al validar perf.cfg: {e}',
+                'file_path': perf_path
+            }
+            return False
+    
+    def validate_config_cfg(self):
+        """Valida comandos críticos en config.cfg (no valida todo el archivo por su tamaño)"""
+        if not self.l4d2_path:
+            return False
+        
+        config_path = os.path.join(self.l4d2_path, "left4dead2", "cfg", "config.cfg")
+        
+        if not os.path.exists(config_path):
+            self.results['config_validation'] = {
+                'status': 'MISSING',
+                'severity': 'CRITICAL',
+                'description': 'Archivo config.cfg no encontrado',
+                'file_path': config_path
+            }
+            return True
+        
+        try:
+            with open(config_path, 'r', encoding='utf-8', errors='ignore') as f:
+                current_content = f.read()
+            
+            issues = []
+            
+            import re
+            
+            # Verificar comandos críticos que podrían usarse para hacer trampa
+            # 1. sk_autoaim_mode debe ser 1 (para mouse/teclado)
+            autoaim_match = re.search(r'sk_autoaim_mode\s+"?(\d+)"?', current_content)
+            if autoaim_match:
+                autoaim_value = autoaim_match.group(1)
+                if autoaim_value != '1':
+                    issues.append(f'sk_autoaim_mode tiene valor "{autoaim_value}" (debe ser "1" para mouse/teclado)')
+            
+            # 2. Verificar que unbindall esté presente (previene binds ocultos)
+            if 'unbindall' not in current_content.lower():
+                issues.append('Comando "unbindall" no encontrado - pueden existir binds ocultos')
+            
+            # 3. Comandos prohibidos que NO deberían estar en config.cfg
+            forbidden_commands = [
+                ('sv_cheats', 'Permite activar cheats en servidor local'),
+                ('god', 'Modo invulnerabilidad'),
+                ('noclip', 'Atravesar paredes'),
+                ('buddha', 'Vida mínima 1 HP'),
+                ('give', 'Dar items'),
+                ('z_spawn tank', 'Spawnear Tank'),
+                ('z_spawn witch', 'Spawnear Witch'),
+                ('director_force', 'Forzar eventos del director'),
+                ('nb_blind', 'Cegar bots'),
+                ('z_health', 'Modificar vida de infectados')
+            ]
+            
+            for cmd, description in forbidden_commands:
+                if cmd in current_content.lower():
+                    issues.append(f'Comando prohibido: "{cmd}" - {description}')
+            
+            if issues:
+                self.results['config_validation'] = {
+                    'status': 'MODIFIED',
+                    'severity': 'CRITICAL',
+                    'description': 'Archivo config.cfg contiene configuraciones sospechosas',
+                    'issues': issues,
+                    'file_path': config_path
+                }
+                return True
+            else:
+                self.results['config_validation'] = {
+                    'status': 'VALID',
+                    'severity': 'NONE',
+                    'description': 'Archivo config.cfg no contiene comandos prohibidos',
+                    'file_path': config_path
+                }
+                return False
+        
+        except Exception as e:
+            self.results['config_validation'] = {
+                'status': 'ERROR',
+                'severity': 'HIGH',
+                'description': f'Error al validar config.cfg: {e}',
+                'file_path': config_path
+            }
+            return False
+    
+    def check_against_cheat_signatures(self, filename):
+        """Verifica si un nombre de archivo coincide con firmas de cheats conocidos"""
+        filename_lower = filename.lower()
+        matched_cheats = []
+        
+        for cheat_name, cheat_data in KNOWN_CHEAT_SIGNATURES.items():
+            for pattern in cheat_data['patterns']:
+                if pattern in filename_lower:
+                    matched_cheats.append({
+                        'cheat_type': cheat_name,
+                        'matched_pattern': pattern,
+                        'severity': cheat_data['severity'],
+                        'description': cheat_data['description']
+                    })
+                    break  # Solo una coincidencia por tipo de cheat
+        
+        return matched_cheats
+    
+    def scan_critical_locations(self):
+        """Escanea ubicaciones críticas del juego de forma exhaustiva"""
+        if not self.l4d2_path:
+            return False
+        
+        critical_findings = []
+        
+        # Ubicaciones críticas a escanear
+        critical_locations = [
+            {
+                'path': os.path.join(self.l4d2_path, "left4dead2", "addons"),
+                'name': 'Addons',
+                'priority': 'CRITICAL',
+                'scan_vpk': True,
+                'scan_loose': True
+            },
+            {
+                'path': os.path.join(self.l4d2_path, "left4dead2", "cfg"),
+                'name': 'Config Files',
+                'priority': 'CRITICAL',
+                'scan_vpk': False,
+                'scan_loose': True
+            },
+            {
+                'path': os.path.join(self.l4d2_path, "left4dead2", "scripts"),
+                'name': 'Scripts',
+                'priority': 'HIGH',
+                'scan_vpk': False,
+                'scan_loose': True
+            },
+            {
+                'path': os.path.join(self.l4d2_path, "left4dead2", "materials"),
+                'name': 'Materials',
+                'priority': 'MEDIUM',
+                'scan_vpk': False,
+                'scan_loose': True
+            },
+            {
+                'path': os.path.join(self.l4d2_path, "left4dead2", "models"),
+                'name': 'Models',
+                'priority': 'MEDIUM',
+                'scan_vpk': False,
+                'scan_loose': True
+            },
+            {
+                'path': self.l4d2_path,  # Raíz del juego
+                'name': 'Game Root',
+                'priority': 'CRITICAL',
+                'scan_vpk': False,
+                'scan_loose': True,
+                'extensions': ['.dll', '.exe', '.asi']  # Solo archivos peligrosos
+            }
+        ]
+        
+        for location in critical_locations:
+            if not os.path.exists(location['path']):
+                continue
+            
+            try:
+                for item in os.listdir(location['path']):
+                    item_path = os.path.join(location['path'], item)
+                    
+                    # Saltar carpetas en raíz (ya se verifican en detect_unofficial_folders)
+                    if location['name'] == 'Game Root' and os.path.isdir(item_path):
+                        continue
+                    
+                    # Filtrar por extensiones si está especificado
+                    if 'extensions' in location:
+                        if not any(item.lower().endswith(ext) for ext in location['extensions']):
+                            continue
+                    
+                    # Solo archivos
+                    if os.path.isfile(item_path):
+                        # Verificar contra firmas de cheats conocidos
+                        cheat_matches = self.check_against_cheat_signatures(item)
+                        
+                        if cheat_matches:
+                            for match in cheat_matches:
+                                critical_findings.append({
+                                    'location': location['name'],
+                                    'location_path': location['path'],
+                                    'file_name': item,
+                                    'file_path': item_path,
+                                    'file_size': os.path.getsize(item_path),
+                                    'cheat_type': match['cheat_type'],
+                                    'matched_pattern': match['matched_pattern'],
+                                    'severity': match['severity'],
+                                    'description': match['description'],
+                                    'detection_method': 'Known Cheat Signature'
+                                })
+            
+            except (PermissionError, OSError) as e:
+                print(f"Error al escanear {location['name']}: {e}")
+        
+        self.results['critical_findings'] = critical_findings
+        return len(critical_findings) > 0
+    
     def count_steam_accounts(self):
         """Cuenta las cuentas de Steam que han iniciado sesión en esta PC"""
         if not self.steam_path:
@@ -802,15 +1853,22 @@ class L4D2IntegrityChecker:
             'l4d2*cheat*.exe', 'l4d2*cheat*.dll',
             'left4dead2*esp*.exe', 'left4dead2*esp*.dll',
             
-            # DLLs genéricas de cheats
+            # DLLs genéricas de cheats (NUEVOS PATRONES)
             '*wallhack*.dll', '*esp*.dll', '*aimbot*.dll',
             '*norecoil*.dll', '*triggerbot*.dll', '*speedhack*.dll',
+            'pol.dll', 'hack.dll', 'cheat.dll', 'hook.dll',
+            '*multihack*.dll', '*multi-hack*.dll',
             
-            # Ejecutables de inyección
-            '*injector*.exe', '*inject*.exe',
+            # Ejecutables de inyección (NUEVOS PATRONES)
+            '*injector*.exe', '*inject*.exe', '*injec*.exe',
+            '*loader*.exe', '*load*.exe',
+            'extreem*.exe', 'extreme*.exe', 'xenos*.exe',
+            'process*hacker*.exe', 'cheat*engine*.exe',
             
             # Carpetas y archivos comunes de cheats
             'cheat*.exe', 'hack*.exe', 'mod*.exe',
+            '*multihack*.exe', '*multi-hack*.exe',
+            'l4d*.exe', 'l4d*.dll', # Cuidado con falsos positivos aquí, validar contexto
         ]
         
         # Nombres de carpetas sospechosas (lista extendida)
@@ -818,18 +1876,19 @@ class L4D2IntegrityChecker:
             # Palabras clave directas
             'cheat', 'cheats', 'hack', 'hacks', 'esp', 'wallhack', 'wallhacks',
             'aimbot', 'aimbots', 'triggerbot', 'speedhack', 'norecoil',
+            'multihack', 'multi-hack', 'multihacks',
             
             # L4D2 específicos
             'l4d2esp', 'l4d2_esp', 'l4d2-esp', 'l4d2 esp',
             'l4d2cheat', 'l4d2_cheat', 'l4d2-cheat', 'l4d2 cheat',
             'l4d2hack', 'l4d2_hack', 'l4d2wallhack',
-            'l4d2loader', 'l4d2_loader', 'l4d2-loader', 'l4d2 loader',  # NUEVO
+            'l4d2loader', 'l4d2_loader', 'l4d2-loader', 'l4d2 loader',
             'left4dead2cheat', 'left4dead2esp', 'left4dead2hack',
-            'left4dead2loader', 'left4dead2_loader',  # NUEVO
+            'left4dead2loader', 'left4dead2_loader',
             
             # Inyectores y loaders (extendido)
-            'injector', 'inject', 'inj',
-            'loader', 'load', 'loaders',  # MUY COMÚN en cheats
+            'injector', 'inject', 'inj', 'injec', 'inyector',
+            'loader', 'load', 'loaders',
             'bootstrap', 'boot',
             'launcher', 'launch', 'launchers',
             'activator', 'activate',
@@ -837,6 +1896,7 @@ class L4D2IntegrityChecker:
             'runner', 'run',
             'executor', 'exec',
             'enabler', 'enable',
+            'extreem', 'extreme', # Extreem Injector
             
             # Nombres engañosos (muy comunes)
             'gamebooster', 'game-booster', 'game booster',
@@ -871,45 +1931,93 @@ class L4D2IntegrityChecker:
         ]
         
         try:
+            import fnmatch
+            
             for location in search_locations:
                 if not os.path.exists(location):
                     continue
                 
+                # Determinar profundidad de escaneo
+                # Descargas, Escritorio, Documentos -> Recursivo (hasta 2 niveles)
+                # Otras carpetas -> Solo raíz (nivel 0)
+                is_user_folder = any(x in location for x in ['Desktop', 'Downloads', 'Documents'])
+                max_depth = 2 if is_user_folder else 0
+                
                 try:
-                    # Buscar solo en el primer nivel (no recursivo profundo para no tardar mucho)
-                    for item in os.listdir(location):
-                        item_path = os.path.join(location, item)
-                        item_lower = item.lower()
+                    # Usar os.walk para escaneo flexible
+                    for root, dirs, files in os.walk(location):
+                        # Calcular profundidad actual
+                        try:
+                            if root == location:
+                                depth = 0
+                            else:
+                                rel_path = os.path.relpath(root, location)
+                                depth = rel_path.count(os.sep) + 1
+                        except:
+                            depth = 0
+                            
+                        # Si excedemos la profundidad, limpiar dirs para no seguir bajando y continuar
+                        if depth > max_depth:
+                            dirs[:] = []
+                            continue
+                            
+                        # 1. Analizar carpetas sospechosas
+                        for dir_name in dirs:
+                            dir_lower = dir_name.lower()
+                            # Verificar si el nombre de la carpeta coincide con patrones sospechosos
+                            if any(sus in dir_lower for sus in suspicious_folder_names):
+                                folder_path = os.path.join(root, dir_name)
+                                # Analizar contenido de la carpeta
+                                folder_info = self._analyze_cheat_folder(folder_path, dir_name)
+                                if folder_info:
+                                    cheat_files_found.append(folder_info)
                         
-                        # Verificar carpetas sospechosas
-                        if os.path.isdir(item_path):
-                            for sus_folder in suspicious_folder_names:
-                                if sus_folder in item_lower:
-                                    # Analizar contenido de la carpeta
-                                    folder_info = self._analyze_cheat_folder(item_path, item)
-                                    if folder_info:
-                                        cheat_files_found.append(folder_info)
-                                    break
-                        
-                        # Verificar archivos sospechosos
-                        elif os.path.isfile(item_path):
-                            if self._is_cheat_file(item_lower, item_path):
-                                file_info = {
-                                    'type': 'cheat_file',
-                                    'file_name': item,
-                                    'file_path': item_path,
-                                    'file_size': os.path.getsize(item_path),
-                                    'location': location,
-                                    'severity': 'CRITICAL',
-                                    'description': f'Archivo de cheat detectado: {item}'
-                                }
-                                cheat_files_found.append(file_info)
+                        # 2. Analizar archivos sospechosos
+                        for file_name in files:
+                            file_lower = file_name.lower()
+                            file_path = os.path.join(root, file_name)
+                            
+                            # A. Whitelist check (evitar falsos positivos como instaladores legítimos)
+                            if self.is_legitimate_program(file_name, file_path):
+                                continue
                                 
-                except (PermissionError, OSError):
+                            # B. Pattern check
+                            is_suspicious = False
+                            matched_pattern = ""
+                            
+                            for pattern in suspicious_file_patterns:
+                                if fnmatch.fnmatch(file_lower, pattern):
+                                    is_suspicious = True
+                                    matched_pattern = pattern
+                                    break
+                            
+                            # Si no coincide con patrones glob, probar también palabras clave directas si no es un archivo común
+                            if not is_suspicious:
+                                if self._is_cheat_file(file_lower, file_path):
+                                    is_suspicious = True
+                                    matched_pattern = "keyword_match"
+
+                            if is_suspicious:
+                                try:
+                                    file_size = os.path.getsize(file_path)
+                                    cheat_files_found.append({
+                                        'type': 'cheat_file',
+                                        'file_name': file_name,
+                                        'file_path': file_path,
+                                        'file_size': file_size,
+                                        'location': root, # Ubicación real donde se encontró
+                                        'severity': 'CRITICAL',
+                                        'description': f'Archivo de cheat detectado: {file_name} (Patrón: {matched_pattern})'
+                                    })
+                                except:
+                                    pass
+                                    
+                except Exception as e:
+                    # print(f"Error escaneando {location}: {e}")
                     continue
                     
         except Exception as e:
-            print(f"Error al buscar archivos de cheats: {e}")
+            print(f"Error general en detección de archivos: {e}")
         
         self.results['cheat_files_found'] = cheat_files_found
         return len(cheat_files_found) > 0
@@ -1006,6 +2114,134 @@ class L4D2IntegrityChecker:
         
         return False
     
+    def parse_prefetch_with_tool(self, prefetch_file):
+        """Usa WinPrefetchView.exe para parsear archivo Prefetch y obtener ruta real"""
+        # Buscar la herramienta en la carpeta pfprogam (sin r)
+        tool_path = os.path.join(os.path.dirname(sys.executable) if is_compiled() else os.path.dirname(__file__), 'pfprogam', 'WinPrefetchView.exe')
+        
+        if not os.path.exists(tool_path):
+            # Intentar buscar en el directorio actual si no está en pfprogam
+            tool_path = os.path.join(os.path.dirname(sys.executable) if is_compiled() else os.path.dirname(__file__), 'WinPrefetchView.exe')
+            if not os.path.exists(tool_path):
+                return None
+        
+        try:
+            # Ejecutar WinPrefetchView para este archivo específico
+            output_file = os.path.join(tempfile.gettempdir(), f'prefetch_{os.path.basename(prefetch_file)}.txt')
+            
+            # Comando: /stext <Filename> /prefetchfile <Prefetch File>
+            cmd = f'"{tool_path}" /stext "{output_file}" /prefetchfile "{prefetch_file}"'
+            
+            # Ejecutar con timeout para evitar bloqueos
+            result = subprocess.run(cmd, shell=True, capture_output=True, timeout=5)
+            
+            if not os.path.exists(output_file):
+                return None
+            
+            # Leer y parsear output - intentar múltiples encodings
+            exe_path = None
+            content = None
+            
+            # Intentar diferentes encodings
+            encodings_to_try = ['utf-16-le', 'utf-16', 'utf-8', 'latin-1', 'cp1252']
+            
+            for encoding in encodings_to_try:
+                try:
+                    with open(output_file, 'r', encoding=encoding, errors='ignore') as f:
+                        content = f.read()
+                    if content and len(content) > 10:  # Verificar que hay contenido válido
+                        break
+                except:
+                    continue
+            
+            if not content:
+                # Limpiar archivo temporal
+                try:
+                    os.remove(output_file)
+                except:
+                    pass
+                return None
+                
+            # Buscar la ruta del ejecutable en diferentes formatos posibles
+            # WinPrefetchView puede usar diferentes etiquetas
+            search_patterns = [
+                "Filename:",
+                "Full Path:",
+                "Executable:",
+                "Process Name:",
+                "File Name:"
+            ]
+            
+            for line in content.splitlines():
+                line = line.strip()
+                for pattern in search_patterns:
+                    if line.startswith(pattern):
+                        # Extraer la parte después del patrón
+                        parts = line.split(":", 1)
+                        if len(parts) > 1:
+                            path_candidate = parts[1].strip()
+                            # Verificar que parece una ruta válida de Windows (tiene C:, D:, etc.)
+                            if path_candidate and len(path_candidate) > 3:
+                                # Verificar formato de ruta Windows
+                                if len(path_candidate) > 1 and path_candidate[1] == ':':
+                                    exe_path = path_candidate
+                                    break
+                                # A veces puede venir con comillas
+                                elif path_candidate.startswith('"') and ':' in path_candidate:
+                                    path_candidate = path_candidate.strip('"')
+                                    if len(path_candidate) > 1 and path_candidate[1] == ':':
+                                        exe_path = path_candidate
+                                        break
+                if exe_path:
+                    break
+            
+            # Limpiar archivo temporal
+            try:
+                os.remove(output_file)
+            except:
+                pass
+                
+            return exe_path
+            
+        except Exception as e:
+            # Silenciar errores para no saturar el log, pero podríamos activar esto para debug
+            # print(f"Error parsing prefetch {os.path.basename(prefetch_file)}: {e}")
+            return None
+
+    def is_legitimate_program(self, program_name, exe_path=None):
+        """Determina si un programa es legítimo usando whitelist y ruta"""
+        program_lower = program_name.lower()
+        
+        # 1. Verificar whitelist por nombre exacto
+        if program_lower in LEGITIMATE_PROGRAMS_WHITELIST:
+            return True
+            
+        # 2. Verificar si termina con alguna extensión de la whitelist (para versiones)
+        # Ejemplo: python3.9.exe -> python
+        base_name = os.path.splitext(program_lower)[0]
+        for legit in LEGITIMATE_PROGRAMS_WHITELIST:
+            legit_base = os.path.splitext(legit)[0]
+            if base_name == legit_base or base_name.startswith(legit_base + "."):
+                return True
+        
+        # 3. Verificar ruta si está disponible
+        if exe_path:
+            path_lower = exe_path.lower()
+            
+            # Rutas legítimas
+            for legit_path in LEGITIMATE_PATHS:
+                if path_lower.startswith(legit_path.lower()):
+                    # Excepción: No permitir carpetas temporales dentro de rutas legítimas si fuera el caso
+                    # pero C:\Windows y Program Files suelen ser seguros
+                    return True
+            
+            # Rutas sospechosas (confirmación de sospecha)
+            for susp_path in SUSPICIOUS_PATHS:
+                if susp_path.lower() in path_lower:
+                    return False # Definitivamente sospechoso
+        
+        return False
+
     def detect_recently_executed_programs(self):
         """Detecta programas ejecutados recientemente usando Prefetch y Registro de Windows"""
         recently_executed = []
@@ -1033,16 +2269,9 @@ class L4D2IntegrityChecker:
             'winject', 'dll injector', 'dllinjector', 'dll-injector',
             'manualmap', 'manual-map', 'manualmapper',
             
-            # Nombres genéricos comunes de inyectores
-            'injector', 'inject', 'inj', 
-            'loader', 'load', 'loader.exe',  # MUY COMÚN
-            'bootstrap', 'boot',
-            'launcher', 'launch',
-            'runner', 'run',
-            'executor', 'exec',
-            'starter', 'start',
-            'activator', 'activate',
-            'enabler', 'enable',
+            # Nombres genéricos comunes de inyectores (SOLO SI SON COMPLETOS O MUY ESPECÍFICOS)
+            'injector.exe', 'loader.exe', 'launcher.exe', 
+            'cheatengine', 'cheat-engine',
             
             # Palabras clave directas de cheats
             'wallhack', 'wall-hack', 'wh.exe', 'walls',
@@ -1073,7 +2302,7 @@ class L4D2IntegrityChecker:
             'mira', 'punteria', 'ayuda',
             
             # Nombres de proyectos de cheats conocidos
-            'unknowncheats', 'unknown-cheats', 'uc',
+            'unknowncheats', 'unknown-cheats', 'uc-downloader',
             'sourcemod', 'source-mod', 'vac-bypass',
             'vacbypass', 'vac bypass', 'antivac',
             'steambypass', 'steam-bypass',
@@ -1082,9 +2311,8 @@ class L4D2IntegrityChecker:
             'inject0r', '1njector', 'h4ck', 'ch34t',
             'a1mbot', 'w4llhack', '3sp',
             
-            # Nombres cortos y abreviaciones
-            'inj.exe', 'ld.exe', 'mm.exe', 'esp', 'wh', 'ab',
-            'ce', 'ph', 'xi', 'ei',
+            # Nombres cortos y abreviaciones (SOLO SI SON MUY ESPECÍFICOS)
+            'inj.exe', 'ld.exe', 'mm.exe',
             
             # DLL Libraries sospechosas
             'overlay.dll', 'hook.dll', 'hooks.dll',
@@ -1134,7 +2362,7 @@ class L4D2IntegrityChecker:
         return len(recently_executed) > 0
     
     def _analyze_prefetch_folder(self, suspicious_patterns):
-        """Analiza la carpeta Prefetch para detectar programas ejecutados recientemente"""
+        """Analiza la carpeta Prefetch - MODO COMPLETO: Muestra TODO lo ejecutado en las últimas 4 horas"""
         prefetch_files = []
         prefetch_path = r"C:\Windows\Prefetch"
         
@@ -1143,53 +2371,108 @@ class L4D2IntegrityChecker:
         
         try:
             current_time = datetime.now()
+            time_window_hours = 4  # Ventana de tiempo: últimas 4 horas
             
-            for filename in os.listdir(prefetch_path):
-                if not filename.endswith('.pf'):
-                    continue
-                
+            # Obtener lista de archivos .pf
+            try:
+                files = [f for f in os.listdir(prefetch_path) if f.lower().endswith('.pf')]
+            except:
+                return []
+
+            for filename in files:
                 file_path = os.path.join(prefetch_path, filename)
                 filename_lower = filename.lower()
                 
-                # Verificar si el nombre contiene patrones sospechosos
-                for pattern in suspicious_patterns:
-                    if pattern in filename_lower:
-                        try:
-                            # Obtener información del archivo
-                            stat = os.stat(file_path)
-                            last_modified = datetime.fromtimestamp(stat.st_mtime)
-                            time_diff = current_time - last_modified
-                            hours_ago = time_diff.total_seconds() / 3600
-                            
-                            # Extraer nombre del programa del archivo prefetch
-                            program_name = filename.replace('.pf', '').split('-')[0]
-                            
-                            # Analizar contexto para reducir falsos positivos
-                            context_analysis = self._analyze_program_context(program_name, pattern)
-                            
-                            # Solo agregar si realmente es sospechoso después del análisis de contexto
-                            if context_analysis['is_suspicious']:
-                                prefetch_files.append({
-                                    'source': 'Prefetch',
-                                    'program_name': program_name,
-                                    'prefetch_file': filename,
-                                    'file_path': file_path,
-                                    'last_execution': last_modified.isoformat(),
-                                    'last_execution_formatted': last_modified.strftime("%Y-%m-%d %H:%M:%S"),
-                                    'hours_ago': round(hours_ago, 2),
-                                    'severity': context_analysis['severity'],
-                                    'description': f'Programa sospechoso ejecutado hace {round(hours_ago, 1)} horas',
-                                    'matched_pattern': pattern,
-                                    'confidence': context_analysis['confidence'],
-                                    'context_details': context_analysis['details']
-                                })
-                            break
-                            
-                        except (OSError, PermissionError):
+                try:
+                    # Obtener información del archivo
+                    stat = os.stat(file_path)
+                    last_modified = datetime.fromtimestamp(stat.st_mtime)
+                    time_diff = current_time - last_modified
+                    hours_ago = time_diff.total_seconds() / 3600
+                    
+                    # FILTRO TEMPORAL: Solo incluir programas ejecutados en las últimas 4 horas
+                    if hours_ago > time_window_hours:
+                        continue
+                    
+                    # Extraer nombre base del programa (ej: PROGRAMA.EXE-HASH.pf -> PROGRAMA.EXE)
+                    try:
+                        program_name_part = filename.split('-')[0]
+                        if program_name_part.lower().endswith('.pf'):
+                            program_name = program_name_part.replace('.pf', '')
+                        else:
+                            program_name = program_name_part
+                    except:
+                        program_name = filename.replace('.pf', '')
+                    
+                    # Intentar obtener ruta real con WinPrefetchView
+                    real_path = self.parse_prefetch_with_tool(file_path)
+                    
+                    # Determinar severidad basándose en patrones y ruta
+                    severity = "INFO"  # Por defecto, solo informativo
+                    matched_pattern = None
+                    is_whitelisted = False
+                    
+                    # 1. Verificar si está en whitelist (solo si tenemos ruta real)
+                    if real_path:
+                        is_whitelisted = self.is_legitimate_program(program_name, real_path)
+                    else:
+                        # Sin ruta real, verificar solo por nombre
+                        is_whitelisted = self.is_legitimate_program(program_name)
+                    
+                    # 2. Verificar patrones sospechosos
+                    for pattern in suspicious_patterns:
+                        if len(pattern) < 3 and pattern not in filename_lower.split('.'):
                             continue
+                        if pattern in filename_lower:
+                            matched_pattern = pattern
+                            severity = "CRITICAL"
+                            break
+                    
+                    # 3. Si no está en whitelist y no tiene ruta real, marcar como sospechoso
+                    if not is_whitelisted and not real_path:
+                        severity = "MEDIUM"  # Potencialmente renombrado o sin verificar
+                    
+                    # 4. Si está en whitelist pero no tiene ruta, marcar como advertencia
+                    if is_whitelisted and not real_path:
+                        severity = "LOW"  # Probablemente legítimo pero sin confirmar
+                    
+                    # Analizar contexto si hay patrón sospechoso
+                    context_details = ""
+                    if matched_pattern:
+                        context_analysis = self._analyze_program_context(program_name, matched_pattern)
+                        context_details = context_analysis['details']
+                    elif not real_path:
+                        context_details = "⚠️ No se pudo verificar la ruta real del ejecutable. Posible evasión por cambio de nombre."
+                    elif not is_whitelisted:
+                        context_details = f"Programa desconocido ejecutado desde: {real_path}"
+                    else:
+                        context_details = f"Programa legítimo verificado: {real_path}"
+                    
+                    prefetch_files.append({
+                        'source': 'Prefetch',
+                        'program_name': program_name,
+                        'prefetch_file': filename,
+                        'file_path': file_path,
+                        'real_path': real_path if real_path else "❌ No detectada (verificar manualmente)",
+                        'last_execution': last_modified.isoformat(),
+                        'last_execution_formatted': last_modified.strftime("%Y-%m-%d %H:%M:%S"),
+                        'hours_ago': round(hours_ago, 2),
+                        'severity': severity,
+                        'description': f'Ejecutado hace {round(hours_ago, 1)} horas',
+                        'matched_pattern': matched_pattern if matched_pattern else "N/A",
+                        'confidence': "MUY ALTA" if real_path else "BAJA",
+                        'context_details': context_details,
+                        'is_whitelisted': is_whitelisted
+                    })
+                        
+                except (OSError, PermissionError):
+                    continue
                             
         except (OSError, PermissionError) as e:
             print(f"No se pudo acceder a Prefetch: {e}")
+        
+        # Ordenar por tiempo de ejecución (más reciente primero)
+        prefetch_files.sort(key=lambda x: x['hours_ago'])
         
         return prefetch_files
     
@@ -1225,15 +2508,25 @@ class L4D2IntegrityChecker:
                                 value_name, value_data, _ = winreg.EnumValue(count_key, j)
                                 
                                 # Decodificar ROT13 del nombre
-                                decoded_name = self._rot13_decode(value_name).lower()
+                                decoded_path = self._rot13_decode(value_name)
+                                decoded_name_lower = decoded_path.lower()
+                                program_name = os.path.basename(decoded_path)
+                                
+                                # 1. Whitelist check
+                                if self.is_legitimate_program(program_name, decoded_path):
+                                    continue
                                 
                                 # Verificar si contiene patrones sospechosos
                                 for pattern in suspicious_patterns:
-                                    if pattern in decoded_name:
+                                    # Evitar matches cortos peligrosos
+                                    if len(pattern) < 3 and pattern not in decoded_name_lower.split('.'):
+                                         continue
+                                         
+                                    if pattern in decoded_name_lower:
                                         userassist_programs.append({
                                             'source': 'UserAssist Registry',
-                                            'program_path': self._rot13_decode(value_name),
-                                            'program_name': os.path.basename(self._rot13_decode(value_name)),
+                                            'program_path': decoded_path,
+                                            'program_name': program_name,
                                             'severity': 'HIGH',
                                             'description': f'Programa sospechoso en historial de UserAssist',
                                             'matched_pattern': pattern
@@ -1282,9 +2575,18 @@ class L4D2IntegrityChecker:
                             # Obtener nombre de la aplicación
                             app_id, _ = winreg.QueryValueEx(app_key, "AppId")
                             app_id_lower = app_id.lower()
+                            program_name = os.path.basename(app_id)
+                            
+                            # 1. Whitelist check
+                            if self.is_legitimate_program(program_name, app_id):
+                                continue
                             
                             # Verificar si contiene patrones sospechosos
                             for pattern in suspicious_patterns:
+                                # Evitar matches cortos peligrosos
+                                if len(pattern) < 3 and pattern not in app_id_lower.split('.'):
+                                     continue
+                                     
                                 if pattern in app_id_lower:
                                     recentapps.append({
                                         'source': 'RecentApps Registry',
@@ -2833,8 +4135,140 @@ class L4D2IntegrityChecker:
                 print(f"      SteamID: {account['steam_id']}")
                 print()
         
+        # Detectar carpetas no oficiales en raíz de L4D2
+        print("\n[5/15] Verificando carpetas en raíz del juego...")
+        self.show_console_progress("Analizando estructura de carpetas", 0.8)
+        unofficial_folders_found = self.detect_unofficial_folders()
+        if unofficial_folders_found:
+            print(f"ADVERTENCIA CRÍTICA: Se encontraron {len(self.results['unofficial_folders'])} carpetas no oficiales:")
+            for folder in self.results['unofficial_folders']:
+                print(f"   ⚠️ {folder['folder_name']} - {folder['description']}")
+                if folder.get('files_count'):
+                    print(f"      Archivos: {folder['files_count']}")
+        else:
+            print("OK - Solo carpetas oficiales en raíz del juego")
+        
+        # Validar integridad de gameinfo.txt
+        print("\n[6/15] Validando archivo gameinfo.txt...")
+        self.show_console_progress("Verificando integridad de gameinfo.txt", 0.5)
+        gameinfo_modified = self.validate_gameinfo_txt()
+        if gameinfo_modified:
+            validation = self.results.get('gameinfo_validation', {})
+            if validation.get('status') == 'MODIFIED':
+                print(f"ADVERTENCIA CRÍTICA: gameinfo.txt ha sido modificado")
+                if validation.get('modifications'):
+                    print("   Modificaciones detectadas:")
+                    for mod in validation['modifications']:
+                        print(f"      - {mod}")
+            elif validation.get('status') == 'MISSING':
+                print(f"ERROR CRÍTICO: gameinfo.txt no encontrado")
+        else:
+            print("OK - gameinfo.txt es oficial y no ha sido modificado")
+        
+        # Validar integridad de addonconfig.cfg
+        print("\n[7/16] Validando archivo addonconfig.cfg...")
+        self.show_console_progress("Verificando restricciones de addons en modos competitivos", 0.5)
+        addonconfig_modified = self.validate_addonconfig_cfg()
+        if addonconfig_modified:
+            validation = self.results.get('addonconfig_validation', {})
+            if validation.get('status') == 'MODIFIED':
+                print(f"ADVERTENCIA CRÍTICA: addonconfig.cfg ha sido modificado")
+                print(f"   ⚠️ {validation['description']}")
+                if validation.get('issues'):
+                    print("   Problemas detectados:")
+                    for issue in validation['issues']:
+                        print(f"      - {issue}")
+            elif validation.get('status') == 'MISSING':
+                print(f"ERROR CRÍTICO: addonconfig.cfg no encontrado")
+        else:
+            validation = self.results.get('addonconfig_validation', {})
+            if validation.get('status') == 'VALID':
+                print("OK - addonconfig.cfg es oficial y bloquea addons en versus/scavenge")
+            elif validation.get('status') == 'MODIFIED_FORMAT':
+                print("OK - addonconfig.cfg tiene formato diferente pero valores correctos")
+        
+        # Validar integridad de 360controller.cfg
+        print("\n[8/17] Validando archivo 360controller.cfg...")
+        self.show_console_progress("Verificando configuración de mando (autoaim exploit)", 0.5)
+        controller_modified = self.validate_360controller_cfg()
+        if controller_modified:
+            validation = self.results.get('controller_validation', {})
+            if validation.get('status') == 'MODIFIED':
+                print(f"ADVERTENCIA CRÍTICA: 360controller.cfg ha sido modificado")
+                print(f"   ⚠️ {validation['description']}")
+                if validation.get('issues'):
+                    print("   Problemas detectados:")
+                    for issue in validation['issues']:
+                        print(f"      - {issue}")
+            elif validation.get('status') == 'MISSING':
+                print(f"INFO: 360controller.cfg no encontrado (solo necesario si se usa mando)")
+        else:
+            validation = self.results.get('controller_validation', {})
+            if validation.get('status') == 'VALID':
+                print("OK - 360controller.cfg es oficial y no permite autoaim exploit")
+            elif validation.get('status') == 'MODIFIED_FORMAT':
+                print("OK - 360controller.cfg tiene formato diferente pero valores críticos correctos")
+            elif validation.get('status') == 'MISSING':
+                print("INFO - 360controller.cfg no encontrado (solo necesario si se usa mando)")
+        
+        # Validar integridad de config.cfg
+        print("\n[9/19] Validando archivo config.cfg...")
+        self.show_console_progress("Verificando comandos críticos en configuración principal", 0.5)
+        config_modified = self.validate_config_cfg()
+        if config_modified:
+            validation = self.results.get('config_validation', {})
+            if validation.get('status') == 'MODIFIED':
+                print(f"ADVERTENCIA CRÍTICA: config.cfg contiene configuraciones sospechosas")
+                print(f"   ⚠️ {validation['description']}")
+                if validation.get('issues'):
+                    print("   Problemas detectados:")
+                    for issue in validation['issues']:
+                        print(f"      - {issue}")
+            elif validation.get('status') == 'MISSING':
+                print(f"ERROR CRÍTICO: config.cfg no encontrado")
+        else:
+            print("OK - config.cfg no contiene comandos prohibidos")
+        
+        # Validar integridad de perf.cfg
+        print("\n[10/19] Validando archivo perf.cfg...")
+        self.show_console_progress("Verificando archivo de pruebas de rendimiento", 0.5)
+        perf_modified = self.validate_perf_cfg()
+        if perf_modified:
+            validation = self.results.get('perf_validation', {})
+            if validation.get('status') == 'MODIFIED':
+                print(f"ADVERTENCIA CRÍTICA: perf.cfg contiene comandos prohibidos")
+                print(f"   ⚠️ {validation['description']}")
+                if validation.get('issues'):
+                    print("   Problemas detectados:")
+                    for issue in validation['issues']:
+                        print(f"      - {issue}")
+        else:
+            validation = self.results.get('perf_validation', {})
+            if validation.get('status') == 'VALID':
+                print("OK - perf.cfg es oficial")
+            elif validation.get('status') == 'MODIFIED_FORMAT':
+                print("OK - perf.cfg tiene formato diferente pero sin comandos prohibidos")
+            elif validation.get('status') == 'MISSING':
+                print("INFO - perf.cfg no encontrado (solo necesario para pruebas de rendimiento)")
+        
+        # Escanear ubicaciones críticas con firmas de cheats
+        print("\n[11/19] Escaneando ubicaciones críticas del juego...")
+        self.show_console_progress("Analizando archivos contra firmas de cheats conocidos", 1.5)
+        critical_found = self.scan_critical_locations()
+        if critical_found:
+            print(f"ADVERTENCIA CRÍTICA: Se encontraron {len(self.results['critical_findings'])} archivos sospechosos:")
+            for finding in self.results['critical_findings']:
+                print(f"   🚨 {finding['file_name']}")
+                print(f"      Ubicación: {finding['location']}")
+                print(f"      Tipo de cheat: {finding['description']}")
+                print(f"      Patrón: '{finding['matched_pattern']}'")
+                print(f"      Severidad: {finding['severity']}")
+                print()
+        else:
+            print("OK - No se encontraron archivos con firmas de cheats conocidos")
+        
         # Detectar procesos sospechosos
-        print("\n[5/11] Escaneando procesos del sistema...")
+        print("\n[9/16] Escaneando procesos del sistema...")
         self.show_console_progress("Analizando procesos activos", 1.5)
         suspicious = self.detect_suspicious_processes()
         if suspicious:
@@ -2872,7 +4306,7 @@ class L4D2IntegrityChecker:
             print("OK - No se encontraron procesos sospechosos")
         
         # Detectar inyecciones de memoria
-        print("\n[6/11] Analizando inyecciones de memoria...")
+        print("\n[15/16] Verificando inyecciones de memoria...")
         self.show_console_progress("Inspeccionando memoria del sistema", 1.3)
         memory_injections = self.detect_memory_injections()
         if memory_injections:
@@ -2887,7 +4321,7 @@ class L4D2IntegrityChecker:
             print("OK - No se encontraron inyecciones de memoria")
         
         # Detectar firmas de cheats conocidos
-        print("\n[7/11] Buscando firmas de cheats conocidos...")
+        print("\n[13/16] Buscando firmas de cheats conocidos...")
         self.show_console_progress("Comparando con base de datos de cheats", 1.5)
         cheat_signatures = self.detect_known_cheat_signatures()
         if cheat_signatures:
@@ -2902,7 +4336,7 @@ class L4D2IntegrityChecker:
             print("OK - No se encontraron firmas de cheats conocidos")
         
         # Detectar mods en Versus
-        print("\n[8/11] Verificando mods en modo Versus...")
+        print("\n[14/16] Verificando mods en modo Versus...")
         self.show_console_progress("Analizando modificaciones de Versus", 1.2)
         versus_mods = self.detect_versus_mods()
         if versus_mods:
@@ -2919,7 +4353,7 @@ class L4D2IntegrityChecker:
             print("OK - No se encontraron mods en Versus")
         
         # Detectar comandos prohibidos en archivos CFG
-        print("\n[9/11] Analizando archivos de configuración (.cfg)...")
+        print("\n[12/16] Analizando archivos de configuración (CFG)...")
         self.show_console_progress("Escaneando archivos .cfg en busca de comandos prohibidos", 1.5)
         suspicious_cfgs = self.detect_suspicious_cfg_commands()
         if suspicious_cfgs:
@@ -2936,7 +4370,7 @@ class L4D2IntegrityChecker:
             print("OK - No se encontraron comandos prohibidos en archivos .cfg")
         
         # Detectar archivos de cheats en el sistema
-        print("\n[10/11] Buscando archivos de cheats en el sistema...")
+        print("\n[10/16] Buscando archivos de cheats en el sistema...")
         self.show_console_progress("Escaneando carpetas comunes (Desktop, Downloads, etc.)", 2.0)
         cheat_files = self.detect_cheat_files_in_system()
         if cheat_files:
@@ -2973,7 +4407,7 @@ class L4D2IntegrityChecker:
             print("OK - No se encontraron archivos de cheats en ubicaciones comunes")
         
         # Detectar programas ejecutados recientemente (incluso si ya están cerrados)
-        print("\n[11/11] Analizando historial de programas ejecutados...")
+        print("\n[11/16] Analizando historial de programas ejecutados...")
         self.show_console_progress("Revisando Prefetch y Registro de Windows", 1.5)
         recently_executed = self.detect_recently_executed_programs()
         if recently_executed:
@@ -3282,8 +4716,82 @@ del /f /q "%~f0"
                 if mod.get('suspicious'):
                     report_lines.append(f"   ⚠️ SOSPECHOSO: {mod.get('analysis', 'Análisis sospechoso')}")
                 report_lines.append("")
-        else:
             report_lines.append("Ningún mod detectado")
+            report_lines.append("")
+        
+        # Carpetas no oficiales en raíz
+        report_lines.append("-"*80)
+        report_lines.append(f"CARPETAS NO OFICIALES EN RAÍZ: {len(self.results.get('unofficial_folders', []))}")
+        report_lines.append("-"*80)
+        if len(self.results.get('unofficial_folders', [])) > 0:
+            for i, folder in enumerate(self.results.get('unofficial_folders', []), 1):
+                report_lines.append(f"{i}. Carpeta: {folder['folder_name']}")
+                report_lines.append(f"   Ruta Completa: {folder['folder_path']}")
+                report_lines.append(f"   Severidad: {folder['severity']}")
+                report_lines.append(f"   Descripción: {folder['description']}")
+                if folder.get('files_count'):
+                    report_lines.append(f"   Archivos: {folder['files_count']}")
+                report_lines.append("")
+        else:
+            report_lines.append("Ninguna carpeta no oficial detectada")
+            report_lines.append("")
+        
+        # Validación de gameinfo.txt
+        report_lines.append("-"*80)
+        report_lines.append("VALIDACIÓN DE GAMEINFO.TXT")
+        report_lines.append("-"*80)
+        if self.results.get('gameinfo_validation'):
+            validation = self.results['gameinfo_validation']
+            report_lines.append(f"Estado: {validation['status']}")
+            report_lines.append(f"Severidad: {validation['severity']}")
+            report_lines.append(f"Descripción: {validation['description']}")
+            if validation.get('modifications'):
+                report_lines.append("Modificaciones detectadas:")
+                for mod in validation['modifications']:
+                    report_lines.append(f"   - {mod}")
+            if validation.get('file_path'):
+                report_lines.append(f"Ruta: {validation['file_path']}")
+        else:
+            report_lines.append("No se realizó validación de gameinfo.txt")
+        report_lines.append("")
+        
+        # Validación de addonconfig.cfg
+        report_lines.append("-"*80)
+        report_lines.append("VALIDACIÓN DE ADDONCONFIG.CFG")
+        report_lines.append("-"*80)
+        if self.results.get('addonconfig_validation'):
+            validation = self.results['addonconfig_validation']
+            report_lines.append(f"Estado: {validation['status']}")
+            report_lines.append(f"Severidad: {validation['severity']}")
+            report_lines.append(f"Descripción: {validation['description']}")
+            if validation.get('issues'):
+                report_lines.append("Problemas detectados:")
+                for issue in validation['issues']:
+                    report_lines.append(f"   - {issue}")
+            if validation.get('file_path'):
+                report_lines.append(f"Ruta: {validation['file_path']}")
+        else:
+            report_lines.append("No se realizó validación de addonconfig.cfg")
+        report_lines.append("")
+        
+        # Hallazgos críticos (firmas de cheats conocidos)
+        report_lines.append("-"*80)
+        report_lines.append(f"FIRMAS DE CHEATS CONOCIDOS: {len(self.results.get('critical_findings', []))}")
+        report_lines.append("-"*80)
+        if len(self.results.get('critical_findings', [])) > 0:
+            for i, finding in enumerate(self.results.get('critical_findings', []), 1):
+                report_lines.append(f"{i}. Archivo: {finding['file_name']}")
+                report_lines.append(f"   Ubicación: {finding['location']}")
+                report_lines.append(f"   Ruta Completa: {finding['file_path']}")
+                report_lines.append(f"   Tamaño: {finding['file_size']:,} bytes")
+                report_lines.append(f"   Tipo de Cheat: {finding['cheat_type']}")
+                report_lines.append(f"   Patrón Detectado: '{finding['matched_pattern']}'")
+                report_lines.append(f"   Severidad: {finding['severity']}")
+                report_lines.append(f"   Descripción: {finding['description']}")
+                report_lines.append(f"   Método de Detección: {finding['detection_method']}")
+                report_lines.append("")
+        else:
+            report_lines.append("Ninguna firma de cheat conocido detectada")
             report_lines.append("")
         
         # Procesos sospechosos
