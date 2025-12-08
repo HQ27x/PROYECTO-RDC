@@ -40,12 +40,67 @@ def is_compiled():
 # BASE DE DATOS DE FIRMAS DE CHEATS CONOCIDOS DE L4D2
 # ============================================================================
 KNOWN_CHEAT_SIGNATURES = {
-    # Aimware - Sistema de aimbot profesional
+    # ===== HACKS COMERCIALES CONOCIDOS =====
+    # Aimware - Sistema de aimbot profesional (PAGO)
     'aimware': {
-        'patterns': ['aimware', 'aim-ware', 'aim_ware', 'aw.dll', 'aw_', 'aimw'],
+        'patterns': ['aimware', 'aim-ware', 'aim_ware', 'aw.dll', 'aw_', 'aimw', 'aimwareloader', 
+                     'aimware_loader', 'awloader', 'aimware.exe', 'aw.exe'],
         'severity': 'CRITICAL',
-        'description': 'Sistema de aimbot profesional (Aimware)'
+        'description': 'Aimware - Sistema de aimbot profesional de pago (Loader + Aimbot + ESP + HvH)',
+        'type': 'COMMERCIAL_INJECTION',
+        'common_paths': ['%TEMP%', '%APPDATA%', 'Desktop', 'Downloads']
     },
+    
+    # BauntiCheats - Muy popular en comunidad rusa/hispana
+    'baunticheats': {
+        'patterns': ['baunti', 'baunticheats', 'baunti_cheats', 'baunti-cheats', 'bauntil4d2', 
+                     'l4d2helper', 'l4d2_helper', 'baunti.exe', 'bauntiloader'],
+        'severity': 'CRITICAL',
+        'description': 'BauntiCheats - Left 4 Dead 2 Helper (Popular en comunidad rusa/hispana)',
+        'type': 'COMMERCIAL_INJECTION',
+        'common_paths': ['%TEMP%', '%APPDATA%', 'Desktop']
+    },
+    
+    # Interwebz - Cheats para juegos Valve
+    'interwebz': {
+        'patterns': ['interwebz', 'inter-webz', 'inter_webz', 'iwz', 'interwebzloader', 
+                     'iwzloader', 'interwebz.exe'],
+        'severity': 'CRITICAL',
+        'description': 'Interwebz - Cheat conocido para juegos Valve (TF2, CSS, L4D2)',
+        'type': 'COMMERCIAL_INJECTION',
+        'common_paths': ['%TEMP%', '%APPDATA%']
+    },
+    
+    # LMAOBOX - Originalmente TF2, portado a L4D2
+    'lmaobox': {
+        'patterns': ['lmaobox', 'lmao-box', 'lmao_box', 'lmao', 'lmaoloader', 'lmaobox.exe'],
+        'severity': 'CRITICAL',
+        'description': 'LMAOBOX - Cheat originalmente de TF2, portado a L4D2',
+        'type': 'COMMERCIAL_INJECTION',
+        'common_paths': ['%TEMP%', '%APPDATA%']
+    },
+    
+    # FleepHack / Fleep - Hack gratuito muy distribuido
+    'fleephack': {
+        'patterns': ['fleep', 'fleephack', 'fleep_hack', 'fleep-hack', 'fleep.exe', 
+                     'fleeploader', 'fleep_loader'],
+        'severity': 'CRITICAL',
+        'description': 'FleepHack / Fleep - Hack gratuito muy distribuido en foros y YouTube',
+        'type': 'FREE_INJECTION',
+        'common_paths': ['%TEMP%', '%APPDATA%', 'Downloads']
+    },
+    
+    # Osiris / RatPoison - Open Source, usado como base para hacks privados
+    'osiris_ratpoison': {
+        'patterns': ['osiris', 'ratpoison', 'rat_poison', 'rat-poison', 'osiris.dll', 
+                     'ratpoison.dll', 'osirisloader'],
+        'severity': 'CRITICAL',
+        'description': 'Osiris / RatPoison - Open Source, usado como base para hacks privados de L4D2',
+        'type': 'OPEN_SOURCE_BASED',
+        'common_paths': ['%TEMP%', '%APPDATA%', 'Downloads']
+    },
+    
+    # ===== HACKS DE FUNCIONALIDAD =====
     
     # No Vomit/Boomer - Elimina efecto de vómito
     'no_vomit': {
@@ -157,6 +212,65 @@ OFFICIAL_L4D2_FOLDERS = {
     'sdk_content',                  # Contenido del SDK
     'sdk_tools',                    # Herramientas del SDK
     'update'                        # Archivos de actualización
+}
+
+# ============================================================================
+# MAPAS COMPETITIVOS LEGÍTIMOS (WHITELIST)
+# Estos son mapas custom usados en servidores competitivos (zonemod, etc.)
+# Se descargan manualmente y se colocan en addons/ (no en addons/workshop)
+# ============================================================================
+COMPETITIVE_MAPS_WHITELIST = {
+    # Nombres exactos (sin extensión .vpk)
+    'bloodtracks',
+    'cmpn_fatalfreightfix',          # cmpn_FatalFreightFix
+    'dead_center_reconstructed',
+    'detourahead',
+    'highwaytohell',
+    'noecho',                        # NoEcho
+    'red_tide',
+    'undead_zone',
+    'bts_l4d2',
+    'dark carnival remix',
+    'deadbeforedawn2_dc',
+    'downpour',
+    'ihatemountains2',
+    'nomercyrehab',
+    'suicideblitz2',
+    'warcelona',
+    'carriedoff',
+    'darkblood2_v3',
+    'deathaboardv2',
+    'energycrisis',
+    'l4d2_diescraper_362',
+    'openroad',
+    'sunrise_carnival',
+    'whispersofwinter',              # WhispersOfWinter
+    'city of the dead map',
+    'daybreak_v3',
+    'deathrow',                      # DeathRow
+    'hauntedforest_v3',
+    'l4d2_thebloodymoors',
+    'parish overgrowth',
+    'the_dark_parish',
+    'white_forest',
+    'city17l4d2',
+    'dead_center_rebirth',
+    'deathsentence',
+    'heavencanwaitl4d2',
+    'left_behind',
+    'ravenholm',
+    'tourofterror',
+    'yama',                          # Yama
+    # Variaciones comunes (por si acaso)
+    'deadbeforedawn2',
+    'darkblood2',
+    'hauntedforest',
+    'daybreak',
+    'city17',
+    'dead_center',
+    'parish',
+    'dark_parish',
+    'city_of_the_dead'
 }
 
 # ============================================================================
@@ -787,6 +901,7 @@ class L4D2IntegrityChecker:
             
         # Múltiples ubicaciones donde pueden estar los mods
         mod_paths = [
+            os.path.join(self.l4d2_path, "left4dead2"),  # IMPORTANTE: Escanear left4dead2/ directamente para VPK no oficiales
             os.path.join(self.l4d2_path, "left4dead2", "addons"),
             os.path.join(self.l4d2_path, "left4dead2", "custom"),
             os.path.join(self.l4d2_path, "left4dead2", "maps"),
@@ -804,6 +919,15 @@ class L4D2IntegrityChecker:
             "pak09_dir.vpk", "pak10_dir.vpk", "pak11_dir.vpk", "pak12_dir.vpk"
         }
         
+        # Archivos pak01_XXX oficiales (patrón: pak01_ seguido de números)
+        # Estos son archivos oficiales del juego y deben ser ignorados
+        import re
+        official_pak_pattern = re.compile(r'^pak01_\d{3}$', re.IGNORECASE)
+        
+        # Ruta de addons para verificar si el mod está en addons/ directamente (no en workshop)
+        addons_path = os.path.join(self.l4d2_path, "left4dead2", "addons")
+        workshop_path = os.path.join(addons_path, "workshop")
+        
         # Patrones de archivos sospechosos
         suspicious_patterns = [
             r'.*cheat.*', r'.*hack.*', r'.*aimbot.*', r'.*wallhack.*',
@@ -814,17 +938,67 @@ class L4D2IntegrityChecker:
         mods_found = []
         
         try:
-            import re
             
             for mod_path in mod_paths:
                 if not os.path.exists(mod_path):
                     continue
+                
+                # Verificar si estamos en la carpeta workshop - NO ignorar nada ahí
+                # Solo ignorar mapas competitivos si están en addons/ directamente
+                # Normalizar rutas para comparación (case-insensitive en Windows)
+                mod_path_normalized = os.path.normpath(mod_path).lower()
+                addons_path_normalized = os.path.normpath(addons_path).lower()
+                workshop_path_normalized = os.path.normpath(workshop_path).lower()
+                
+                is_workshop_folder = mod_path_normalized.startswith(workshop_path_normalized)
+                is_addons_direct = mod_path_normalized == addons_path_normalized
                     
                 for filename in os.listdir(mod_path):
                     file_path = os.path.join(mod_path, filename)
                     
+                    # IGNORAR archivos DEM (demos/grabaciones del juego) - No son mods ni cheats
+                    if filename.endswith(".dem") or filename.lower().endswith(".dem"):
+                        continue  # Ignorar completamente los archivos DEM
+                    
                     # Verificar archivos VPK
-                    if filename.endswith(".vpk") and filename not in official_files:
+                    if filename.endswith(".vpk"):
+                        # Verificar si es un archivo oficial
+                        filename_no_ext = filename[:-4]  # Sin extensión
+                        
+                        # Ignorar archivos oficiales
+                        if filename in official_files:
+                            continue
+                        
+                        # Ignorar archivos pak01_XXX oficiales (patrón: pak01_ seguido de 3 dígitos)
+                        if official_pak_pattern.match(filename_no_ext):
+                            continue
+                        
+                        # Verificar si es un mapa competitivo legítimo
+                        # Solo ignorar si está en addons/ directamente (no en workshop)
+                        mod_name_without_ext = filename_no_ext.lower()
+                        
+                        # Si es un mapa competitivo y está en addons/ directamente, ignorarlo
+                        if mod_name_without_ext in COMPETITIVE_MAPS_WHITELIST and is_addons_direct and not is_workshop_folder:
+                            # Ignorar este mod - es un mapa competitivo legítimo
+                            continue
+                        
+                        # Si estamos en la carpeta left4dead2/ directamente, es MUY sospechoso
+                        # (los VPK oficiales ya fueron filtrados arriba)
+                        left4dead2_dir_path = os.path.join(self.l4d2_path, "left4dead2")
+                        if mod_path.lower() == left4dead2_dir_path.lower():
+                            # VPK en left4dead2/ que no es oficial = CRÍTICO
+                            file_size = os.path.getsize(file_path)
+                            mod_info = {
+                                'name': filename,
+                                'size': file_size,
+                                'path': file_path,
+                                'location': mod_path,
+                                'suspicious': True,
+                                'analysis': f'🚨 CRÍTICO: Archivo VPK no oficial en carpeta left4dead2/. Posible mod para Versus/Competitivo. Los archivos VPK oficiales (pak01_XXX) ya fueron filtrados.'
+                            }
+                            mods_found.append(mod_info)
+                            continue
+                        
                         file_size = os.path.getsize(file_path)
                         
                         # Análisis de contenido del archivo
@@ -890,13 +1064,18 @@ class L4D2IntegrityChecker:
     
     def _is_suspicious_file(self, filename):
         """Determina si un archivo es sospechoso por su nombre o extensión"""
+        filename_lower = filename.lower()
+        
+        # IGNORAR archivos DEM (demos/grabaciones del juego) - No son sospechosos
+        # Los archivos .dem son grabaciones/replays del juego, no mods ni cheats
+        if filename_lower.endswith('.dem'):
+            return False
+        
         suspicious_extensions = ['.dll', '.exe', '.bat', '.cmd', '.vbs', '.js']
         suspicious_names = [
             'cheat', 'hack', 'aimbot', 'wallhack', 'esp', 'triggerbot',
             'speedhack', 'norecoil', 'radar', 'overlay', 'inject', 'bypass'
         ]
-        
-        filename_lower = filename.lower()
         
         # Verificar extensiones sospechosas
         for ext in suspicious_extensions:
@@ -964,13 +1143,35 @@ class L4D2IntegrityChecker:
                             'folder_path': item_path,
                             'severity': 'CRITICAL',
                             'description': f'Carpeta no oficial detectada en raíz: {item}',
-                            'reason': 'Esta carpeta no es parte de la instalación oficial de L4D2'
+                            'reason': 'Esta carpeta no es parte de la instalación oficial de L4D2. Posible carpeta de mods para Versus/Competitivo.'
                         }
                         
                         # Analizar contenido de la carpeta sospechosa
                         try:
-                            files_count = len([f for f in os.listdir(item_path) if os.path.isfile(os.path.join(item_path, f))])
+                            all_files = os.listdir(item_path)
+                            files_count = len([f for f in all_files if os.path.isfile(os.path.join(item_path, f))])
                             folder_info['files_count'] = files_count
+                            
+                            # Buscar archivos VPK específicamente (mods comprimidos)
+                            vpk_files = [f for f in all_files if f.endswith('.vpk')]
+                            if vpk_files:
+                                folder_info['vpk_files'] = vpk_files
+                                folder_info['vpk_count'] = len(vpk_files)
+                                folder_info['description'] += f' ⚠️ Contiene {len(vpk_files)} archivo(s) VPK (posible paquete de mods)'
+                                folder_info['severity'] = 'CRITICAL'
+                                
+                                # Listar algunos nombres de VPK para referencia
+                                if len(vpk_files) <= 5:
+                                    folder_info['vpk_names'] = vpk_files
+                                else:
+                                    folder_info['vpk_names'] = vpk_files[:5]
+                                    folder_info['vpk_names'].append(f'...y {len(vpk_files) - 5} más')
+                            
+                            # Verificar si hay subcarpetas (estructura de mod)
+                            subdirs = [d for d in all_files if os.path.isdir(os.path.join(item_path, d))]
+                            if subdirs:
+                                folder_info['subdirectories'] = subdirs[:10]  # Primeras 10
+                                
                         except (PermissionError, OSError):
                             folder_info['files_count'] = 'No accesible'
                         
@@ -1020,18 +1221,42 @@ class L4D2IntegrityChecker:
                 if 'SearchPaths' in current_content:
                     # Extraer sección SearchPaths
                     import re
-                    search_paths_match = re.search(r'SearchPaths\s*{([^}]*)}', current_content, re.DOTALL)
+                    # Buscar SearchPaths con diferentes variaciones (case-insensitive, con/sin espacios)
+                    search_paths_match = re.search(r'SearchPaths\s*\{([^}]*)\}', current_content, re.DOTALL | re.IGNORECASE)
                     if search_paths_match:
                         search_paths_content = search_paths_match.group(1)
                         
-                        # Buscar Game paths no oficiales
-                        game_paths = re.findall(r'Game\s+([^\s\n]+)', search_paths_content)
+                        # Buscar Game paths (incluyendo errores de tipeo como "Gmme")
+                        # Patrón más flexible para detectar "Game" o variaciones
+                        game_paths = re.findall(r'(?:Game|Gmme|Gamme|Gam)\s+([^\s\n\r]+)', search_paths_content, re.IGNORECASE)
                         official_game_paths = ['update', 'left4dead2_dlc3', 'left4dead2_dlc2', 
                                               'left4dead2_dlc1', '|gameinfo_path|.', 'hl2']
                         
+                        # Normalizar rutas oficiales para comparación
+                        official_game_paths_normalized = [p.lower().strip() for p in official_game_paths]
+                        
                         for game_path in game_paths:
-                            if game_path not in official_game_paths:
-                                modifications.append(f'Game path no oficial: {game_path}')
+                            game_path_clean = game_path.strip()
+                            game_path_normalized = game_path_clean.lower()
+                            
+                            # Verificar si es una ruta oficial
+                            if game_path_normalized not in official_game_paths_normalized:
+                                # Es una ruta no oficial - CRÍTICO para versus/competitivo
+                                modifications.append(f'🚨 RUTA NO OFICIAL EN SearchPaths: "{game_path_clean}" - Posible mod para Versus/Competitivo')
+                                
+                                # Verificar si la carpeta existe en la raíz de L4D2
+                                if self.l4d2_path:
+                                    folder_path = os.path.join(self.l4d2_path, game_path_clean)
+                                    if os.path.exists(folder_path) and os.path.isdir(folder_path):
+                                        modifications.append(f'   📁 Carpeta encontrada: {folder_path}')
+                                        
+                                        # Contar archivos VPK en la carpeta
+                                        try:
+                                            vpk_files = [f for f in os.listdir(folder_path) if f.endswith('.vpk')]
+                                            if vpk_files:
+                                                modifications.append(f'   ⚠️ {len(vpk_files)} archivo(s) VPK encontrado(s) en esta carpeta')
+                                        except:
+                                            pass
                 
                 self.results['gameinfo_validation'] = {
                     'status': 'MODIFIED',
@@ -1404,20 +1629,30 @@ class L4D2IntegrityChecker:
         
         critical_findings = []
         
-        # Ubicaciones críticas a escanear
+        # Ubicaciones críticas a escanear (PRIORIDAD ALTA para detección de hacks)
         critical_locations = [
+            {
+                'path': os.path.join(self.l4d2_path, "bin"),  # CRÍTICO: DLLs reemplazadas aquí
+                'name': 'Bin (DLLs)',
+                'priority': 'CRITICAL',
+                'scan_vpk': False,
+                'scan_loose': True,
+                'extensions': ['.dll'],  # Solo DLLs (d3d9.dll, opengl32.dll, etc.)
+                'check_replaced': True  # Verificar DLLs reemplazadas
+            },
+            {
+                'path': os.path.join(self.l4d2_path, "left4dead2", "cfg"),
+                'name': 'Config Files (CFG)',
+                'priority': 'CRITICAL',
+                'scan_vpk': False,
+                'scan_loose': True,
+                'extensions': ['.cfg']  # Solo archivos .cfg (autoexec.cfg, config.cfg)
+            },
             {
                 'path': os.path.join(self.l4d2_path, "left4dead2", "addons"),
                 'name': 'Addons',
                 'priority': 'CRITICAL',
                 'scan_vpk': True,
-                'scan_loose': True
-            },
-            {
-                'path': os.path.join(self.l4d2_path, "left4dead2", "cfg"),
-                'name': 'Config Files',
-                'priority': 'CRITICAL',
-                'scan_vpk': False,
                 'scan_loose': True
             },
             {
@@ -1470,6 +1705,23 @@ class L4D2IntegrityChecker:
                     
                     # Solo archivos
                     if os.path.isfile(item_path):
+                        # Verificar DLLs reemplazadas en bin/ (CRÍTICO)
+                        if location['name'] == 'Bin (DLLs)' and 'check_replaced' in location:
+                            if self._is_replaced_dll(item, item_path):
+                                critical_findings.append({
+                                    'location': location['name'],
+                                    'location_path': location['path'],
+                                    'file_name': item,
+                                    'file_path': item_path,
+                                    'file_size': os.path.getsize(item_path),
+                                    'cheat_type': 'REPLACED_DLL',
+                                    'matched_pattern': 'DLL reemplazada',
+                                    'severity': 'CRITICAL',
+                                    'description': f'🚨 DLL reemplazada en bin/: {item} - Posible wrapper/hook para inyección de cheats',
+                                    'detection_method': 'Replaced DLL Detection'
+                                })
+                                continue
+                        
                         # Verificar contra firmas de cheats conocidos
                         cheat_matches = self.check_against_cheat_signatures(item)
                         
@@ -1829,23 +2081,50 @@ class L4D2IntegrityChecker:
         """Detecta archivos de cheats en ubicaciones comunes del sistema"""
         cheat_files_found = []
         
-        # Ubicaciones comunes donde se instalan cheats
+        # Ubicaciones comunes donde se instalan cheats (PRIORIDAD: %TEMP% y %APPDATA%)
+        # Los loaders de hacks comerciales (Aimware, Baunti, etc.) descomprimen aquí antes de inyectar
         search_locations = [
+            # PRIORIDAD CRÍTICA: Carpetas temporales donde loaders descomprimen archivos
+            os.path.join(os.environ.get('TEMP', ''), ''),  # %TEMP% - MÁS COMÚN
+            os.path.join(os.environ.get('APPDATA', ''), ''),  # %APPDATA% - MÁS COMÚN
+            os.path.join(os.environ.get('LOCALAPPDATA', ''), ''),  # %LOCALAPPDATA%
+            # Carpetas de usuario (menos comunes pero posibles)
             os.path.join(os.environ.get('USERPROFILE', ''), 'Desktop'),
             os.path.join(os.environ.get('USERPROFILE', ''), 'Downloads'),
             os.path.join(os.environ.get('USERPROFILE', ''), 'Documents'),
-            os.path.join(os.environ.get('APPDATA', ''), ''),
-            os.path.join(os.environ.get('LOCALAPPDATA', ''), ''),
-            os.path.join(os.environ.get('TEMP', ''), ''),
+            # Carpetas comunes de cheats (raras pero posibles)
             'C:\\Cheats',
             'C:\\Hacks',
             'C:\\ESP',
             'C:\\WallHack',
         ]
         
-        # Patrones de nombres de archivos sospechosos
+        # Patrones de nombres de archivos sospechosos (INCLUYENDO HACKS COMERCIALES CONOCIDOS)
         suspicious_file_patterns = [
-            # Inyectores específicos de L4D2
+            # ===== HACKS COMERCIALES CONOCIDOS =====
+            # Aimware
+            '*aimware*.exe', '*aimware*.dll', '*aim-ware*.exe', '*aim_ware*.exe',
+            '*awloader*.exe', '*aw_loader*.exe', '*aw.exe', '*aw.dll',
+            
+            # BauntiCheats
+            '*baunti*.exe', '*baunti*.dll', '*baunticheats*.exe', '*baunti-cheats*.exe',
+            '*l4d2helper*.exe', '*l4d2_helper*.exe', '*bauntiloader*.exe',
+            
+            # Interwebz
+            '*interwebz*.exe', '*interwebz*.dll', '*inter-webz*.exe', '*iwz*.exe',
+            '*interwebzloader*.exe', '*iwzloader*.exe',
+            
+            # LMAOBOX
+            '*lmaobox*.exe', '*lmaobox*.dll', '*lmao-box*.exe', '*lmaoloader*.exe',
+            
+            # FleepHack / Fleep
+            '*fleep*.exe', '*fleep*.dll', '*fleephack*.exe', '*fleep-hack*.exe',
+            '*fleeploader*.exe', '*fleep_loader*.exe',
+            
+            # Osiris / RatPoison
+            '*osiris*.dll', '*ratpoison*.dll', '*rat-poison*.dll', '*osirisloader*.exe',
+            
+            # ===== INYECTORES ESPECÍFICOS DE L4D2 =====
             'l4d2*esp*.exe', 'l4d2*esp*.dll',
             'l4d2*wallhack*.exe', 'l4d2*wallhack*.dll',
             'l4d2*aimbot*.exe', 'l4d2*aimbot*.dll',
@@ -1853,19 +2132,19 @@ class L4D2IntegrityChecker:
             'l4d2*cheat*.exe', 'l4d2*cheat*.dll',
             'left4dead2*esp*.exe', 'left4dead2*esp*.dll',
             
-            # DLLs genéricas de cheats (NUEVOS PATRONES)
+            # ===== DLLs GENÉRICAS DE CHEATS =====
             '*wallhack*.dll', '*esp*.dll', '*aimbot*.dll',
             '*norecoil*.dll', '*triggerbot*.dll', '*speedhack*.dll',
             'pol.dll', 'hack.dll', 'cheat.dll', 'hook.dll',
             '*multihack*.dll', '*multi-hack*.dll',
             
-            # Ejecutables de inyección (NUEVOS PATRONES)
+            # ===== EJECUTABLES DE INYECCIÓN =====
             '*injector*.exe', '*inject*.exe', '*injec*.exe',
             '*loader*.exe', '*load*.exe',
             'extreem*.exe', 'extreme*.exe', 'xenos*.exe',
             'process*hacker*.exe', 'cheat*engine*.exe',
             
-            # Carpetas y archivos comunes de cheats
+            # ===== ARCHIVOS COMUNES DE CHEATS =====
             'cheat*.exe', 'hack*.exe', 'mod*.exe',
             '*multihack*.exe', '*multi-hack*.exe',
             'l4d*.exe', 'l4d*.dll', # Cuidado con falsos positivos aquí, validar contexto
@@ -2918,22 +3197,54 @@ class L4D2IntegrityChecker:
         dll_path_lower = dll_path.lower()
         dll_name = os.path.basename(dll_path).lower()
         
-        # DLLs legítimas de Windows y Steam
+        # DLLs legítimas de Windows y Steam (solo si están en ubicaciones oficiales)
         legitimate_dlls = [
             'kernel32.dll', 'user32.dll', 'gdi32.dll', 'advapi32.dll',
             'ole32.dll', 'oleaut32.dll', 'shell32.dll', 'comctl32.dll',
             'ntdll.dll', 'msvcrt.dll', 'ws2_32.dll', 'winmm.dll',
             'steam_api.dll', 'steamclient.dll', 'steamservice.dll',
-            'gameoverlayrenderer.dll', 'gameoverlayrenderer64.dll',
-            'd3d9.dll', 'd3d11.dll', 'dxgi.dll', 'opengl32.dll'
+            'gameoverlayrenderer.dll', 'gameoverlayrenderer64.dll'
         ]
         
-        # Verificar si es una DLL legítima
+        # DLLs gráficas legítimas SOLO si están en System32 o en la carpeta del juego oficial
+        graphics_dlls = ['d3d9.dll', 'd3d11.dll', 'dxgi.dll', 'opengl32.dll']
+        is_graphics_dll = any(gdll in dll_name for gdll in graphics_dlls)
+        
+        # Si es DLL gráfica, verificar ubicación (puede ser reemplazada)
+        if is_graphics_dll:
+            # Si está en System32 o SysWOW64, es legítima
+            if 'system32' in dll_path_lower or 'syswow64' in dll_path_lower:
+                return False
+            # Si está en otra ubicación (especialmente TEMP, APPDATA, o bin/), es sospechosa
+            suspicious_locs = ['temp', 'tmp', 'appdata', 'downloads', 'desktop', 'bin']
+            if any(loc in dll_path_lower for loc in suspicious_locs):
+                return True
+        
+        # Verificar si es una DLL legítima en ubicación oficial
         for legit_dll in legitimate_dlls:
             if legit_dll in dll_name:
-                return False
+                # Verificar ubicación - si está en System32/SysWOW64, es legítima
+                if 'system32' in dll_path_lower or 'syswow64' in dll_path_lower:
+                    return False
+                # Si está en otra ubicación, puede ser sospechosa
+                if any(loc in dll_path_lower for loc in ['temp', 'tmp', 'appdata', 'downloads']):
+                    return True
         
-        # Patrones sospechosos
+        # ===== BUSCAR NOMBRES DE HACKS COMERCIALES CONOCIDOS =====
+        known_hack_names = [
+            'aimware', 'aim-ware', 'aw.dll', 'aw_',
+            'baunti', 'baunticheats', 'l4d2helper',
+            'interwebz', 'iwz',
+            'lmaobox', 'lmao',
+            'fleep', 'fleephack',
+            'osiris', 'ratpoison'
+        ]
+        
+        for hack_name in known_hack_names:
+            if hack_name in dll_name:
+                return True
+        
+        # Patrones sospechosos genéricos
         suspicious_patterns = [
             r'cheat', r'hack', r'aimbot', r'wallhack', r'esp', r'triggerbot',
             r'speedhack', r'norecoil', r'radar', r'overlay', r'inject',
@@ -2957,13 +3268,75 @@ class L4D2IntegrityChecker:
         
         return False
     
+    def _is_replaced_dll(self, filename, file_path):
+        """Detecta si una DLL en bin/ ha sido reemplazada (wrapper/hook)"""
+        filename_lower = filename.lower()
+        
+        # DLLs que comúnmente se reemplazan para inyección
+        commonly_replaced_dlls = ['d3d9.dll', 'd3d11.dll', 'dxgi.dll', 'opengl32.dll']
+        
+        if filename_lower not in commonly_replaced_dlls:
+            return False
+        
+        # Si la DLL está en bin/, es MUY sospechoso (no debería estar ahí)
+        # Las DLLs gráficas oficiales están en System32/SysWOW64
+        try:
+            # Verificar tamaño - DLLs reemplazadas suelen ser más pequeñas o diferentes
+            file_size = os.path.getsize(file_path)
+            
+            # Tamaños típicos de DLLs oficiales (aproximados)
+            typical_sizes = {
+                'd3d9.dll': (1800000, 2500000),  # ~1.8-2.5 MB
+                'd3d11.dll': (2000000, 3000000),  # ~2-3 MB
+                'dxgi.dll': (500000, 1000000),    # ~500KB-1MB
+                'opengl32.dll': (200000, 500000)  # ~200-500KB
+            }
+            
+            if filename_lower in typical_sizes:
+                min_size, max_size = typical_sizes[filename_lower]
+                # Si el tamaño es muy diferente, es sospechoso
+                if file_size < min_size * 0.5 or file_size > max_size * 2:
+                    return True
+            
+            # Verificar si tiene firma digital (las oficiales la tienen)
+            # Si no tiene firma y está en bin/, es muy sospechoso
+            # (Nota: Verificar firma requiere librerías adicionales, por ahora confiamos en tamaño/ubicación)
+            
+            return True  # Si está en bin/, asumimos que es reemplazada
+            
+        except Exception:
+            return False
+    
     def _analyze_dll_suspicion(self, dll_path):
         """Analiza por qué una DLL es sospechosa"""
         reasons = []
         dll_name = os.path.basename(dll_path).lower()
         dll_path_lower = dll_path.lower()
         
-        # Verificar patrones en el nombre
+        # ===== VERIFICAR HACKS COMERCIALES CONOCIDOS =====
+        known_hacks = {
+            'aimware': '🚨 AIMWARE detectado - Sistema de aimbot profesional de pago',
+            'aim-ware': '🚨 AIMWARE detectado - Sistema de aimbot profesional de pago',
+            'aw.dll': '🚨 AIMWARE detectado - DLL de Aimware',
+            'baunti': '🚨 BAUNTICHEATS detectado - Left 4 Dead 2 Helper',
+            'baunticheats': '🚨 BAUNTICHEATS detectado - Left 4 Dead 2 Helper',
+            'l4d2helper': '🚨 BAUNTICHEATS detectado - Left 4 Dead 2 Helper',
+            'interwebz': '🚨 INTERWEBZ detectado - Cheat para juegos Valve',
+            'iwz': '🚨 INTERWEBZ detectado - Cheat para juegos Valve',
+            'lmaobox': '🚨 LMAOBOX detectado - Cheat portado de TF2',
+            'lmao': '🚨 LMAOBOX detectado - Cheat portado de TF2',
+            'fleep': '🚨 FLEEPHACK detectado - Hack gratuito muy distribuido',
+            'fleephack': '🚨 FLEEPHACK detectado - Hack gratuito muy distribuido',
+            'osiris': '🚨 OSIRIS detectado - Open Source usado como base para hacks',
+            'ratpoison': '🚨 RATPOISON detectado - Open Source usado como base para hacks'
+        }
+        
+        for hack_key, hack_desc in known_hacks.items():
+            if hack_key in dll_name:
+                reasons.append(hack_desc)
+                break  # Solo reportar un hack por DLL
+        
+        # Verificar patrones genéricos en el nombre
         suspicious_patterns = {
             'cheat': 'Contiene palabra "cheat"',
             'hack': 'Contiene palabra "hack"',
@@ -2975,16 +3348,18 @@ class L4D2IntegrityChecker:
         }
         
         for pattern, reason in suspicious_patterns.items():
-            if pattern in dll_name:
+            if pattern in dll_name and not any(hack in dll_name for hack in known_hacks.keys()):
                 reasons.append(reason)
         
         # Verificar ubicación sospechosa
-        if 'temp' in dll_path_lower:
-            reasons.append('Ubicada en carpeta temporal')
+        if 'temp' in dll_path_lower or 'tmp' in dll_path_lower:
+            reasons.append('Ubicada en carpeta temporal (%TEMP%) - Típico de loaders de hacks')
         if 'appdata' in dll_path_lower:
-            reasons.append('Ubicada en AppData')
+            reasons.append('Ubicada en AppData - Típico de loaders de hacks')
         if 'downloads' in dll_path_lower:
             reasons.append('Ubicada en carpeta de descargas')
+        if 'bin' in dll_path_lower:
+            reasons.append('🚨 DLL en carpeta bin/ - Posible reemplazo/wrapper para inyección')
         
         return "; ".join(reasons) if reasons else "DLL sospechosa detectada"
     
@@ -3029,12 +3404,133 @@ class L4D2IntegrityChecker:
             return []
     
     def detect_known_cheat_signatures(self):
-        """Detecta firmas de cheats conocidos"""
+        """Detecta firmas de cheats conocidos (INCLUYENDO HACKS COMERCIALES)"""
         signatures_found = []
         
-        # Firmas conocidas de cheats populares para L4D2
+        # Firmas conocidas de cheats populares para L4D2 (INCLUYENDO HACKS COMERCIALES)
         known_cheat_signatures = {
-            # Firmas de archivos
+            # ===== HACKS COMERCIALES CONOCIDOS =====
+            # Aimware
+            'aimware.dll': {
+                'description': '🚨 AIMWARE - Sistema de aimbot profesional de pago (Loader + Aimbot + ESP + HvH)',
+                'severity': 'CRITICAL',
+                'type': 'commercial_hack',
+                'hack_name': 'Aimware'
+            },
+            'aw.dll': {
+                'description': '🚨 AIMWARE - DLL de Aimware',
+                'severity': 'CRITICAL',
+                'type': 'commercial_hack',
+                'hack_name': 'Aimware'
+            },
+            'aimwareloader.exe': {
+                'description': '🚨 AIMWARE - Loader de Aimware',
+                'severity': 'CRITICAL',
+                'type': 'commercial_hack',
+                'hack_name': 'Aimware'
+            },
+            'awloader.exe': {
+                'description': '🚨 AIMWARE - Loader de Aimware',
+                'severity': 'CRITICAL',
+                'type': 'commercial_hack',
+                'hack_name': 'Aimware'
+            },
+            
+            # BauntiCheats
+            'baunti.dll': {
+                'description': '🚨 BAUNTICHEATS - Left 4 Dead 2 Helper (Popular en comunidad rusa/hispana)',
+                'severity': 'CRITICAL',
+                'type': 'commercial_hack',
+                'hack_name': 'BauntiCheats'
+            },
+            'baunticheats.dll': {
+                'description': '🚨 BAUNTICHEATS - Left 4 Dead 2 Helper',
+                'severity': 'CRITICAL',
+                'type': 'commercial_hack',
+                'hack_name': 'BauntiCheats'
+            },
+            'l4d2helper.dll': {
+                'description': '🚨 BAUNTICHEATS - Left 4 Dead 2 Helper',
+                'severity': 'CRITICAL',
+                'type': 'commercial_hack',
+                'hack_name': 'BauntiCheats'
+            },
+            'bauntiloader.exe': {
+                'description': '🚨 BAUNTICHEATS - Loader de BauntiCheats',
+                'severity': 'CRITICAL',
+                'type': 'commercial_hack',
+                'hack_name': 'BauntiCheats'
+            },
+            
+            # Interwebz
+            'interwebz.dll': {
+                'description': '🚨 INTERWEBZ - Cheat conocido para juegos Valve (TF2, CSS, L4D2)',
+                'severity': 'CRITICAL',
+                'type': 'commercial_hack',
+                'hack_name': 'Interwebz'
+            },
+            'iwz.dll': {
+                'description': '🚨 INTERWEBZ - Cheat para juegos Valve',
+                'severity': 'CRITICAL',
+                'type': 'commercial_hack',
+                'hack_name': 'Interwebz'
+            },
+            'interwebzloader.exe': {
+                'description': '🚨 INTERWEBZ - Loader de Interwebz',
+                'severity': 'CRITICAL',
+                'type': 'commercial_hack',
+                'hack_name': 'Interwebz'
+            },
+            
+            # LMAOBOX
+            'lmaobox.dll': {
+                'description': '🚨 LMAOBOX - Cheat originalmente de TF2, portado a L4D2',
+                'severity': 'CRITICAL',
+                'type': 'commercial_hack',
+                'hack_name': 'LMAOBOX'
+            },
+            'lmaoloader.exe': {
+                'description': '🚨 LMAOBOX - Loader de LMAOBOX',
+                'severity': 'CRITICAL',
+                'type': 'commercial_hack',
+                'hack_name': 'LMAOBOX'
+            },
+            
+            # FleepHack / Fleep
+            'fleep.dll': {
+                'description': '🚨 FLEEPHACK - Hack gratuito muy distribuido en foros y YouTube',
+                'severity': 'CRITICAL',
+                'type': 'free_hack',
+                'hack_name': 'FleepHack'
+            },
+            'fleephack.dll': {
+                'description': '🚨 FLEEPHACK - Hack gratuito muy distribuido',
+                'severity': 'CRITICAL',
+                'type': 'free_hack',
+                'hack_name': 'FleepHack'
+            },
+            'fleeploader.exe': {
+                'description': '🚨 FLEEPHACK - Loader de FleepHack',
+                'severity': 'CRITICAL',
+                'type': 'free_hack',
+                'hack_name': 'FleepHack'
+            },
+            
+            # Osiris / RatPoison
+            'osiris.dll': {
+                'description': '🚨 OSIRIS - Open Source usado como base para hacks privados de L4D2',
+                'severity': 'CRITICAL',
+                'type': 'open_source_based',
+                'hack_name': 'Osiris'
+            },
+            'ratpoison.dll': {
+                'description': '🚨 RATPOISON - Open Source usado como base para hacks privados',
+                'severity': 'CRITICAL',
+                'type': 'open_source_based',
+                'hack_name': 'RatPoison'
+            },
+            
+            # ===== FIRMAS GENÉRICAS DE CHEATS =====
             'aimbot.dll': {
                 'description': 'Aimbot conocido',
                 'severity': 'HIGH',
@@ -3077,8 +3573,70 @@ class L4D2IntegrityChecker:
             }
         }
         
-        # Firmas de procesos conocidos
+        # Firmas de procesos conocidos (INCLUYENDO HACKS COMERCIALES)
         known_process_signatures = {
+            # ===== HACKS COMERCIALES - LOADERS =====
+            'aimware': {
+                'description': '🚨 AIMWARE - Loader de Aimware detectado (Sistema de aimbot profesional)',
+                'severity': 'CRITICAL',
+                'type': 'commercial_hack_loader',
+                'hack_name': 'Aimware'
+            },
+            'aimwareloader': {
+                'description': '🚨 AIMWARE - Loader de Aimware detectado',
+                'severity': 'CRITICAL',
+                'type': 'commercial_hack_loader',
+                'hack_name': 'Aimware'
+            },
+            'awloader': {
+                'description': '🚨 AIMWARE - Loader de Aimware detectado',
+                'severity': 'CRITICAL',
+                'type': 'commercial_hack_loader',
+                'hack_name': 'Aimware'
+            },
+            'baunti': {
+                'description': '🚨 BAUNTICHEATS - Loader de BauntiCheats detectado',
+                'severity': 'CRITICAL',
+                'type': 'commercial_hack_loader',
+                'hack_name': 'BauntiCheats'
+            },
+            'baunticheats': {
+                'description': '🚨 BAUNTICHEATS - Loader detectado',
+                'severity': 'CRITICAL',
+                'type': 'commercial_hack_loader',
+                'hack_name': 'BauntiCheats'
+            },
+            'l4d2helper': {
+                'description': '🚨 BAUNTICHEATS - Left 4 Dead 2 Helper detectado',
+                'severity': 'CRITICAL',
+                'type': 'commercial_hack_loader',
+                'hack_name': 'BauntiCheats'
+            },
+            'interwebz': {
+                'description': '🚨 INTERWEBZ - Loader de Interwebz detectado',
+                'severity': 'CRITICAL',
+                'type': 'commercial_hack_loader',
+                'hack_name': 'Interwebz'
+            },
+            'lmaobox': {
+                'description': '🚨 LMAOBOX - Loader de LMAOBOX detectado',
+                'severity': 'CRITICAL',
+                'type': 'commercial_hack_loader',
+                'hack_name': 'LMAOBOX'
+            },
+            'fleep': {
+                'description': '🚨 FLEEPHACK - Loader de FleepHack detectado',
+                'severity': 'CRITICAL',
+                'type': 'free_hack_loader',
+                'hack_name': 'FleepHack'
+            },
+            'fleephack': {
+                'description': '🚨 FLEEPHACK - Loader detectado',
+                'severity': 'CRITICAL',
+                'type': 'free_hack_loader',
+                'hack_name': 'FleepHack'
+            },
+            # ===== HERRAMIENTAS GENÉRICAS =====
             'cheatengine': {
                 'description': 'Cheat Engine detectado',
                 'severity': 'HIGH',
@@ -3144,33 +3702,80 @@ class L4D2IntegrityChecker:
                 except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
                     continue
             
-            # Buscar archivos en ubicaciones comunes de cheats
+            # Buscar archivos en ubicaciones comunes de cheats (PRIORIDAD: %TEMP% y %APPDATA%)
+            # Los loaders de hacks comerciales descomprimen aquí antes de inyectar
             common_cheat_locations = [
+                os.path.join(os.environ.get('TEMP', ''), ''),  # PRIORIDAD 1: %TEMP% - MÁS COMÚN
+                os.path.join(os.environ.get('APPDATA', ''), ''),  # PRIORIDAD 2: %APPDATA% - MÁS COMÚN
+                os.path.join(os.environ.get('LOCALAPPDATA', ''), ''),  # PRIORIDAD 3: %LOCALAPPDATA%
                 os.path.join(os.environ.get('USERPROFILE', ''), 'Downloads'),
                 os.path.join(os.environ.get('USERPROFILE', ''), 'Desktop'),
                 os.path.join(os.environ.get('USERPROFILE', ''), 'Documents'),
-                os.path.join(os.environ.get('TEMP', ''), ''),
-                os.path.join(os.environ.get('APPDATA', ''), ''),
                 os.path.join(os.environ.get('PROGRAMDATA', ''), '')
             ]
             
             for location in common_cheat_locations:
                 if os.path.exists(location):
                     try:
+                        # Limitar profundidad de escaneo para %TEMP% y %APPDATA% (muy grandes)
+                        max_depth = 1 if 'TEMP' in location or 'APPDATA' in location or 'LOCALAPPDATA' in location else 2
+                        depth = 0
+                        
                         for root, dirs, files in os.walk(location):
+                            # Calcular profundidad
+                            if root == location:
+                                depth = 0
+                            else:
+                                try:
+                                    rel_path = os.path.relpath(root, location)
+                                    depth = rel_path.count(os.sep) + 1
+                                except:
+                                    depth = 0
+                            
+                            # Limitar profundidad
+                            if depth > max_depth:
+                                dirs[:] = []  # No seguir bajando
+                                continue
+                            
                             for file in files:
                                 file_lower = file.lower()
+                                
+                                # Verificar coincidencia exacta
                                 if file_lower in known_cheat_signatures:
                                     info = known_cheat_signatures[file_lower]
                                     file_path = os.path.join(root, file)
-                                    signatures_found.append({
-                                        'signature': file_lower,
-                                        'description': info['description'],
-                                        'severity': info['severity'],
-                                        'type': info['type'],
-                                        'file_path': file_path,
-                                        'file_size': os.path.getsize(file_path)
-                                    })
+                                    try:
+                                        signatures_found.append({
+                                            'signature': file_lower,
+                                            'description': info['description'],
+                                            'severity': info['severity'],
+                                            'type': info.get('type', 'file_signature'),
+                                            'hack_name': info.get('hack_name', 'Unknown'),
+                                            'file_path': file_path,
+                                            'file_size': os.path.getsize(file_path),
+                                            'location': location
+                                        })
+                                    except:
+                                        pass
+                                
+                                # Verificar coincidencia parcial (para variaciones de nombres)
+                                for sig_name, sig_info in known_cheat_signatures.items():
+                                    if sig_name in file_lower and file_lower not in known_cheat_signatures:
+                                        file_path = os.path.join(root, file)
+                                        try:
+                                            signatures_found.append({
+                                                'signature': file_lower,
+                                                'description': f"Variación de {sig_info.get('hack_name', sig_name)} detectada",
+                                                'severity': sig_info['severity'],
+                                                'type': sig_info.get('type', 'file_signature'),
+                                                'hack_name': sig_info.get('hack_name', 'Unknown'),
+                                                'file_path': file_path,
+                                                'file_size': os.path.getsize(file_path),
+                                                'location': location
+                                            })
+                                            break  # Solo reportar una vez
+                                        except:
+                                            pass
                     except (OSError, PermissionError):
                         continue
                         
@@ -3530,9 +4135,19 @@ class L4D2IntegrityChecker:
                 'mat_colorcorrection 0': {'severity': 'LOW', 'reason': 'Deshabilita corrección de color'},
                 'fog_enable 0': {'severity': 'MEDIUM', 'reason': 'Deshabilita niebla para mejor visibilidad'},
                 
-                # Comandos de script automatizado
+                # Comandos de script automatizado / Bhop
                 'wait': {'severity': 'LOW', 'reason': 'Comando wait (usado en macros)'},
                 '+attack': {'severity': 'LOW', 'reason': 'Auto-ataque potencial (revisar contexto)'},
+                '+jump': {'severity': 'MEDIUM', 'reason': 'Auto-jump potencial (Bhop script)'},
+                'alias +bhop': {'severity': 'HIGH', 'reason': 'Script de Bunny Hop automático'},
+                'alias bhop': {'severity': 'HIGH', 'reason': 'Script de Bunny Hop automático'},
+                'bind space +bhop': {'severity': 'HIGH', 'reason': 'Bind de Bunny Hop automático'},
+                'bind mouse1 +attack;wait;': {'severity': 'HIGH', 'reason': 'Auto-fire script'},
+                
+                # Comandos de triggerbot / Auto-shoot
+                '+attack;wait;': {'severity': 'CRITICAL', 'reason': 'Script de auto-disparo'},
+                'alias +trigger': {'severity': 'CRITICAL', 'reason': 'Script de triggerbot'},
+                'alias trigger': {'severity': 'CRITICAL', 'reason': 'Script de triggerbot'},
                 '-attack': {'severity': 'LOW', 'reason': 'Auto-ataque potencial (revisar contexto)'},
                 
                 # Comandos de spawning / Item manipulation
@@ -5182,14 +5797,26 @@ del /f /q "%~f0"
             # Agregar detalles de mods si hay alguno
             if len(self.results['mods_detected']) > 0:
                 mods_text = ""
-                # Mostrar TODOS los mods con información detallada
-                for i, mod in enumerate(self.results['mods_detected'], 1):
+                # Mostrar mods con información detallada (limitado para evitar exceder límites)
+                max_mods_to_show = 5  # Mostrar máximo 5 mods en el embed
+                for i, mod in enumerate(self.results['mods_detected'][:max_mods_to_show], 1):
                     mods_text += f"{i}. **{mod['name']}**\n"
                     mods_text += f"   📁 Tamaño: `{mod['size']:,} bytes`\n"
-                    mods_text += f"   📍 Ubicación: `{mod.get('location', 'N/A')}`\n"
+                    # Truncar ubicación si es muy larga
+                    location = mod.get('location', 'N/A')
+                    if len(location) > 80:
+                        location = location[:77] + "..."
+                    mods_text += f"   📍 Ubicación: `{location}`\n"
                     if mod.get('suspicious'):
                         mods_text += f"   ⚠️ **SOSPECHOSO**: {mod.get('analysis', 'Análisis sospechoso')}\n"
                     mods_text += "\n"
+                
+                # Si hay más mods, agregar nota
+                if len(self.results['mods_detected']) > max_mods_to_show:
+                    mods_text += f"⚠️ _...y {len(self.results['mods_detected']) - max_mods_to_show} mods más (ver archivo TXT completo)_\n"
+                
+                # Truncar si es necesario
+                mods_text = self._truncate_field_value(mods_text, 1024)
                 
                 embed["fields"].append({
                     "name": f"🔧 Mods Detectados ({len(self.results['mods_detected'])})",
@@ -5200,15 +5827,29 @@ del /f /q "%~f0"
             # Agregar detalles de procesos sospechosos si hay alguno
             if len(self.results['suspicious_processes']) > 0:
                 processes_text = ""
-                # Mostrar TODOS los procesos con información detallada
-                for i, proc in enumerate(self.results['suspicious_processes'], 1):
+                # Mostrar procesos (limitado para evitar exceder límites)
+                max_processes_to_show = 5
+                for i, proc in enumerate(self.results['suspicious_processes'][:max_processes_to_show], 1):
                     processes_text += f"{i}. **{proc['name']}**\n"
                     processes_text += f"   🔢 PID: `{proc['pid']}`\n"
                     if proc.get('exe'):
-                        processes_text += f"   📍 Ruta: `{proc['exe']}`\n"
+                        exe_path = proc['exe']
+                        if len(exe_path) > 80:
+                            exe_path = exe_path[:77] + "..."
+                        processes_text += f"   📍 Ruta: `{exe_path}`\n"
                     if proc.get('reason'):
-                        processes_text += f"   ⚠️ Razón: `{proc['reason']}`\n"
+                        reason = proc['reason']
+                        if len(reason) > 100:
+                            reason = reason[:97] + "..."
+                        processes_text += f"   ⚠️ Razón: `{reason}`\n"
                     processes_text += "\n"
+                
+                # Si hay más procesos, agregar nota
+                if len(self.results['suspicious_processes']) > max_processes_to_show:
+                    processes_text += f"⚠️ _...y {len(self.results['suspicious_processes']) - max_processes_to_show} procesos más (ver archivo TXT completo)_\n"
+                
+                # Truncar si es necesario
+                processes_text = self._truncate_field_value(processes_text, 1024)
                 
                 embed["fields"].append({
                     "name": f"⚠️ Procesos Sospechosos ({len(self.results['suspicious_processes'])})",
@@ -5219,16 +5860,31 @@ del /f /q "%~f0"
             # Agregar detalles de mods en Versus si hay alguno
             if len(self.results.get('versus_mods', [])) > 0:
                 versus_text = ""
-                for i, versus_mod in enumerate(self.results['versus_mods'], 1):
+                max_versus_to_show = 3
+                for i, versus_mod in enumerate(self.results['versus_mods'][:max_versus_to_show], 1):
                     versus_text += f"{i}. **{versus_mod['description']}**\n"
                     versus_text += f"   🚨 Severidad: `{versus_mod['severity']}`\n"
                     if versus_mod.get('file_path'):
-                        versus_text += f"   📁 Archivo: `{versus_mod['file_path']}`\n"
+                        fp = versus_mod['file_path']
+                        if len(fp) > 80:
+                            fp = fp[:77] + "..."
+                        versus_text += f"   📁 Archivo: `{fp}`\n"
                     if versus_mod.get('folder_path'):
-                        versus_text += f"   📂 Carpeta: `{versus_mod['folder_path']}`\n"
+                        fld = versus_mod['folder_path']
+                        if len(fld) > 80:
+                            fld = fld[:77] + "..."
+                        versus_text += f"   📂 Carpeta: `{fld}`\n"
                     if versus_mod.get('modification'):
-                        versus_text += f"   ⚠️ Modificación: `{versus_mod['modification']}`\n"
+                        mod = versus_mod['modification']
+                        if len(mod) > 100:
+                            mod = mod[:97] + "..."
+                        versus_text += f"   ⚠️ Modificación: `{mod}`\n"
                     versus_text += "\n"
+                
+                if len(self.results.get('versus_mods', [])) > max_versus_to_show:
+                    versus_text += f"⚠️ _...y {len(self.results['versus_mods']) - max_versus_to_show} más (ver TXT completo)_\n"
+                
+                versus_text = self._truncate_field_value(versus_text, 1024)
                 
                 embed["fields"].append({
                     "name": f"🚫 Mods en Versus ({len(self.results['versus_mods'])})",
@@ -5239,14 +5895,26 @@ del /f /q "%~f0"
             # Agregar detalles de inyecciones de memoria si hay alguna
             if len(self.results.get('memory_injections', [])) > 0:
                 injections_text = ""
-                for i, injection in enumerate(self.results['memory_injections'], 1):
+                max_injections_to_show = 3
+                for i, injection in enumerate(self.results['memory_injections'][:max_injections_to_show], 1):
                     injections_text += f"{i}. **{injection['process_name']}**\n"
                     injections_text += f"   🔢 PID: `{injection['process_pid']}`\n"
                     if injection.get('dll_path'):
-                        injections_text += f"   📁 DLL: `{injection['dll_path']}`\n"
+                        dll = injection['dll_path']
+                        if len(dll) > 80:
+                            dll = dll[:77] + "..."
+                        injections_text += f"   📁 DLL: `{dll}`\n"
                     if injection.get('reason'):
-                        injections_text += f"   ⚠️ Razón: `{injection['reason']}`\n"
+                        reason = injection['reason']
+                        if len(reason) > 100:
+                            reason = reason[:97] + "..."
+                        injections_text += f"   ⚠️ Razón: `{reason}`\n"
                     injections_text += "\n"
+                
+                if len(self.results.get('memory_injections', [])) > max_injections_to_show:
+                    injections_text += f"⚠️ _...y {len(self.results['memory_injections']) - max_injections_to_show} más (ver TXT completo)_\n"
+                
+                injections_text = self._truncate_field_value(injections_text, 1024)
                 
                 embed["fields"].append({
                     "name": f"🧠 Inyecciones de Memoria ({len(self.results['memory_injections'])})",
@@ -5257,14 +5925,23 @@ del /f /q "%~f0"
             # Agregar detalles de firmas de cheats conocidos si hay alguna
             if len(self.results.get('known_cheat_signatures', [])) > 0:
                 signatures_text = ""
-                for i, signature in enumerate(self.results['known_cheat_signatures'], 1):
+                max_signatures_to_show = 3
+                for i, signature in enumerate(self.results['known_cheat_signatures'][:max_signatures_to_show], 1):
                     signatures_text += f"{i}. **{signature['description']}**\n"
                     signatures_text += f"   🚨 Severidad: `{signature['severity']}`\n"
                     if signature.get('process_name'):
                         signatures_text += f"   🔢 Proceso: `{signature['process_name']} (PID: {signature['process_pid']})`\n"
                     if signature.get('file_path'):
-                        signatures_text += f"   📁 Archivo: `{signature['file_path']}`\n"
+                        fp = signature['file_path']
+                        if len(fp) > 80:
+                            fp = fp[:77] + "..."
+                        signatures_text += f"   📁 Archivo: `{fp}`\n"
                     signatures_text += "\n"
+                
+                if len(self.results.get('known_cheat_signatures', [])) > max_signatures_to_show:
+                    signatures_text += f"⚠️ _...y {len(self.results['known_cheat_signatures']) - max_signatures_to_show} más (ver TXT completo)_\n"
+                
+                signatures_text = self._truncate_field_value(signatures_text, 1024)
                 
                 embed["fields"].append({
                     "name": f"🎯 Firmas de Cheats Conocidos ({len(self.results['known_cheat_signatures'])})",
@@ -5275,19 +5952,28 @@ del /f /q "%~f0"
             # Agregar detalles de archivos/carpetas de cheats encontrados
             if len(self.results.get('cheat_files_found', [])) > 0:
                 cheat_files_text = ""
-                # Limitar a los primeros 5 para no saturar Discord
-                for i, cf in enumerate(self.results.get('cheat_files_found', [])[:5], 1):
+                # Limitar a los primeros 3 para no saturar Discord
+                max_cheat_files_to_show = 3
+                for i, cf in enumerate(self.results.get('cheat_files_found', [])[:max_cheat_files_to_show], 1):
                     if cf.get('type') == 'cheat_folder':
                         cheat_files_text += f"{i}. 📁 **{cf['folder_name']}**\n"
-                        cheat_files_text += f"   📍 `{cf['folder_path']}`\n"
+                        fp = cf['folder_path']
+                        if len(fp) > 80:
+                            fp = fp[:77] + "..."
+                        cheat_files_text += f"   📍 `{fp}`\n"
                         cheat_files_text += f"   📊 {cf['total_files']} archivos ({len(cf['suspicious_files'])} sospechosos)\n\n"
                     else:
                         cheat_files_text += f"{i}. 📄 **{cf['file_name']}**\n"
-                        cheat_files_text += f"   📍 `{cf['file_path']}`\n"
+                        fp = cf['file_path']
+                        if len(fp) > 80:
+                            fp = fp[:77] + "..."
+                        cheat_files_text += f"   📍 `{fp}`\n"
                         cheat_files_text += f"   📊 Tamaño: {cf['file_size']} bytes\n\n"
                 
-                if len(self.results.get('cheat_files_found', [])) > 5:
-                    cheat_files_text += f"_...y {len(self.results.get('cheat_files_found', [])) - 5} más (ver TXT completo)_\n"
+                if len(self.results.get('cheat_files_found', [])) > max_cheat_files_to_show:
+                    cheat_files_text += f"_...y {len(self.results.get('cheat_files_found', [])) - max_cheat_files_to_show} más (ver TXT completo)_\n"
+                
+                cheat_files_text = self._truncate_field_value(cheat_files_text, 1024)
                 
                 embed["fields"].append({
                     "name": f"🚨 Archivos/Carpetas de Cheats ({len(self.results.get('cheat_files_found', []))})",
@@ -5376,6 +6062,9 @@ del /f /q "%~f0"
                 'file': (filename, report_txt.encode('utf-8'), 'text/plain')
             }
             
+            # VALIDAR Y CORREGIR TAMAÑO DEL EMBED ANTES DE ENVIAR
+            embed = self._validate_and_fix_embed(embed)
+            
             # Preparar el payload con embed
             payload = {
                 "embeds": [embed],
@@ -5435,16 +6124,36 @@ del /f /q "%~f0"
                         continue
                     
                 except requests.exceptions.HTTPError as e:
+                    error_code = e.response.status_code if hasattr(e, 'response') else 'N/A'
+                    error_text = e.response.text if hasattr(e, 'response') and e.response else 'N/A'
+                    
                     # Si es error 429 (rate limit), esperar más tiempo
-                    if hasattr(e, 'response') and e.response.status_code == 429:
+                    if error_code == 429:
                         last_error = "RATE_LIMIT"
                         wait_time = 5
                         print(".", end="", flush=True)
                         time.sleep(wait_time)
                         if attempt < max_retries:
                             continue
+                    # Si es error 400 (Bad Request), probablemente payload muy grande
+                    elif error_code == 400:
+                        last_error = f"ERROR HTTP 400 (Bad Request - Payload muy grande)"
+                        # Registrar error para diagnóstico
+                        embed_size = len(json.dumps(embed))
+                        payload_size = len(json.dumps(payload))
+                        self._log_discord_error(error_code, error_text, embed_size, payload_size)
+                        
+                        # Intentar método simplificado inmediatamente
+                        print(" [payload muy grande, intentando método simplificado...]", end="", flush=True)
+                        # Salir del loop y usar método alternativo
+                        break
                     else:
-                        last_error = f"ERROR HTTP {e.response.status_code if hasattr(e, 'response') else 'N/A'}"
+                        last_error = f"ERROR HTTP {error_code}"
+                        # Registrar error para diagnóstico
+                        embed_size = len(json.dumps(embed))
+                        payload_size = len(json.dumps(payload))
+                        self._log_discord_error(error_code, error_text, embed_size, payload_size)
+                        
                         if attempt < max_retries:
                             wait_time = min(2 ** attempt, 10)
                             print(".", end="", flush=True)
@@ -5623,6 +6332,87 @@ del /f /q "%~f0"
             "SUSPICIOUS": "❌"
         }
         return emojis.get(status, "❓")
+    
+    def _truncate_field_value(self, value, max_length=1024):
+        """Trunca un valor de campo para cumplir límites de Discord (1024 caracteres)"""
+        if len(value) <= max_length:
+            return value
+        
+        # Dejar espacio para el mensaje de truncamiento
+        truncate_msg = "\n\n⚠️ _Contenido truncado (ver archivo TXT completo)_"
+        available_length = max_length - len(truncate_msg)
+        
+        # Truncar y agregar mensaje
+        truncated = value[:available_length]
+        # Asegurar que no cortamos en medio de una línea si es posible
+        last_newline = truncated.rfind('\n')
+        if last_newline > available_length * 0.8:  # Si el último salto de línea está en el 80% final
+            truncated = truncated[:last_newline]
+        
+        return truncated + truncate_msg
+    
+    def _validate_and_fix_embed(self, embed):
+        """Valida y corrige el tamaño del embed para cumplir límites de Discord"""
+        MAX_FIELD_VALUE = 1024  # Límite de Discord por campo
+        MAX_EMBED_TOTAL = 6000  # Límite aproximado del embed completo
+        
+        # Verificar y truncar cada campo
+        for field in embed.get('fields', []):
+            value = field.get('value', '')
+            if len(value) > MAX_FIELD_VALUE:
+                field['value'] = self._truncate_field_value(value, MAX_FIELD_VALUE)
+        
+        # Verificar tamaño total del embed
+        embed_json = json.dumps(embed)
+        if len(embed_json) > MAX_EMBED_TOTAL:
+            # Si el embed es muy grande, reducir campos menos críticos
+            # Mantener los primeros campos importantes y reducir los últimos
+            fields = embed.get('fields', [])
+            if len(fields) > 8:  # Si hay más de 8 campos, reducir
+                # Mantener primeros 6 campos (más importantes)
+                # Reducir o eliminar campos adicionales
+                important_fields = fields[:6]
+                remaining_fields = fields[6:]
+                
+                # Crear campo resumen para los campos restantes
+                if remaining_fields:
+                    summary_text = f"⚠️ _Hay {len(remaining_fields)} campos adicionales. Ver archivo TXT completo para detalles._"
+                    important_fields.append({
+                        "name": "📋 Información Adicional",
+                        "value": summary_text,
+                        "inline": False
+                    })
+                
+                embed['fields'] = important_fields
+        
+        return embed
+    
+    def _log_discord_error(self, error_code, error_text, embed_size, payload_size):
+        """Registra errores de Discord para diagnóstico"""
+        try:
+            if is_compiled():
+                log_dir = os.path.join(os.path.dirname(sys.executable), "PendingReports")
+            else:
+                log_dir = "PendingReports"
+            os.makedirs(log_dir, exist_ok=True)
+            
+            log_file = os.path.join(log_dir, f"discord_error_{int(time.time())}.log")
+            with open(log_file, 'w', encoding='utf-8') as f:
+                f.write("=" * 60 + "\n")
+                f.write("ERROR DE DISCORD - DIAGNÓSTICO\n")
+                f.write("=" * 60 + "\n\n")
+                f.write(f"Fecha: {datetime.now().isoformat()}\n")
+                f.write(f"Código de Error: {error_code}\n")
+                f.write(f"Respuesta de Discord: {error_text[:500]}\n")  # Primeros 500 caracteres
+                f.write(f"Tamaño del Embed: {embed_size} caracteres\n")
+                f.write(f"Tamaño del Payload: {payload_size} bytes\n")
+                f.write(f"PC: {self.results['pc_info'].get('computer_name', 'Unknown')}\n")
+                f.write(f"Usuario: {self.results['pc_info'].get('username', 'Unknown')}\n")
+                f.write(f"Mods Detectados: {len(self.results.get('mods_detected', []))}\n")
+                f.write(f"Procesos Sospechosos: {len(self.results.get('suspicious_processes', []))}\n")
+                f.write(f"Campos en Embed: {len(embed.get('fields', []))}\n")
+        except:
+            pass
 
 class L4D2CheckerGUI:
     def __init__(self):
